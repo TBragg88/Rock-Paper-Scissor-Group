@@ -3,4 +3,4 @@
 ### Credits
 Elite Coders: Tom Bragg, Alex McAlpine, Jo Wolfarth, Jake Smith
 
-Testing 
+github sucks ass and i fucking hate it all
