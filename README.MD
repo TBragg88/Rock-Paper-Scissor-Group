@@ -3,7 +3,7 @@
 ### Credits
 Elite Coders: Tom Bragg, Alex McAlpine, Jo Wolfarth, Jake Smith
 
-i fucking hate github :thumb:
+i fucking hate github :thumb: i still hate github
 
 ### Deployment
 
