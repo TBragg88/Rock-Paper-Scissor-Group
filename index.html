@@ -25,27 +25,81 @@
 </head>
 
 <body>
-<header>
+    <header>
         <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
     </header>
 
     <main>
 
-        <section>
-            <div class="center-container" class="wrapper">
-                <img class="side-image" src="assets/images/notspock.png" alt="Not spock">
-                <div class="button-group">
-                    <button class="play-btn">PLAY</button>
-                    <div class="sub-buttons">
-                        <button class="sub-btn">How to play</button>
-                        <button class="sub-btn">Difficulty</button>
+        <div id="menuScreen">
+            <section>
+                <div class="center-container" class="wrapper">
+                    <img class="side-image" src="assets/images/notspock.png" alt="Not spock">
+                    <div class="button-group">
+                        <!-- <button class="play-btn">PLAY</button> -->
+                        <button class="play-btn" id="startButton">Start Game</button>
+                        <div class="sub-buttons">
+                            <button class="sub-btn">How to play</button>
+                            <button class="sub-btn">Difficulty</button>
+                        </div>
                     </div>
+                    <img class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
                 </div>
-                <img class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
-            </div>
-        </section>
+            </section>
+        </div>
+
+        <div id="gameScreen" style="display: none;">
+            <section>
+                <div class="container">
+                    <div class="col-12 my-4 row">
+                        <header class="d-flex justify-content-center">
+                            <div class="row">
+                                <button class="btn btn-primary mb-3 col">How to Play</button>
+                                <h2 class="col mb-3">Score</h2>
+                                <div class="d-flex flex-column align-items-center col">
+                                    <label for="difficulty" class="mb-2">Difficulty</label>
+                                    <select class="form-select w-auto text-center" id="difficulty">
+                                        <option value="R-shirt">Red Shirt</option>
+                                        <option value="Kirk">Kirk</option>
+                                        <option value="Spock">Spock</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4 px-0">
+                            <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
+                                class="img-fluid">
+                        </div>
+
+                        <div id="btn-col" class="col-1 px-0">
+
+
+                            <div class="d-grid  gap-2">
+                                <button class="select-btn btn">Rock</button>
+                                <button class="select-btn btn">Paper</button>
+                                <button class="select-btn btn">Scissors</button>
+                                <button class="select-btn btn">Lizard</button>
+                                <button class="select-btn btn">Spock</button>
+                            </div>
+                        </div>
+                        <div class="col-3 text-center">
+                            <canvas id="gameCanvas"></canvas>
+                        </div>
+                            <div class="col-4 text-center">
+                                <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </div>
+
 
     </main>
+
+
 
 
 

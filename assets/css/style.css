@@ -103,3 +103,35 @@ body {
     margin-top: auto;
     font-size: 0.9rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----Game Canvas-----for size */
+#btn-col {
+    width:50px;
+}
+#gameScreen .select-btn {
+    color:#fff;
+    border: #fff 2px solid;
+    border-radius: 100px;
+
+}
+
+#gameCanvas {
+width:200px;
+height:200px;
+    background-color: #000;
+    border: 2px solid #fff;
+    display: block;
+    margin: 0 auto;
+
+}

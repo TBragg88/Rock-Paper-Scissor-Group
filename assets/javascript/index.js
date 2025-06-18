@@ -1,5 +1,11 @@
 // ----- HTML HOOK UP'S ------------
 
+document.getElementById("startButton").addEventListener("click", function() {
+    document.getElementById("menuScreen").style.display = "none";  // Hide menu
+    document.getElementById("gameScreen").style.display = "block"; // Show game
+});
+
+
 // buttons listening and shit.
 
 //-------GAME RULES + FUNCTIONS --------
@@ -45,3 +51,10 @@ console.log(winner(playerAction, aiAction()))
 const result = winner(playerAction, aiAction())
 console.log(result)
 // alert(result)
+
+
+
+
+
+
+
