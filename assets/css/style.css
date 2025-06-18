@@ -1,6 +1,3 @@
-
-
-
 body {
     margin: 0;
     background: #180518;
@@ -48,10 +45,9 @@ body {
     flex-direction: column;
 }
 
-
 /* Buttons */
 
-.button-group {
+.menu-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,34 +100,31 @@ body {
     font-size: 0.9rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* -----Game Canvas-----for size */
 #btn-col {
-    width:50px;
+    width: 50px;
 }
-#gameScreen .select-btn {
-    color:#fff;
+#gameScreen .select-button {
+    /* display: flex;
+    flex-direction: column; */
+    
+    
+    
+    margin: 0;
+    padding: 0;
+     color: #fff;
     border: #fff 2px solid;
-    border-radius: 100px;
-
+    border-radius: 50%;
+    height: 50px;
+    width:  50px;
 }
 
 #gameCanvas {
-width:200px;
-height:200px;
+    width: 200px;
+    height: 200px;
     background-color: #000;
     border: 2px solid #fff;
     display: block;
     margin: 0 auto;
-
 }
+

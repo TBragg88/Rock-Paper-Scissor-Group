@@ -35,7 +35,7 @@
             <section>
                 <div class="center-container" class="wrapper">
                     <img class="side-image" src="assets/images/notspock.png" alt="Not spock">
-                    <div class="button-group">
+                    <div class="menu-buttons">
                         <!-- <button class="play-btn">PLAY</button> -->
                         <button class="play-btn" id="startButton">Start Game</button>
                         <div class="sub-buttons">
@@ -51,7 +51,7 @@
         <div id="gameScreen" style="display: none;">
             <section>
                 <div class="container">
-                    <div class="col-12 my-4 row">
+                    <div class="col-12 my-4 row mb-4">
                         <header class="d-flex justify-content-center">
                             <div class="row">
                                 <button class="btn btn-primary mb-3 col">How to Play</button>
@@ -74,25 +74,25 @@
                                 class="img-fluid">
                         </div>
 
-                        <div id="btn-col" class="col-1 px-0">
+                        <div id="btn-col" class="col-1 px-0 pt-5">
 
 
-                            <div class="d-grid  gap-2">
-                                <button class="select-btn btn">Rock</button>
-                                <button class="select-btn btn">Paper</button>
-                                <button class="select-btn btn">Scissors</button>
-                                <button class="select-btn btn">Lizard</button>
-                                <button class="select-btn btn">Spock</button>
+                            <div class="game-buttons">
+                                <button class="select-button" id="rock">🧱</button>
+                                <button class="select-button" id="paper">📜</button>
+                                <button class="select-button" id="scissors">✂️</button>
+                                <button class="select-button" id="lizard">🦎</button>
+                                <button class="select-button" id="spock">🖖</button>
                             </div>
                         </div>
-                        <div class="col-3 text-center">
+                        <div id="canvascon" class="col-3 text-center mt-5">
                             <canvas id="gameCanvas"></canvas>
                         </div>
-                            <div class="col-4 text-center">
-                                <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
-                            </div>
+                        <div class="col-4 text-center">
+                            <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
                         </div>
                     </div>
+                </div>
             </section>
         </div>
 
