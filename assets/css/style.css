@@ -105,14 +105,9 @@ body {
     width: 50px;
 }
 #gameScreen .select-button {
-    /* display: flex;
-    flex-direction: column; */
-    
-    
-    
     margin: 0;
     padding: 0;
-     color: #fff;
+    color: #fff;
     border: #fff 2px solid;
     border-radius: 50%;
     height: 50px;
