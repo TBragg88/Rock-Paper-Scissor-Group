@@ -1,35 +1,20 @@
-// ----- HTML HOOK UP'S ------------
-
 document.getElementById("startButton").addEventListener("click", function() {
-    document.getElementById("menuScreen").style.display = "none";  // Hide menu
-    document.getElementById("gameScreen").style.display = "block"; // Show game
+    document.getElementById("menuScreen").style.display = "none";  
+    document.getElementById("gameScreen").style.display = "block"; 
 });
-
-
-// buttons listening and shit.
-
-//-------GAME RULES + FUNCTIONS --------
-
-// ok we start the game , we need the "ai to select his choice secretly"
-//player inputs his choice and its starts or requires button submit
-// game compares two answers and returns who wins
-// alert box or something to indicate winner?
-//scores to be alterated
-// "animation" of sad ai opponent and new game button ?
-
-//computer choice
+// AI randomly selects a move
 function aiAction() {
-    const action = ["rock", "paper", "scissors", "lizard", "spock"];
-    return action[Math.floor(Math.random() * action.length)];
+    const actions = ["rock", "paper", "scissors", "lizard", "spock"];
+    return actions[Math.floor(Math.random() * actions.length)];
 }
-console.log("the ai chose ",aiAction());
+console.log("AI Action:", aiAction());
 
-
-//button input
-const playerAction = "rock";
-
-//game start
-//compare
+// Event listener for buttons
+document.querySelector(".game-buttons").addEventListener("click", function(event) {
+    console.log("Human Action", event.target.id);
+});
+console.log()
+// Compare moves and determine winner
 function winner(playerAction, aiChoice) {
     const winCon = {
         rock: ["scissors", "lizard"],
@@ -47,10 +32,8 @@ function winner(playerAction, aiChoice) {
         return `You lose! ${aiChoice} beats ${playerAction}.`;
     }
 }
-console.log(winner(playerAction, aiAction()))
-const result = winner(playerAction, aiAction())
-console.log(result)
 // alert(result)
+
 
 
 
