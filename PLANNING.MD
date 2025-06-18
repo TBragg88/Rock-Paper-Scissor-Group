@@ -100,7 +100,7 @@ These **stretch goals** push the project beyond expectations, making it deeply i
 
 
 **some ideas** 
-![Spock Character](/assets/images/char-spok.png){ width="180" }
+![Spock Character](assets/images/char-spok.png){ width="180" }
 
 "Ahh, you chose rock. Predictable, yet flawed. For as science dictates… Spock vaporizes rock."
 
