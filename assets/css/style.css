@@ -1,6 +1,6 @@
 :root {
     #b35737;
-    #9d1823;
+    --borgred: #9d1823;
     --textcolor: #cd9c30;
     #d9c4a9;
     --buttonhover: #6ca3bf;
@@ -9,6 +9,7 @@
     #326761;
     --buttoncolor2: #2a3768;
     #253b3e;
+    --bordercolor: #9e7336;
 }
 
 
@@ -152,8 +153,12 @@ body {
 .footer-social .btn {
     margin-right: 0;
     margin-left: 0.5rem;
+    color: var(--textcolor);
 }
 
+.footer-social .btn:hover {
+    color: var(--borgred);
+}
 @media (max-width: 767px) {
     .footer-flex {
         flex-direction: column;
