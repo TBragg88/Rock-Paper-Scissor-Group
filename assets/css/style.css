@@ -74,28 +74,132 @@ h1 {
 
 /* Buttons */
 
+#console {
+    background: black;
+    border: 7px solid var(--bordercolor);
+}
+
 .menu-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.play-btn {
-    font-size: 2.5rem;
-    padding: 1.5rem 4rem;
-    margin-bottom: 2rem;
-    background: var(--buttoncolor);
-    color: var(--textcolor);
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    transition: background 0.2s;
+.play-btn-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.play-btn:hover {
-    background: var(--buttonhover);
+.play-btn-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.play-btn-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(227, 42%, 29%) 0%,
+    hsl(227, 42%, 29%) 8%,
+    hsl(227, 42%, 29%) 92%,
+    hsl(227, 42%, 29%) 100%
+  );
+}
+
+.play-btn-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: var(--textcolor);
+  background: var(--buttoncolor);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+    /* 
+   cubic-bezier(.3, .7, .4, 1) defines a custom timing function for CSS transitions or animations.
+   It controls the speed curve of the animation, allowing for more natural or unique motion effects.
+   The four values represent control points for the Bézier curve:
+   (.3, .7) and (.4, 1) shape how the animation accelerates and decelerates.
+   This function must be used as a value for properties like 'transition-timing-function' or 'animation-timing-function'.
+*/
+}
+
+.play-btn-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.play-btn-pushable:hover .play-btn-front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.play-btn-pushable:active .play-btn-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.play-btn-pushable:hover .play-btn-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.play-btn-pushable:active .play-btn-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.play-btn-pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.sub-btn {
+    background: var(--buttoncolor2);
+}
+
+.sub-btn-edge {
+      background: linear-gradient(
+    to left,
+    hsl(227, 42%, 20%) 0%,
+    hsl(227, 42%, 20%) 8%,
+    hsl(227, 42%, 20%) 92%,
+    hsl(227, 42%, 20%) 100%
+  );
 }
 
 .sub-buttons {
@@ -103,20 +207,6 @@ h1 {
     gap: 1.5rem;
 }
 
-.sub-btn {
-    font-size: 1.1rem;
-    padding: 0.7rem 1.5rem;
-    background: var(--buttoncolor2);
-    color: var(--textcolor);
-    border: none;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.sub-btn:hover {
-    background: var(--buttonhover);
-}
 
 .game-buttons {
     display: flex;
@@ -303,8 +393,14 @@ h1 {
 
 }
 
+
 /* Media Query: Tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
 
     .center-container,
     .wrapper,
