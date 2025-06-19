@@ -1,9 +1,29 @@
 // ----- HTML HOOK UP'S ------------
+function showScreen(screenId) {
+  // Hide all screens
+  const screens = ["menuScreen", "gameScreen", "campaign", "chooseOpponent"];
+  screens.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = "none";
+  });
 
-document.getElementById("startButton").addEventListener("click", function () {
-    document.getElementById("menuScreen").style.display = "none";
-    document.getElementById("gameScreen").style.display = "block";
+  // Show the selected one
+  const active = document.getElementById(screenId);
+  if (active) active.style.display = "block";
+}
+document.getElementById("startButton").addEventListener("click", () => {
+  showScreen("gameScreen");
 });
+
+document.getElementById("bossRush").addEventListener("click", () => {
+  showScreen("campaign");
+});
+
+document.getElementById("chooseOpponet").addEventListener("click", () => {
+  showScreen("chooseOpponent");
+});
+
+
 
 /*-------GAME RULES + FUNCTIONS --------
 ok we start the game , we need the "ai to select his choice secretly" 
@@ -18,7 +38,7 @@ scores to be included✔️
 "animation" of sad ai opponent and new game button ?
 ------------------------------------------------
 find a way to provide a score incremental to score board
-impliment without breaking,✔️
+impliment without breaking,
 change "ai to be looking at player choice 
 and then react accordingly (red shirt lose, spock win)
 
