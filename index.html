@@ -94,7 +94,7 @@
                                 Menu
                             </button>
                         </div>
-                        <div class="col-12 col-md-6 text-center">
+                        <div id="score-col" class="col-12 col-md-6 text-center">
                             <h2 id="Score-display" class="display-4 mb-3">Score</h2>
                             <p><span id="player-name">Player</span><span id="player-score">0</span></p>
                             <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
@@ -139,7 +139,7 @@
                                 Menu
                             </button>
                         </div>
-                        <div class="col-12 col-md-6 text-center">
+                        <div id="score-col" class="col-12 col-md-6 text-center">
                             <h2 id="Score-display" class="display-4 mb-3">Score</h2>
                             <p><span id="player-name">Player</span><span id="player-score">0</span></p>
                             <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
@@ -176,46 +176,46 @@
                 <div class="container">
                     <div class="col-12 my-4 row mb-4">
                         <div id="game-console" class="row justify-content-evenly align-items-start my-4">
-                        <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
-                            <button id="rules-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#rulesModal">
-                                How to Play
-                            </button>
-                            <button id="menu-btn" class="btn btn-secondary" onclick="location.href='index.html'">
-                                Menu
-                            </button>
-                        </div>
-                        <div class="col-12 col-md-6 text-center">
-                            <h2 id="Score-display" class="display-4 mb-3">Score</h2>
-                            <p><span id="player-name">Player</span><span id="player-score">0</span></p>
-                            <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
-                        </div>
-                   
-                    </div>
-                </div>
+                            <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
+                                <button id="rules-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#rulesModal">
+                                    How to Play
+                                </button>
+                                <button id="menu-btn" class="btn btn-secondary" onclick="location.href='index.html'">
+                                    Menu
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 text-center">
+                                <h2 id="Score-display" class="display-4 mb-3">Score</h2>
+                                <p><span id="player-name">Player</span><span id="player-score">0</span></p>
+                                <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                            </div>
 
-                <div class="row">
-                    <div id="Play-Avatar-choose" class="col-4 px-0">
-                        <img id="P-Avatar-choose" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
-                            class="img-fluid">
+                        </div>
                     </div>
 
-                    <div id="canvascon-choose" class="col-4 text-center mt-5">
-                        <canvas id="gameCanvas-choose"></canvas>
-                        <p id="message-el-choose">Select your opponent and play!</p>
-                        <div class="game-buttons mt-3 justify-content-center d-flex">
-                            <button class="select-button" id="rock-choose">🧱</button>
-                            <button class="select-button" id="paper-choose">📜</button>
-                            <button class="select-button" id="scissors-choose">✂️</button>
-                            <button class="select-button" id="lizard-choose">🦎</button>
-                            <button class="select-button" id="spock-choose">🖖</button>
+                    <div class="row">
+                        <div id="Play-Avatar-choose" class="col-4 px-0">
+                            <img id="P-Avatar-choose" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
+                                class="img-fluid">
+                        </div>
+
+                        <div id="canvascon-choose" class="col-4 text-center mt-5">
+                            <canvas id="gameCanvas-choose"></canvas>
+                            <p id="message-el-choose">Select your opponent and play!</p>
+                            <div class="game-buttons mt-3 justify-content-center d-flex">
+                                <button class="select-button" id="rock-choose">🧱</button>
+                                <button class="select-button" id="paper-choose">📜</button>
+                                <button class="select-button" id="scissors-choose">✂️</button>
+                                <button class="select-button" id="lizard-choose">🦎</button>
+                                <button class="select-button" id="spock-choose">🖖</button>
+                            </div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <img id="Opponent-Avatar" src="assets/images/char-spok.png" alt="Opponent Avatar"
+                                class="img-fluid">
                         </div>
                     </div>
-                    <div class="col-4 text-center">
-                        <img id="Opponent-Avatar" src="assets/images/char-spok.png" alt="Opponent Avatar"
-                            class="img-fluid">
-                    </div>
-                </div>
             </section>
         </div>
     </main>
