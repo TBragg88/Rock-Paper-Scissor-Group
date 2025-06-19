@@ -365,13 +365,14 @@ h1 {
         gap: 12px;
         justify-content: center;
     }
-}
 
-ul {
+    ul {
     list-style-type: none;
     }
 
 }
+
+
 
 /*Media Query: Footer styles for small devices */
 
