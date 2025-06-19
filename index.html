@@ -22,11 +22,17 @@
     <!-- CSS Stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Rock, Paper, Scissors, Lizard, Spock</h1>
+        <h1>Challenge of the Vulcan Mind</h1>
     </header>
 
     <main>
@@ -52,7 +58,7 @@
             <section>
                 <div class="container">
                     <div class="col-12 my-4 row mb-4">
-                        <header class="d-flex justify-content-center">
+                        <header id="game-header" class="d-flex justify-content-center">
                             <div class="row">
                                 <button class="btn btn-primary mb-3 col">How to Play</button>
                                 <h2 class="col mb-3">Score</h2>
@@ -74,18 +80,16 @@
                                 class="img-fluid">
                         </div>
 
-                        <div id="btn-col" class="col-1 px-0 pt-5">
-                            <div class="game-buttons">
+                        <div id="canvascon" class="col-4 text-center mt-5">
+                            <canvas id="gameCanvas"></canvas>
+                            <p id="message-el">choose your weapon</p>
+                            <div class="game-buttons mt-3 justify-content-center d-flex">
                                 <button class="select-button" id="rock">🧱</button>
                                 <button class="select-button" id="paper">📜</button>
                                 <button class="select-button" id="scissors">✂️</button>
                                 <button class="select-button" id="lizard">🦎</button>
                                 <button class="select-button" id="spock">🖖</button>
                             </div>
-                        </div>
-                        <div id="canvascon" class="col-3 text-center mt-5">
-                            <canvas id="gameCanvas"></canvas>
-                            <p id="message-el">choose your weapon</p>
                         </div>
                         <div class="col-4 text-center">
                             <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
@@ -98,35 +102,26 @@
 
     </main>
 
-
-
-
-
-
-
-
     <footer id="contact" class="custom-footer text-lg-start">
         <div class="container-fluid text-highlight mt-4">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center p-3">
-                    <p class="mb-4">Our social media:</p>
-                    <div>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                            aria-label="Visit our Facebook page (opens in a new tab)"
-                            class="btn btn-outline-custom btn-floating m-1" role="button"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener"
-                            aria-label="Visit our X page (opens in a new tab)"
-                            class="btn btn-outline-custom btn-floating m-1" role="button"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener"
-                            aria-label="Visit our Instagram page (opens in a new tab)"
-                            class="btn btn-outline-custom btn-floating m-1" role="button"><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-12 text-center p-3">
+            <div class="footer-flex">
+                <div class="footer-copyright">
                     <p class="mb-0">&copy; 2025. All rights reserved.</p>
+                </div>
+                <div class="footer-social d-flex align-items-center">
+                    <span class="me-2">Our social media:</span>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)"
+                        class="btn btn-outline-custom btn-floating m-1" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"
+                        aria-label="Visit our X page (opens in a new tab)"
+                        class="btn btn-outline-custom btn-floating m-1" role="button"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (opens in a new tab)"
+                        class="btn btn-outline-custom btn-floating m-1" role="button"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
