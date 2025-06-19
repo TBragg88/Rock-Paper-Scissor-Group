@@ -209,6 +209,24 @@ h1 {
     gap: 1rem;
     margin-top: 1rem;
 }
+/* =========================
+   gamescreen stylies
+   ========================= */
+#game-console {
+  background-color: rgba(0, 0, 0, 0.85); /* deep space black w/ transparency */
+  border: 2px solid #00ffff; /* glowing teal edge */
+  border-radius: 12px;
+  box-shadow:
+    0 0 8px #00ffffaa,
+    0 0 24px #00ffff33,
+    inset 0 0 4px #00ffff55;
+  padding: 1rem 2rem;
+  max-width: 600px;
+  margin: auto;
+  transition: transform 0.3s ease;
+  transform: translateY(-15px); /* gives it a floaty offset */
+}
+
 
 /* =========================
    Footer
@@ -251,14 +269,16 @@ h1 {
 /* =========================
    Game Canvas & Select Buttons
    ========================= */
-#gameScreen .select-button {
-    margin: 0;
-    padding: 0;
+#gameScreen .select-button,
+#campaign .select-button,
+#chooseOpponent .select-button {
     color: #fff;
-    border: #fff 2px solid;
+    border: 2px solid #fff;
     border-radius: 50%;
     height: 50px;
     width: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 #gameCanvas {
