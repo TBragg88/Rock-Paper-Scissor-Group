@@ -1,3 +1,6 @@
+
+
+
 body {
     margin: 0;
     background: #180518;
@@ -31,12 +34,6 @@ main {
     width: 120px;
     height: 120px;
     object-fit: contain;
-}
-
-html,
-body {
-    height: 100%;
-    margin: 0;
 }
 
 .wrapper {
