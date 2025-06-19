@@ -113,3 +113,19 @@ These **stretch goals** push the project beyond expectations, making it deeply i
 "You played Spock? Fascinating. A statistically sound decision. And yet, we find ourselves at an impasse—Spock cannot defeat Spock. A true test of logic."
 
 ---
+
+
+Planning Day 2:
+
+gameboard: shift buttons and canvas: frame layout, header footer. translucent against a starry background* 
+
+
+game difficulties: change red shirt to always winning diff, kirk being normal game and spock being impossible to win only drawn lose. 
+
+
+star trek "space" colours: blacks blues navy colours.  like star print background, dark blues/greys bright highlights as "officer yellow" engineer "blue" 
+fonts Orbitron, mychroma, Roboto 
+
+
+
+
