@@ -11,17 +11,6 @@ function showScreen(screenId) {
   const active = document.getElementById(screenId);
   if (active) active.style.display = "block";
 }
-document.getElementById("startButton").addEventListener("click", () => {
-  showScreen("gameScreen");
-});
-
-document.getElementById("bossRush").addEventListener("click", () => {
-  showScreen("campaign");
-});
-
-document.getElementById("chooseOpponet").addEventListener("click", () => {
-  showScreen("chooseOpponent");
-});
 
 
 
@@ -96,11 +85,40 @@ let winner = function (playerAction, aiChoice) {
 };
 
 // --------buttons and winner function -----------
-document
-    .querySelector(".game-buttons")
-    .addEventListener("click", function (event) {
-        const playerAction = event.target.id;
-        const aiChoice = aiAction();
-        winner(playerAction, aiChoice);
-    });
+// Standard Mode
+document.addEventListener("DOMContentLoaded", () => {
+  // Page navigation
+  document.getElementById("startButton")?.addEventListener("click", () => {
+    showScreen("gameScreen");
+  });
 
+  document.getElementById("bossRush")?.addEventListener("click", () => {
+    showScreen("campaign");
+  });
+
+  document.getElementById("chooseOpponet")?.addEventListener("click", () => {
+    showScreen("chooseOpponent");
+  });
+
+  // Game input buttons: split per screen
+  document.querySelectorAll(".game-buttons-standard .select-button").forEach(button => {
+    button.addEventListener("click", () => {
+      const aiChoice = aiAction();
+      winner(button.id, aiChoice);
+    });
+  });
+
+  document.querySelectorAll(".game-buttons-campaign .select-button").forEach(button => {
+    button.addEventListener("click", () => {
+      const aiChoice = campaignAiAction(); // Or reuse aiAction()
+      winner(button.id, aiChoice);
+    });
+  });
+
+  document.querySelectorAll(".game-buttons-choose .select-button").forEach(button => {
+    button.addEventListener("click", () => {
+      const aiChoice = customAiAction(); // Or reuse aiAction()
+      winner(button.id, aiChoice);
+    });
+  });
+});

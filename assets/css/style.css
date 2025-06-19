@@ -13,7 +13,7 @@
     --scorehighlight1: #7b4a85;
     --scorebackground2: #d47827;
     --scorehighlight2: #fda71d;
-    --scoretextcolor: #000
+    --scoretextcolor: #000;
 }
 
 /* =========================
@@ -213,23 +213,26 @@ h1 {
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
-    
 }
 /* =========================
    gamescreen stylies
    ========================= */
 #game-console {
-  background-color: rgba(0, 0, 0, 0.85); /* deep space black w/ transparency */
-  border: 2px solid yellow; /* glowing teal edge */
-  border-radius: 12px;
-  
-  padding: 1rem 2rem;
-  max-width: 600px;
-  margin: auto;
-  
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.85
+    ); /* deep space black w/ transparency */
+    border: 2px solid yellow; /* glowing teal edge */
+    border-radius: 12px;
+
+    padding: 1rem 2rem;
+    max-width: 600px;
+    margin: auto;
 }
 main .btn,
-.menu-btn{
+.menu-btn {
     color: var(--scoretextcolor);
     background-color: var(--scorebackground2);
     border-radius: 20px 20px 0 0;
@@ -240,45 +243,48 @@ main .btn,
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-main .menu-btn{
+main .menu-btn {
     border-radius: 0 0 20px 20px;
-    margin-top:0;
+    margin-top: 0;
 }
-main .Score-display{
+main .Score-display {
     color: var(--scoretextcolor);
     background-color: var(--scorehighlight2);
-   display: inline-block;
-  min-width: 200px; /* or however wide you want */
-  text-align: center;
+    display: inline-block;
+    min-width: 200px; /* or however wide you want */
+    text-align: center;
     border-radius: 50px;
     margin-bottom: 1rem;
 }
-main #player-name{
-background-color: var(--scorebackground1);
+main #player-name {
+    background-color: var(--scorebackground1);
     color: #fff;
     border-radius: 20px 0 0 20px;
     padding: 0.5rem 1.9rem;
-    margin-left:1em;
-
+    margin-left: 1em;
 }
-main #player-score{
+main #player-score {
     width: 50px;
     background-color: var(--scorebackground1);
     color: #fff;
     border-radius: 0 20px 20px 0;
     padding: 0.5rem 1rem;
-    margin-left:1em;
+    margin-left: 1em;
 }
-main #computer-name{background-color: var(--scorebackground1);
+main #computer-name {
+    background-color: var(--scorebackground1);
     color: #fff;
     border-radius: 20px 0 0 20px;
     padding: 0.5rem 1rem;
-    margin-left:1em;}
-main #computer-score{ background-color: var(--scorebackground1);
+    margin-left: 1em;
+}
+main #computer-score {
+    background-color: var(--scorebackground1);
     color: #fff;
     border-radius: 0 20px 20px 0;
     padding: 0.5rem 1rem;
-    margin-left:1em;}
+    margin-left: 1em;
+}
 
 /* =========================
    Footer
@@ -396,14 +402,12 @@ ul {
         padding: 10px 0;
     }
     main .btn,
-.menu-btn{
+    .menu-btn {
         width: 100%;
         padding: 0.5rem 1rem;
         font-size: 1.2rem;
     }
-
 }
-
 
 /* --- Large Devices --- */
 @media screen and (min-width: 992px) {
@@ -424,12 +428,12 @@ ul {
         padding-top: 10px;
     }
 }
-main .Score-display{
-    font-size: 35px
-    }
-    main #score-col{
-        margin-top: 1rem;
-    }
+main .Score-display {
+    font-size: 35px;
+}
+main #score-col {
+    margin-top: 1rem;
+}
 
 /* --- Extra Large Devices --- */
 @media screen and (min-width: 1200px) {
@@ -442,11 +446,11 @@ main .Score-display{
         font-size: 2.5rem;
         padding-top: 10px;
     }
-#gameScreen,
-#campaign,
-#chooseOpponent {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-}
+    #gameScreen,
+    #campaign,
+    #chooseOpponent {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
 }
