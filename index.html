@@ -84,20 +84,21 @@
         <div id="gameScreen" style="display: none;">
             <section>
                 <div class="container">
-                    <div id="game-console" class="row justify-content-center align-items-center my-4">
-                        <div class="col-md-4 text-start text-md-end mb-3">
-                            <button id="rulesBtn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    <div id="game-console" class="row justify-content-evenly align-items-start my-4">
+                        <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
+                            <button id="rules-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#rulesModal">
                                 How to Play
                             </button>
+                            <button id="menu-btn" class="btn btn-secondary" onclick="location.href='index.html'">
+                                Menu
+                            </button>
                         </div>
-                        <div class="col-md-4 text-center mb-3">
-                            <h2 class="display-3">Score</h2>
-                            <p class="mb-0">Player: <span id="player-score">0</span></p>
-                            <p>Computer: <span id="computer-score">0</span></p>
+                        <div class="col-12 col-md-6 text-center">
+                            <h2 id="Score-display" class="display-4 mb-3">Score</h2>
+                            <p><span id="player-name">Player</span><span id="player-score">0</span></p>
+                            <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
                         </div>
-                        <div class="col-md-4"></div>
-
                     </div>
                 </div>
 
@@ -128,20 +129,21 @@
         <div id="campaign" style="display: none;">
             <section>
                 <div class="container">
-                    <div id="game-console" class="row justify-content-center align-items-center my-4">
-                        <div class="col-md-4 text-start text-md-end mb-3">
-                            <button id="rulesBtn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    <div id="game-console" class="row justify-content-evenly align-items-start my-4">
+                        <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
+                            <button id="rules-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
                                 data-bs-target="#rulesModal">
                                 How to Play
                             </button>
+                            <button id="menu-btn" class="btn btn-secondary" onclick="location.href='index.html'">
+                                Menu
+                            </button>
                         </div>
-                        <div class="col-md-4 text-center mb-3">
-                            <h2 class="display-3">Score</h2>
-                            <p class="mb-0">Player: <span id="player-score">0</span></p>
-                            <p>Computer: <span id="computer-score">0</span></p>
+                        <div class="col-12 col-md-6 text-center">
+                            <h2 id="Score-display" class="display-4 mb-3">Score</h2>
+                            <p><span id="player-name">Player</span><span id="player-score">0</span></p>
+                            <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
                         </div>
-                        <div class="col-md-4"></div>
-
                     </div>
                 </div>
 
@@ -173,25 +175,22 @@
             <section>
                 <div class="container">
                     <div class="col-12 my-4 row mb-4">
-                        <header id="choose-header" class="d-flex justify-content-center">
-                            <div class="row">
-                                <button id="rulesBtn-choose" type="button" class="btn btn-primary mb-3 col"
-                                    data-bs-toggle="modal" data-bs-target="#rulesModal">How to Play</button>
-                                <div></div>
-                                <h2 class="col mb-3">Choose Your Opponent</h2>
-                                <p>Player: <span id="player-score-choose">0</span></p>
-                                <p>Opponent: <span id="opponent-score">0</span></p>
-                                <div class="d-flex flex-column align-items-center col">
-                                    <label for="opponent-select" class="mb-2">Opponent</label>
-                                    <select class="form-select w-auto text-center" id="opponent-select">
-                                        <option value="spock">Spock</option>
-                                        <option value="kirk">Kirk</option>
-                                        <option value="redshirt">Red Shirt</option>
-                                        <option value="boss">Boss</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </header>
+                        <div id="game-console" class="row justify-content-evenly align-items-start my-4">
+                        <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
+                            <button id="rules-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#rulesModal">
+                                How to Play
+                            </button>
+                            <button id="menu-btn" class="btn btn-secondary" onclick="location.href='index.html'">
+                                Menu
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-6 text-center">
+                            <h2 id="Score-display" class="display-4 mb-3">Score</h2>
+                            <p><span id="player-name">Player</span><span id="player-score">0</span></p>
+                            <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                        </div>
+                   
                     </div>
                 </div>
 
