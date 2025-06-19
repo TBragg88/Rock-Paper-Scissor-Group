@@ -22,7 +22,8 @@ body {
 
 body {
     margin: 0;
-    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat center center fixed;
+    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat
+        center center fixed;
     background-size: cover;
     color: #fff;
     height: 100%;
@@ -50,7 +51,7 @@ main {
 }
 
 h1 {
-    color: var(--textcolor)
+    color: var(--textcolor);
 }
 
 .center-container {
@@ -283,7 +284,6 @@ h1 {
 
 /* Media Query: Small phones (320px and up) */
 @media screen and (min-width: 320px) {
-
     .header {
         width: 100%;
     }
@@ -332,7 +332,6 @@ h1 {
 
 /* Media Query: M/L phones (375px and up) */
 @media screen and (min-width: 375px) {
-
     .center-container,
     .wrapper,
     .container {
@@ -366,6 +365,11 @@ h1 {
         gap: 12px;
         justify-content: center;
     }
+}
+
+ul {
+    list-style-type: none;
+    }
 
 }
 
@@ -396,12 +400,10 @@ h1 {
 
 /* Media Query: Tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-
     .center-container,
     .wrapper,
     .container {
