@@ -128,6 +128,50 @@ body {
     font-size: 0.9rem;
 }
 
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer-social .btn {
+    margin-right: 0;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 767px) {
+    .footer-flex {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    .footer-social,
+    .footer-copyright {
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100%;
+        text-align: center !important;
+    }
+    .footer-social .text-end {
+        text-align: center !important;
+    }
+}
+
 /* -----Game Canvas-----for size */
 #gameScreen .select-button {
     margin: 0;
