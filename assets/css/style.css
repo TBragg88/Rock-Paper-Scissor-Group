@@ -5,14 +5,14 @@ body {
 }
 
 :root {
-    #b35737;
+    /* #b35737; */
     --borgred: #9d1823;
     --textcolor: #cd9c30;
-    #d9c4a9;
+    /* #d9c4a9; */
     --buttonhover: #6ca3bf;
     --buttoncolor: #4762a0;
-    #9d3d50;
-    #326761;
+    /* #9d3d50;
+    #326761; */
     --buttoncolor2: #2a3768;
     --spaceblue:#253b3e;
     --bordercolor: #9e7336;

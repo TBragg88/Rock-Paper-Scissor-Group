@@ -57,15 +57,21 @@
 
         <div id="gameScreen" style="display: none;">
             <section>
-                <div class="container">
-                    <div class="col-12 my-4 row mb-4">
-                        <header id="game-header" class="d-flex justify-content-center">
-                            <div class="row">
-                                <button class="btn btn-primary mb-3 col">How to Play</button>
-                                <h2 class="col mb-3">Score</h2>
-                                <div class="d-flex flex-column align-items-center col">
-                                    <label for="difficulty" class="mb-2">Difficulty</label>
-                                    <select class="form-select w-auto text-center" id="difficulty">
+                <div class="container justify-content-center">
+                    <div>
+                        <header id="game-header" class="container my-4">
+                            <div class="row justify-content-center text-center align-items-center">
+                                <div class="col-md-3 mb-3">
+                                    <button class="btn btn-primary w-100">How to Play</button>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <h2>Score</h2>
+                                    <p>Player: <span id="player-score">0</span></p>
+                                    <p>Computer: <span id="computer-score">0</span></p>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="difficulty" class="form-label">Difficulty</label>
+                                    <select class="form-select text-center" id="difficulty">
                                         <option value="R-shirt">Red Shirt</option>
                                         <option value="Kirk">Kirk</option>
                                         <option value="Spock">Spock</option>
@@ -74,30 +80,31 @@
                             </div>
                         </header>
                     </div>
+                </div>
 
-                    <div class="row">
-                        <div id="Play-Avatar" class="col-4 px-0">
-                            <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
-                                class="img-fluid">
-                        </div>
+                <div class="row">
+                    <div id="Play-Avatar" class="col-4 px-0">
+                        <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
+                            class="img-fluid">
+                    </div>
 
-                        <div id="canvascon" class="col-4 text-center mt-5">
-                            <canvas id="gameCanvas"></canvas>
-                            <p id="message-el">choose your weapon</p>
-                            <div class="game-buttons mt-3 justify-content-center d-flex">
-                                <button class="select-button" id="rock">🧱</button>
-                                <button class="select-button" id="paper">📜</button>
-                                <button class="select-button" id="scissors">✂️</button>
-                                <button class="select-button" id="lizard">🦎</button>
-                                <button class="select-button" id="spock">🖖</button>
-                            </div>
-                        </div>
-                        <div class="col-4 text-center">
-                            <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
+                    <div id="canvascon" class="col-4 text-center mt-5">
+                        <canvas id="gameCanvas"></canvas>
+                        <p id="message-el">choose your weapon</p>
+                        <div class="game-buttons mt-3 justify-content-center d-flex">
+                            <button class="select-button" id="rock">🧱</button>
+                            <button class="select-button" id="paper">📜</button>
+                            <button class="select-button" id="scissors">✂️</button>
+                            <button class="select-button" id="lizard">🦎</button>
+                            <button class="select-button" id="spock">🖖</button>
                         </div>
                     </div>
+                    <div class="col-4 text-center">
+                        <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
+                    </div>
                 </div>
-            </section>
+        </div>
+        </section>
         </div>
 
 
