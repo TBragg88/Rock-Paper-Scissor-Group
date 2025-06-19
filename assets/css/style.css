@@ -5,22 +5,23 @@ body {
 }
 
 :root {
-    #b35737;
+    /* #b35737; */
     --borgred: #9d1823;
     --textcolor: #cd9c30;
-    #d9c4a9;
+    /* #d9c4a9; */
     --buttonhover: #6ca3bf;
     --buttoncolor: #4762a0;
-    #9d3d50;
-    #326761;
+    /* #9d3d50; */
+    /* #326761; */
     --buttoncolor2: #2a3768;
-    --spaceblue:#253b3e;
+    --spaceblue: #253b3e;
     --bordercolor: #9e7336;
 }
 
 body {
     margin: 0;
-    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat center center fixed;
+    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat
+        center center fixed;
     background-size: cover;
     color: #fff;
     height: 100%;
@@ -47,7 +48,7 @@ main {
 }
 
 h1 {
-    color: var(--textcolor)
+    color: var(--textcolor);
 }
 
 .center-container {
@@ -205,7 +206,6 @@ h1 {
 
 /* Media Query: Small phones (320px and up) */
 @media screen and (min-width: 320px) {
-
     .header {
         width: 100%;
     }
@@ -242,13 +242,10 @@ h1 {
         gap: 12px;
         justify-content: center;
     }
-    
-
 }
 
 /* Media Query: M/L phones (375px and up) */
 @media screen and (min-width: 375px) {
-
     .center-container,
     .wrapper,
     .container {
@@ -264,7 +261,7 @@ h1 {
     .side-image {
         margin-bottom: 15px;
         margin-top: 15px;
-    }    
+    }
 
     .menu-buttons {
         display: flex;
@@ -286,17 +283,18 @@ h1 {
         gap: 12px;
         justify-content: center;
     }
-    
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* Media Query: Tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-
     .center-container,
     .wrapper,
     .container {
@@ -308,10 +306,8 @@ h1 {
         justify-content: space-between;
         flex-wrap: wrap;
     }
-
 }
 
 /* Extra large devicese (large laptops and desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
-
 }
