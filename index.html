@@ -84,24 +84,25 @@
         <div id="gameScreen" style="display: none;">
             <section>
                 <div class="container">
-                    <div id="game-console" class="row justify-content-evenly align-items-start my-4">
-                        <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
-                            <button id="rules-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#rulesModal">
-                                How to Play
-                            </button>
-                            <button id="menu-btn" class="btn btn-secondary" onclick="location.href='index.html'">
-                                Menu
-                            </button>
-                        </div>
-                        <div id="score-col" class="col-12 col-md-6 text-center">
-                            <h2 id="Score-display" class="display-4 mb-3">Score</h2>
-                            <p><span id="player-name">Player</span><span id="player-score">0</span></p>
-                            <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                    <div class="col-12 my-4 row mb-4">
+                        <div id="game-console" class="row justify-content-evenly align-items-start my-4">
+                            <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
+                                <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#rulesModal">
+                                    How to Play
+                                </button>
+                                <button class="menu-btn btn btn-secondary" onclick="location.href='index.html'">
+                                    Menu
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 text-center">
+                                <h2 class="Score-display display-4 mb-3">Score</h2>
+                                <p><span id="player-name">Player</span><span id="player-score">0</span></p>
+                                <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div id="Play-Avatar" class="col-4 px-0">
                         <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
@@ -128,25 +129,26 @@
 
         <div id="campaign" style="display: none;">
             <section>
-                <div class="container">
-                    <div id="game-console" class="row justify-content-evenly align-items-start my-4">
-                        <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
-                            <button id="rules-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#rulesModal">
-                                How to Play
-                            </button>
-                            <button id="menu-btn" class="btn btn-secondary" onclick="location.href='index.html'">
-                                Menu
-                            </button>
-                        </div>
-                        <div id="score-col" class="col-12 col-md-6 text-center">
-                            <h2 id="Score-display" class="display-4 mb-3">Score</h2>
-                            <p><span id="player-name">Player</span><span id="player-score">0</span></p>
-                            <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                <div class="container col-12">
+                    <div class="col-12 my-4 row mb-4">
+                        <div id="game-console" class="row justify-content-evenly align-items-start my-4">
+                            <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
+                                <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#rulesModal">
+                                    How to Play
+                                </button>
+                                <button class="menu-btn btn btn-secondary" onclick="location.href='index.html'">
+                                    Menu
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 text-center">
+                                <h2 class="Score-display display-4 mb-3">Score</h2>
+                                <p><span id="player-name">Player</span><span id="player-score">0</span></p>
+                                <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div id="Play-Avatar" class="col-4 px-0">
                         <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
@@ -154,15 +156,15 @@
                     </div>
 
                     <div id="canvascon" class="col-4 text-center mt-5">
-                        <canvas id="gameCanvas"></canvas>
-                        <p id="message-el">choose your weapon</p>
-                        <div class="game-buttons mt-3 justify-content-center d-flex">
+                        <div class="game-buttons mb-3 justify-content-center d-flex">
                             <button class="select-button" id="rock">🧱</button>
                             <button class="select-button" id="paper">📜</button>
                             <button class="select-button" id="scissors">✂️</button>
                             <button class="select-button" id="lizard">🦎</button>
                             <button class="select-button" id="spock">🖖</button>
                         </div>
+                        <p id="message-el">choose your weapon</p>
+                        <canvas id="gameCanvas"></canvas>
                     </div>
                     <div class="col-4 text-center">
                         <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
@@ -177,20 +179,19 @@
                     <div class="col-12 my-4 row mb-4">
                         <div id="game-console" class="row justify-content-evenly align-items-start my-4">
                             <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
-                                <button id="rules-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#rulesModal">
                                     How to Play
                                 </button>
-                                <button id="menu-btn" class="btn btn-secondary" onclick="location.href='index.html'">
+                                <button class="menu-btn btn btn-secondary" onclick="location.href='index.html'">
                                     Menu
                                 </button>
                             </div>
                             <div class="col-12 col-md-6 text-center">
-                                <h2 id="Score-display" class="display-4 mb-3">Score</h2>
+                                <h2 class="Score-display display-4 mb-3">Score</h2>
                                 <p><span id="player-name">Player</span><span id="player-score">0</span></p>
                                 <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
                             </div>
-
                         </div>
                     </div>
 

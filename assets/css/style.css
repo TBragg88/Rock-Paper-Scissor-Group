@@ -229,7 +229,7 @@ h1 {
   
 }
 main .btn,
-#menu-btn{
+.menu-btn{
     color: var(--scoretextcolor);
     background-color: var(--scorebackground2);
     border-radius: 20px 20px 0 0;
@@ -240,18 +240,16 @@ main .btn,
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-#menu-btn{
+main .menu-btn{
     border-radius: 0 0 20px 20px;
     margin-top:0;
 }
-main #Score-display{
+main .Score-display{
     color: var(--scoretextcolor);
     background-color: var(--scorehighlight2);
    display: inline-block;
   min-width: 200px; /* or however wide you want */
   text-align: center;
-  
-    
     border-radius: 50px;
     margin-bottom: 1rem;
 }
@@ -398,7 +396,7 @@ ul {
         padding: 10px 0;
     }
     main .btn,
-#menu-btn{
+.menu-btn{
         width: 100%;
         padding: 0.5rem 1rem;
         font-size: 1.2rem;
@@ -426,11 +424,11 @@ ul {
         padding-top: 10px;
     }
 }
-main #Score-display{
+main .Score-display{
     font-size: 35px
     }
     main #score-col{
-        margin-top:1rem;
+        margin-top: 1rem;
     }
 
 /* --- Extra Large Devices --- */
@@ -444,4 +442,11 @@ main #Score-display{
         font-size: 2.5rem;
         padding-top: 10px;
     }
+#gameScreen,
+#campaign,
+#chooseOpponent {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
 }
