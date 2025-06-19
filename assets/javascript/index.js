@@ -40,7 +40,7 @@ let winner = function (playerAction, aiChoice) {
     }
     document.getElementById("message-el").textContent = message;
 };
-/
+
 // --------buttons and winner function -----------
 document
     .querySelector(".game-buttons")
