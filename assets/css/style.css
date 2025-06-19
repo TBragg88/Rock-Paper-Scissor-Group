@@ -8,7 +8,7 @@
     #9d3d50;
     #326761;
     --buttoncolor2: #2a3768;
-    #253b3e;
+    --spaceblue:#253b3e;
     --bordercolor: #9e7336;
 }
 
@@ -25,7 +25,7 @@ body {
 }
 
 header {
-    background: rgba(67, 50, 83, 0.85); /* 0.85 = 85% opaque */
+    background: rgba(37, 59, 62, 0.85); /* 0.85 = 85% opaque */
     text-align: center;
     padding: 0.5rem 0;
 }
@@ -123,7 +123,7 @@ body {
 /* Footer */
 
 .custom-footer {
-    background-color: rgba(67, 50, 83, 0.85); /* 0.85 = 85% opaque */
+    background-color: rgba(95, 48, 85, 0.85); /* 0.85 = 85% opaque */
     padding: 0.2rem 0.5rem;
     margin-top: auto;
     font-size: 0.9rem;
