@@ -64,7 +64,7 @@ let winner = function (playerAction, aiChoice) {
 
         if (winCon[playerAction].includes(aiChoice)) {
             message = `You win! ${playerAction} beats ${aiChoice}.`;
-            plgit e++;
+            playerScore++;
         } else {
             message = `You lose! ${aiChoice} beats ${playerAction}.`;
             aiScore++;
