@@ -1,18 +1,9 @@
 // ----- HTML HOOK UP'S ------------
-function showScreen(screenId) {
-  // Hide all screens
-  const screens = ["menuScreen", "gameScreen", "campaign", "chooseOpponent"];
-  screens.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.style.display = "none";
-  });
 
-  // Show the selected one
-  const active = document.getElementById(screenId);
-  if (active) active.style.display = "block";
-}
-
-
+document.getElementById("startButton").addEventListener("click", function () {
+    document.getElementById("menuScreen").style.display = "none";
+    document.getElementById("gameScreen").style.display = "block";
+});
 
 /*-------GAME RULES + FUNCTIONS --------
 ok we start the game , we need the "ai to select his choice secretly" 
@@ -85,40 +76,11 @@ let winner = function (playerAction, aiChoice) {
 };
 
 // --------buttons and winner function -----------
-// Standard Mode
-document.addEventListener("DOMContentLoaded", () => {
-  // Page navigation
-  document.getElementById("startButton")?.addEventListener("click", () => {
-    showScreen("gameScreen");
-  });
-
-  document.getElementById("bossRush")?.addEventListener("click", () => {
-    showScreen("campaign");
-  });
-
-  document.getElementById("chooseOpponet")?.addEventListener("click", () => {
-    showScreen("chooseOpponent");
-  });
-
-  // Game input buttons: split per screen
-  document.querySelectorAll(".game-buttons-standard .select-button").forEach(button => {
-    button.addEventListener("click", () => {
-      const aiChoice = aiAction();
-      winner(button.id, aiChoice);
+document
+    .querySelector(".game-buttons")
+    .addEventListener("click", function (event) {
+        const playerAction = event.target.id;
+        const aiChoice = aiAction();
+        winner(playerAction, aiChoice);
     });
-  });
 
-  document.querySelectorAll(".game-buttons-campaign .select-button").forEach(button => {
-    button.addEventListener("click", () => {
-      const aiChoice = campaignAiAction(); // Or reuse aiAction()
-      winner(button.id, aiChoice);
-    });
-  });
-
-  document.querySelectorAll(".game-buttons-choose .select-button").forEach(button => {
-    button.addEventListener("click", () => {
-      const aiChoice = customAiAction(); // Or reuse aiAction()
-      winner(button.id, aiChoice);
-    });
-  });
-});
