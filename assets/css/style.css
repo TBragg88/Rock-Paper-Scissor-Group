@@ -371,8 +371,6 @@ ul {
     list-style-type: none;
     }
 
-}
-
 /*Media Query: Footer styles for small devices */
 
 @media (max-width: 767px) {
