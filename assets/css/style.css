@@ -76,7 +76,7 @@ h1 {
     margin-top: 4rem;
 }
 .wrapper {
-    min-height: 100vh;
+    min-height: 67vh;
     flex-direction: column;
 }
 
@@ -84,9 +84,10 @@ h1 {
    Images
    ========================= */
 .side-image {
-    width: 120px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
+    z-index: -1;
 }
 
 /* =========================
@@ -395,7 +396,7 @@ ul {
     }
     .side-image {
         width: 100%;
-        max-width: 400px;
+        max-width: 100px;
         height: auto;
     }
     .play-btn,
@@ -422,7 +423,7 @@ ul {
         margin-top: 40px;
     }
     .side-image {
-        max-width: 650px;
+        max-width: 200px;
     }
     .play-btn,
     .sub-btn {
@@ -441,7 +442,7 @@ main #score-col {
 /* --- Extra Large Devices --- */
 @media screen and (min-width: 1200px) {
     .side-image {
-        max-width: 850px;
+        max-width: 300px;
     }
     .play-btn,
     .sub-btn {
