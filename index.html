@@ -173,15 +173,25 @@
                     <h6>How to play</h6>
                     <p>Each player secretly selects one of the five options</p>
                     <ul>
-                        <li>🧱Rock</li>
-                        <li>📜Paper</li>
-                        <li>✂️Scissors</li>
-                        <li>🦎Lizard</li>
-                        <li>🖖Spock</li>
+                        <li id="rock">🧱Rock</li>
+                        <div class="hide">Rock beats lizard & scissors</div><br>
+                        <li id="paper">📜Paper</li>
+                        <div class="hide">Paper beats rock & spock</div><br>
+                        <li id="scissors">✂️Scissors</li>
+                        <div class="hide">Scissors beats paper & lizard</div><br>
+                        <li id="lizard">🦎Lizard</li>
+                        <div class="hide">Lizard beats Spock & paper</div><br>
+                        <li id="spock">🖖Spock</li>
+                        <div class="hide">Spock beats scissors & rock</div>
                     </ul>
                     <img src="assets/images/RPSLS.webp" alt="Rock Paper Scissors Lizard Spock" class="img-fluid mb-3">
                     <p>Then, they reveal their choice simultaneously. The winner is decided based on the
                         following interactions:</p>
+                    <div class="text-center my-2">
+                        <a id="sheldon" href="https://youtu.be/_PUEoDYpUyQ" target="_blank" rel="noopener" class="text">
+                            Let Sheldon explain.
+                        </a>
+                    </div>
                     <ul>
                         <li><strong>Scissors cuts Paper:</strong> Scissors wins against Paper</li>
                         <li><strong>Paper covers Rock:</strong> Paper wins against Rock</li>

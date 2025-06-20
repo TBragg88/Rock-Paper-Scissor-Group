@@ -38,7 +38,7 @@
 
     <main>
         <img id="enterprise" class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
-        <div id="gameScreen" >
+        <div id="gameScreen">
             <section>
                 <div class="container col-12">
                     <div class="col-12 my-4 row mb-4">
@@ -84,6 +84,65 @@
             </section>
         </div>
     </main>
+
+    <div id="rulesModal" class="modal fade" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rulesModalLabel">How to Play</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <h6> Challenge of the Volcan Mind</h6>
+                    <p>
+                        Rock, Paper, Scissors, Lizard, Spock is an extended version of the classic game, designed to
+                        reduce ties. It was popularized by The Big Bang Theory, and here’s how it works:</p>
+                    <h6>How to play</h6>
+                    <p>Each player secretly selects one of the five options</p>
+                    <ul>
+                        <li id="rock">🧱Rock</li>
+                        <div class="hide">Rock beats lizard & scissors</div><br>
+                        <li id="paper">📜Paper</li>
+                        <div class="hide">Paper beats rock & spock</div><br>
+                        <li id="scissors">✂️Scissors</li>
+                        <div class="hide">Scissors beats paper & lizard</div><br>
+                        <li id="lizard">🦎Lizard</li>
+                        <div class="hide">Lizard beats Spock & paper</div><br>
+                        <li id="spock">🖖Spock</li>
+                        <div class="hide">Spock beats scissors & rock</div>
+                    </ul>
+                    <img src="assets/images/RPSLS.webp" alt="Rock Paper Scissors Lizard Spock" class="img-fluid mb-3">
+                    <p>Then, they reveal their choice simultaneously. The winner is decided based on the
+                        following interactions:</p>
+                    <div class="text-center my-2">
+                        <a id="sheldon" href="https://youtu.be/_PUEoDYpUyQ" target="_blank" rel="noopener" class="text"
+                            aria-label="Clip of Sheldon explaining the rules of Rock Paper Scissors Lizard Spock">
+                            Let Sheldon explain.
+                        </a>
+                    </div>
+                    <ul>
+                        <li><strong>Scissors cuts Paper:</strong> Scissors wins against Paper</li>
+                        <li><strong>Paper covers Rock:</strong> Paper wins against Rock</li>
+                        <li><strong>Rock crushes Lizard:</strong> Rock wins against Lizard</li>
+                        <li><strong>Lizard poisons Spock:</strong> Lizard wins against Spock</li>
+                        <li><strong>Spock smashes Scissors:</strong> Spock wins against Scissors</li>
+                        <li><strong>Scissors decapitates Lizard:</strong> Scissors wins against Lizard</li>
+                        <li><strong>Lizard eats Paper:</strong> Lizard wins against Paper.</li>
+                        <li><strong>Paper disproves Spock</strong> Paper wins against Spock</li>
+                        <li><strong>Spock vaporizes Rock:</strong> Spock wins against Rock</li>
+                        <li><strong>Rock crushes Scissors:</strong> Rock wins against Scissors</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <footer id="contact" class="custom-footer text-lg-start">
         <div class="container-fluid text-highlight mt-4">
@@ -142,13 +201,14 @@
     </div>
 
     <!-- Winner Modal -->
-    <div id="winnerModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:9999;">
-      <div style="background:#222; color:#fff; padding:2rem; border-radius:12px; text-align:center; min-width:250px;">
-        <h2 id="winnerMessage"></h2>
-        <button id="closeModalBtn">OK</button>
-      </div>
+    <div id="winnerModal"
+        style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:9999;">
+        <div style="background:#222; color:#fff; padding:2rem; border-radius:12px; text-align:center; min-width:250px;">
+            <h2 id="winnerMessage"></h2>
+            <button id="closeModalBtn">OK</button>
+        </div>
     </div>
-    
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
