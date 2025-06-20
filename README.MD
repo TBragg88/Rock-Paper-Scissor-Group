@@ -29,8 +29,8 @@ A Star Trek–themed Rock-Paper-Scissors game with multiple play modes, built wi
 ## Features
 
 - Classic Rock-Paper-Scissors gameplay
-- Campaign mode with progressive difficulty
-- Choose Opponent mode for multiplayer fun
+- Campaign mode with progressive difficulty *
+- Choose Opponent mode for multiplayer fun *
 - Responsive design (mobile-friendly)
 - Modal with game rules
 - Themed UI with Bootstrap and custom styles
@@ -97,12 +97,6 @@ A Star Trek–themed Rock-Paper-Scissors game with multiple play modes, built wi
 
 ---
 
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request.
-
----
-
 ## Credits
 
 - Star Trek and related marks are trademarks of CBS Studios Inc.
@@ -113,6 +107,7 @@ Elite Coders: Alex McAlpine, Jake Smith, Jo Wolfarth and Tom Bragg
 
 ### Deployment
 
+soon*
 
 ## License
 
