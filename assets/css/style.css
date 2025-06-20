@@ -21,7 +21,8 @@
    ========================= */
 
 body {
-    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat center center fixed;
+    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat
+        center center fixed;
     background-size: cover;
     color: #fff;
     display: flex;
@@ -140,11 +141,13 @@ h1 {
 }
 
 .play-btn-edge {
-    background: linear-gradient(to left,
-            hsl(227, 42%, 29%) 0%,
-            hsl(227, 42%, 29%) 8%,
-            hsl(227, 42%, 29%) 92%,
-            hsl(227, 42%, 29%) 100%);
+    background: linear-gradient(
+        to left,
+        hsl(227, 42%, 29%) 0%,
+        hsl(227, 42%, 29%) 8%,
+        hsl(227, 42%, 29%) 92%,
+        hsl(227, 42%, 29%) 100%
+    );
 }
 
 .play-btn-front {
@@ -195,11 +198,13 @@ h1 {
 }
 
 .sub-btn-edge {
-    background: linear-gradient(to left,
-            hsl(227, 42%, 20%) 0%,
-            hsl(227, 42%, 20%) 8%,
-            hsl(227, 42%, 20%) 92%,
-            hsl(227, 42%, 20%) 100%);
+    background: linear-gradient(
+        to left,
+        hsl(227, 42%, 20%) 0%,
+        hsl(227, 42%, 20%) 8%,
+        hsl(227, 42%, 20%) 92%,
+        hsl(227, 42%, 20%) 100%
+    );
 }
 
 .sub-buttons {
@@ -297,7 +302,7 @@ main #computer-score {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     align-items: center;
     justify-content: center;
     z-index: 9999;
@@ -397,13 +402,29 @@ ul {
     list-style-type: none;
 }
 
+/* Modal */
+
+.modal-header,
+.modal-footer {
+    background-color: #253b3e;
+}
+
+.modal-body {
+    font-family: roboto;
+}
+
+h5,
+h6 {
+    color: #cd9c30;
+    text-align: center;
+}
+
 /* =========================
     Responsive Design
    ========================= */
 
 /* --- Small Devices --- */
 @media (max-width: 767px) {
-
     body {
         max-width: 100%;
         max-height: 100%;
@@ -466,7 +487,6 @@ ul {
 
 /* --- Large Devices --- */
 @media screen and (min-width: 992px) {
-
     .center-container,
     .wrapper,
     .container {
@@ -486,7 +506,6 @@ ul {
         padding-top: 10px;
     }
 
-
     main .Score-display {
         font-size: 35px;
     }
@@ -494,7 +513,6 @@ ul {
     main #score-col {
         margin-top: 1rem;
     }
-
 }
 
 /* --- Extra Large Devices --- */
@@ -517,6 +535,4 @@ ul {
         margin: 0 auto;
         padding: 1rem;
     }
-
-
 }
