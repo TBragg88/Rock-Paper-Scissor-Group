@@ -68,7 +68,7 @@ const showWinnerModal = (message) => {
     document.getElementById("winnerModal").style.display = "flex";
 };
 
-// -------------------Leaderboard Rendering-------------------
+// -------------------Leaderboard -------------------
 onValue(leaderboardRef, (snapshot) => {
     const data = snapshot.val();
     console.log("Leaderboard updated:", data); // add this
