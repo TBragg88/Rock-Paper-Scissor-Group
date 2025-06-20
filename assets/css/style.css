@@ -223,8 +223,8 @@ h1 {
         0,
         0,
         0.85
-    ); /* deep space black w/ transparency */
-    border: 2px solid yellow; /* glowing teal edge */
+    ); 
+    border: 2px solid yellow;
     border-radius: 12px;
 
     padding: 1rem 2rem;
@@ -251,7 +251,7 @@ main .Score-display {
     color: var(--scoretextcolor);
     background-color: var(--scorehighlight2);
     display: inline-block;
-    min-width: 200px; /* or however wide you want */
+    min-width: 200px;
     text-align: center;
     border-radius: 50px;
     margin-bottom: 1rem;

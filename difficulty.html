@@ -22,22 +22,16 @@
     <!-- CSS Stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    
 </head>
 <!--Class set to make footer stay at bottom-->
 
-<body class="d-flex flex-column min-vh-100">
+<body id="choose-dif" class="d-flex flex-column min-vh-100">
     <header>
         <h1>Challenge of the Vulcan Mind</h1>
     </header>
 
     <main>
-
         <div id="menuScreen">
             <section>
                 <div id="console" class="center-container wrapper">
@@ -50,7 +44,7 @@
                                     Start Game
                                 </span>
                             </button>
-                            <button class="play-btn-pushable" onclick="location.href='campaign.html'" id="bossRush" role="button">
+                            <button class="play-btn-pushable" id="bossRush" role="button">
                                 <span class="play-btn-shadow"></span>
                                 <span class="play-btn-edge"></span>
                                 <span class="play-btn-front text">
@@ -192,7 +186,7 @@
 
 
     <!-- JavaScript -->
-    <script src="assets/javascript/index.js"></script>
+    <script src="assets/javascript/difficulty.js"></script>
 </body>
 
 </html>
