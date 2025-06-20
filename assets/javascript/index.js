@@ -25,7 +25,7 @@ and then react accordingly (red shirt lose, spock win)
 
 so global variables for player score and ai score✔️
 increment score based on winner function
-display scores in the message box
+display scores in the message box✔️
 add a reset button to reset scores and game state?
 maybe save high scores in local storage?
 */
@@ -67,7 +67,6 @@ let winner = function (playerAction, aiChoice) {
             aiScore++;
         }
     }
-
     document.getElementById("message-el").textContent = message;
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("computer-score").textContent = aiScore;
@@ -75,23 +74,13 @@ let winner = function (playerAction, aiChoice) {
     // Check for match winner
     if (playerScore === winTarget || aiScore === winTarget) {
         setTimeout(() => {
-            if (playerScore === winTarget) {
-                alert("Congratulations! You won the match!");
-            } else {
-                alert("The computer wins the match!");
-            }
-            resetGame();
+            const winnerText = playerScore === winTarget
+                ? "Congratulations! You won the match!"
+                : "The computer wins the match!";
+            showWinnerModal(winnerText);
         }, 100);
     }
 };
-
-function resetGame() {
-    playerScore = 0;
-    aiScore = 0;
-    document.getElementById("player-score").textContent = playerScore;
-    document.getElementById("computer-score").textContent = aiScore;
-    document.getElementById("message-el").textContent = "First to 3 wins! Start a new match.";
-}
 
 // --------buttons and winner function -----------
 document
@@ -101,4 +90,23 @@ document
         const aiChoice = aiAction();
         winner(playerAction, aiChoice);
     });
+
+// -------- Modal Logic --------
+function showWinnerModal(message) {
+    document.getElementById("winnerMessage").textContent = message;
+    document.getElementById("winnerModal").style.display = "flex";
+}
+
+document.getElementById("closeModalBtn").addEventListener("click", function () {
+    document.getElementById("winnerModal").style.display = "none";
+    resetGame();
+});
+
+function resetGame() {
+    playerScore = 0;
+    aiScore = 0;
+    document.getElementById("player-score").textContent = playerScore;
+    document.getElementById("computer-score").textContent = aiScore;
+    document.getElementById("message-el").textContent = "First to 3 wins! Start a new match.";
+}
 
