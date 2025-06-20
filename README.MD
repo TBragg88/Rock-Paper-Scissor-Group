@@ -2,6 +2,7 @@
 
 A Star Trek–themed Rock-Paper-Scissors game with multiple play modes, built with HTML, CSS (Bootstrap), and JavaScript.
 
+Please lord let this work
 ---
 
 ## Table of Contents
