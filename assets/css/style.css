@@ -87,11 +87,23 @@ h1 {
     z-index: -1;
 }
 
+.space {
+    z-index: -1;
+}
+
+#enterprise {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 20%;
+}
+
 /* =========================
    Console
    ========================= */
 #console {
-    background: black;
+    background: rgba(0, 0, 0, 0.85);
     border: 2px solid yellow;
     border-radius: 12px;
     padding: 1rem 2rem;
@@ -238,7 +250,7 @@ h1 {
 main .btn,
 .menu-btn {
     color: var(--scoretextcolor);
-    background-color: var(--scorebackground2);
+    background-color: var(--scorehighlight2);
     border-radius: 20px 20px 0 0;
     padding: 1.2rem 1.8rem;
     margin: 0.1rem;
@@ -377,7 +389,7 @@ main #computer-score {
 #gameScreen .select-button,
 #campaign .select-button,
 #chooseOpponent .select-button {
-    color: #fff;
+    color:var (var(--scorehighlight2));
     border: 2px solid #fff;
     border-radius: 50%;
     height: 50px;
@@ -386,13 +398,13 @@ main #computer-score {
     padding: 0;
 }
 
-#gameCanvas {
-    width: 200px;
-    height: 200px;
-    background-color: #000;
-    border: 2px solid #fff;
-    display: block;
-    margin: 0 auto;
+#buttonConsole {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid yellow;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    max-width: 600px;
+    margin: auto;
 }
 
 /* =========================
@@ -418,6 +430,38 @@ h6 {
     color: #cd9c30;
     text-align: center;
 }
+.hide {
+    display: none;
+}
+
+#rock:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
+
+#paper:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
+#scissors:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
+#lizard:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
+#spock:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
+
+#sheldon {
+    text-align: center;
+    color: var(--textcolor);
+}
+
+
 
 /* =========================
     Responsive Design
@@ -465,9 +509,9 @@ h6 {
     }
 
     .side-image {
-        width: 10%;
+        width: 100%;
         max-width: 100px;
-        height: auto;
+        height: 100%;
     }
 
     .play-btn,
@@ -495,9 +539,9 @@ h6 {
         margin-top: 40px;
     }
 
-    .side-image {
+    /* .side-image {
         max-width: 200px;
-    }
+    } */
 
     .play-btn,
     .sub-btn {
@@ -517,9 +561,9 @@ h6 {
 
 /* --- Extra Large Devices --- */
 @media screen and (min-width: 1200px) {
-    .side-image {
+    /* .side-image {
         max-width: 300px;
-    }
+    } */
 
     .play-btn,
     .sub-btn {

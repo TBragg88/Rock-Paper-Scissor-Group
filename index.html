@@ -37,7 +37,9 @@
     </header>
 
     <main>
-        <img id="enterprise" class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
+        <div id="enterprise" class="space">
+            <img id="chaos" class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
+        </div>
         <div id="menuScreen">
             <section>
                 <div class="center-container wrapper">
@@ -83,11 +85,12 @@
                 </div>
             </section>
         </div>
+        <!-- help -->
         <!---------------------------------------gamescreens------------------------------------------------>
         <div id="gameScreen" style="display: none;">
             <section>
-                <div class="container col-12">
-                    <div class="col-12 my-4 row mb-4">
+                <div class="container-fluid">
+                    <div class="row my-4 mb-4">
                         <div id="game-console" class="row justify-content-evenly align-items-start my-4">
                             <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
                                 <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
@@ -100,31 +103,30 @@
                             </div>
                             <div class="col-12 col-md-6 text-center">
                                 <h2 class="Score-display display-4 mt-3">Score</h2>
-                                <p><span id="player-name">Player</span><span id="player-score">0</span></p>
-                                <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                                <p><span id="player-name">Player</span> <span id="player-score">0</span></p>
+                                <p><span id="computer-name">Computer</span> <span id="computer-score">0</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div id="Play-Avatar" class="col-4 px-0">
+                <div class="row align-items-center">
+                    <div id="Play-Avatar" class="col-12 col-md-4 px-0 d-flex justify-content-center mb-3 mb-md-0">
                         <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
-                            class="img-fluid">
+                            class="img-fluid" style="max-width: 180px; width: 100%; height: auto;">
                     </div>
-
-                    <div id="canvascon" class="col-4 text-center">
-                        <div class="game-buttons mb-3 justify-content-center d-flex">
-                            <button class="select-button" id="rock">🧱</button>
-                            <button class="select-button" id="paper">📜</button>
-                            <button class="select-button" id="scissors">✂️</button>
-                            <button class="select-button" id="lizard">🦎</button>
-                            <button class="select-button" id="spock">🖖</button>
+                    <div id="buttonConsole" class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                        <p id="message-el">Choose your weapon</p>
+                        <div class="game-buttons mb-3 justify-content-center d-flex flex-wrap gap-2">
+                            <button class="select-button" id="rock" style="font-size:2rem;">🧱</button>
+                            <button class="select-button" id="paper" style="font-size:2rem;">📜</button>
+                            <button class="select-button" id="scissors" style="font-size:2rem;">✂️</button>
+                            <button class="select-button" id="lizard" style="font-size:2rem;">🦎</button>
+                            <button class="select-button" id="spock" style="font-size:2rem;">🖖</button>
                         </div>
-                        <p id="message-el">choose your weapon</p>
-                        <canvas id="gameCanvas"></canvas>
                     </div>
-                    <div class="col-4 text-center">
-                        <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
+                    <div class="col-12 col-md-4 text-center d-flex justify-content-center">
+                        <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid"
+                            style="max-width: 180px; width: 100%; height: auto;">
                     </div>
                 </div>
             </section>
@@ -174,15 +176,25 @@
                     <h6>How to play</h6>
                     <p>Each player secretly selects one of the five options</p>
                     <ul>
-                        <li>🧱Rock</li>
-                        <li>📜Paper</li>
-                        <li>✂️Scissors</li>
-                        <li>🦎Lizard</li>
-                        <li>🖖Spock</li>
+                        <li id="rock">🧱Rock</li>
+                        <div class="hide">Rock beats lizard & scissors</div><br>
+                        <li id="paper">📜Paper</li>
+                        <div class="hide">Paper beats rock & spock</div><br>
+                        <li id="scissors">✂️Scissors</li>
+                        <div class="hide">Scissors beats paper & lizard</div><br>
+                        <li id="lizard">🦎Lizard</li>
+                        <div class="hide">Lizard beats Spock & paper</div><br>
+                        <li id="spock">🖖Spock</li>
+                        <div class="hide">Spock beats scissors & rock</div>
                     </ul>
                     <img src="assets/images/RPSLS.webp" alt="Rock Paper Scissors Lizard Spock" class="img-fluid mb-3">
                     <p>Then, they reveal their choice simultaneously. The winner is decided based on the
                         following interactions:</p>
+                    <div class="text-center my-2">
+                        <a id="sheldon" href="https://youtu.be/_PUEoDYpUyQ" target="_blank" rel="noopener" class="text">
+                            Let Sheldon explain.
+                        </a>
+                    </div>
                     <ul>
                         <li><strong>Scissors cuts Paper:</strong> Scissors wins against Paper</li>
                         <li><strong>Paper covers Rock:</strong> Paper wins against Rock</li>
