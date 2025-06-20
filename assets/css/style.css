@@ -393,6 +393,23 @@ ul {
     list-style-type: none;
 }
 
+/* Modal */
+
+.modal-header,
+.modal-footer {
+    background-color: #253b3e;
+}
+
+.modal-body {
+    font-family: roboto;
+}
+
+h5,
+h6 {
+    color: #cd9c30;
+    text-align: center;
+}
+
 /* =========================
    Responsive Design
    ========================= */
