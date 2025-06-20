@@ -222,19 +222,15 @@ h1 {
    gamescreen stylies
    ========================= */
 #game-console {
-    background-color: rgba(
-        0,
-        0,
-        0,
-        0.85
-    ); /* deep space black w/ transparency */
-    border: 2px solid yellow; /* glowing teal edge */
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid yellow;
     border-radius: 12px;
 
     padding: 1rem 2rem;
     max-width: 600px;
     margin: auto;
 }
+#closeModalBtn,
 main .btn,
 .menu-btn {
     color: var(--scoretextcolor);
@@ -247,6 +243,7 @@ main .btn,
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+#closeModalBtn,
 main .menu-btn {
     border-radius: 0 0 20px 20px;
     margin-top: 0;
@@ -255,7 +252,7 @@ main .Score-display {
     color: var(--scoretextcolor);
     background-color: var(--scorehighlight2);
     display: inline-block;
-    min-width: 200px; /* or however wide you want */
+    min-width: 200px;
     text-align: center;
     border-radius: 50px;
     margin-bottom: 1rem;
@@ -288,6 +285,40 @@ main #computer-score {
     border-radius: 0 20px 20px 0;
     padding: 0.5rem 1rem;
     margin-left: 1em;
+}
+#winnerModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* Flex to center modal */
+    display: flex;
+}
+
+#winnerConsole {
+    background: var(--scoretextcolor);
+    color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 250px;
+    margin: auto;
+}
+
+#winnerMessage {
+    color: var(--scoretextcolor);
+    background-color: var(--scorebackground2);
+    border-radius: 20px 20px 0 0;
+    padding: 1.2rem 1.8rem;
+    margin: 0.1rem;
+    margin-top: 1rem;
+    border: none;
 }
 
 /* =========================
