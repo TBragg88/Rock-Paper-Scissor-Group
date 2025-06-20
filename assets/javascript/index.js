@@ -8,7 +8,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
 const firebaseConfig = {
-    databaseURL: "https://rpsls-14063-default-rtdb.europe-west1.firebasedatabase.app/",
+    databaseURL:
+        "https://rpsls-14063-default-rtdb.europe-west1.firebasedatabase.app/",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -54,7 +55,9 @@ const winner = (playerAction, aiChoice) => {
 
     if (aiScore === winTarget) {
         setTimeout(() => {
-            showWinnerModal("You held out well! put your name in the leaderboard!");
+            showWinnerModal(
+                "You held out well! put your name in the leaderboard!"
+            );
         }, 100);
     }
 };
@@ -68,19 +71,21 @@ const showWinnerModal = (message) => {
 // -------------------Leaderboard Rendering-------------------
 onValue(leaderboardRef, (snapshot) => {
     const data = snapshot.val();
+    console.log("Leaderboard updated:", data); // add this
+
     const leaderboardList = document.getElementById("leaderboardList");
     leaderboardList.innerHTML = "";
-
+    
     if (data) {
         const sorted = Object.values(data).sort((a, b) => b.score - a.score);
-        sorted.slice(0, 5).forEach((entry) => {
+        sorted.forEach((entry) => {
             const li = document.createElement("li");
             li.textContent = `${entry.name}: ${entry.score}`;
             leaderboardList.appendChild(li);
         });
     }
 });
-
+console.log("listener fired")
 // -------------------Reset Logic-------------------
 const resetGame = () => {
     playerScore = 0;
@@ -122,7 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (submitBtn) {
         submitBtn.addEventListener("click", () => {
             const playerName =
-                document.getElementById("playerNameInput").value || "Unknown Player";
+                document.getElementById("playerNameInput").value ||
+                "Unknown Player";
             push(leaderboardRef, {
                 name: playerName,
                 score: playerScore,
