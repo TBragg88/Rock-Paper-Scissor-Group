@@ -22,22 +22,16 @@
     <!-- CSS Stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!--Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Michroma&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    
 </head>
 <!--Class set to make footer stay at bottom-->
 
-<body class="d-flex flex-column min-vh-100">
+<body id="choose-dif" class="d-flex flex-column min-vh-100">
     <header>
         <h1>Challenge of the Vulcan Mind</h1>
     </header>
 
     <main>
-
         <div id="menuScreen">
             <section>
                 <div id="console" class="center-container wrapper">
@@ -50,7 +44,7 @@
                                     Start Game
                                 </span>
                             </button>
-                            <button class="play-btn-pushable" onclick="location.href='campaign.html'" id="bossRush" role="button">
+                            <button class="play-btn-pushable" id="bossRush" role="button">
                                 <span class="play-btn-shadow"></span>
                                 <span class="play-btn-edge"></span>
                                 <span class="play-btn-front text">
@@ -163,34 +157,18 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-
-                    <h6> Challenge of the Volcan Mind</h6>
-                    <p>
-                        Rock, Paper, Scissors, Lizard, Spock is an extended version of the classic game, designed to
-                        reduce ties. It was popularized by The Big Bang Theory, and here’s how it works:</p>
-                    <h6>How to play<h6>
-                            <p>Each player secretly selects one of the five options</p>
-                            <ul>
-                                <li>🧱Rock</li>
-                                <li>📜Paper</li>
-                                <li>✂️Scissors</li>
-                                <li>🦎Lizard</li>
-                                <li>🖖Spock</li>
-                            </ul>
-                            <p>Then, they reveal their choice simultaneously. The winner is decided based on the
-                                following interactions:</p>
-                            <ul>
-                                <li><strong>Scissors cuts Paper:</strong> Scissors wins against Paper</li>
-                                <li><strong>Paper covers Rock:</strong> Paper wins against Rock</li>
-                                <li><strong>Rock crushes Lizard:</strong> Rock wins against Lizard</li>
-                                <li><strong>Lizard poisons Spock:</strong> Lizard wins against Spock</li>
-                                <li><strong>Spock smashes Scissors:</strong> Spock wins against Scissors</li>
-                                <li><strong>Scissors decapitates Lizard:</strong> Scissors wins against Lizard</li>
-                                <li><strong>Lizard eats Paper:</strong> Lizard wins against Paper.</li>
-                                <li><strong>Paper disproves Spock</strong> Paper wins against Spock</li>
-                                <li><strong>Spock vaporizes Rock:</strong> Spock wins against Rock</li>
-                                <li><strong>Rock crushes Scissors:</strong> Rock wins against Scissors</li>
-                            </ul>
+                    <ul>
+                        <li>✂️<strong>Scissors cuts Paper:</strong> Scissors wins against Paper</li>
+                        <li>📜<strong>Paper covers Rock:</strong> Paper wins against Rock</li>
+                        <li>🧱<strong>Rock crushes Lizard:</strong> Rock wins against Lizard</li>
+                        <li>🦎<strong>Lizard poisons Spock:</strong> Lizard wins against Spock</li>
+                        <li>🖖<strong>Spock smashes Scissors:</strong> Spock wins against Scissors</li>
+                        <li>✂️<strong>Scissors decapitates Lizard:</strong> Scissors wins against Lizard</li>
+                        <li>🦎<strong>Lizard eats Paper:</strong> Lizard wins against Paper.</li>
+                        <li>📜<strong>Paper disproves Spock</strong> Paper wins against Spock</li>
+                        <li>🖖<strong>Spock vaporizes Rock:</strong> Spock wins against Rock</li>
+                        <li>🧱<strong>Rock crushes Scissors:</strong> Rock wins against Scissors</li>
+                    </ul>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -200,13 +178,6 @@
         </div>
     </div>
 
-    <!-- Winner Modal -->
-    <div id="winnerModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:9999;">
-      <div style="background:#222; color:#fff; padding:2rem; border-radius:12px; text-align:center; min-width:250px;">
-        <h2 id="winnerMessage"></h2>
-        <button id="closeModalBtn">OK</button>
-      </div>
-    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
@@ -215,7 +186,7 @@
 
 
     <!-- JavaScript -->
-    <script src="assets/javascript/index.js"></script>
+    <script src="assets/javascript/difficulty.js"></script>
 </body>
 
 </html>
