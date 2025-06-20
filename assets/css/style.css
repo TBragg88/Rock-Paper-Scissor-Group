@@ -426,6 +426,7 @@ ul {
         margin-top: 40px;
     }
     .side-image {
+        width: 10%;
         max-width: 100px;
         height: auto;
     }
@@ -453,7 +454,7 @@ ul {
         margin-top: 40px;
     }
     .side-image {
-        max-width: 150px;
+        max-width: 200px;
     }
     .play-btn,
     .sub-btn {
@@ -472,7 +473,7 @@ main #score-col {
 /* --- Extra Large Devices --- */
 @media screen and (min-width: 1200px) {
     .side-image {
-        max-width: 200px;
+        max-width: 300px;
     }
     .play-btn,
     .sub-btn {
