@@ -18,7 +18,7 @@ scores to be included✔️
 "animation" of sad ai opponent and new game button ?
 ------------------------------------------------
 find a way to provide a score incremental to score board
-impliment without breaking,✔️
+impliment without breaking,
 change "ai to be looking at player choice 
 and then react accordingly (red shirt lose, spock win)
 

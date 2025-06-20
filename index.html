@@ -40,7 +40,7 @@
 
         <div id="menuScreen">
             <section>
-                <div id="console" class="center-container" class="wrapper">
+                <div id="console" class="center-container wrapper">
                     <div class="menu-buttons">
                         <div>
                             <button class="play-btn-pushable" id="startButton" role="button">
@@ -66,7 +66,8 @@
                             </span>
                         </button>
                         <div class="sub-buttons">
-                            <button class="play-btn-pushable" id="rulesModalBtn" role="button" data-bs-toggle="modal" data-bs-target="#rulesModal">
+                            <button class="play-btn-pushable" id="rulesModalBtn" role="button" data-bs-toggle="modal"
+                                data-bs-target="#rulesModal">
                                 <span class="play-btn-shadow"></span>
                                 <span class="play-btn-edge sub-btn-edge"></span>
                                 <span class="play-btn-front sub-btn text">
@@ -79,29 +80,29 @@
                 </div>
             </section>
         </div>
-
+        <!---------------------------------------gamescreens------------------------------------------------>
         <div id="gameScreen" style="display: none;">
             <section>
-                <div class="container">
+                <div class="container col-12">
                     <div class="col-12 my-4 row mb-4">
-                        <header id="game-header" class="d-flex justify-content-center">
-                            <div class="row">
-                                <button id="rulesBtn" type="button" class="btn btn-primary mb-3 col"
-                                    data-bs-toggle="modal" data-bs-target="#rulesModal">How to Play</button>
-                                <h2 class="col mb-3">Score</h2>
-                                <div class="d-flex flex-column align-items-center col">
-                                    <label for="difficulty" class="mb-2">Difficulty</label>
-                                    <select class="form-select w-auto text-center" id="difficulty">
-                                        <option value="R-shirt">Red Shirt</option>
-                                        <option value="Kirk">Kirk</option>
-                                        <option value="Spock">Spock</option>
-                                    </select>
-                                </div>
+                        <div id="game-console" class="row justify-content-evenly align-items-start my-4">
+                            <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
+                                <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#rulesModal">
+                                    How to Play
+                                </button>
+                                <button class="menu-btn btn btn-secondary" onclick="location.href='index.html'">
+                                    Menu
+                                </button>
                             </div>
-                        </header>
+                            <div class="col-12 col-md-6 text-center">
+                                <h2 class="Score-display display-4 mt-3">Score</h2>
+                                <p><span id="player-name">Player</span><span id="player-score">0</span></p>
+                                <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div id="Play-Avatar" class="col-4 px-0">
                         <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
@@ -109,25 +110,114 @@
                     </div>
 
                     <div id="canvascon" class="col-4 text-center mt-5">
-                        <canvas id="gameCanvas"></canvas>
-                        <p id="message-el">choose your weapon</p>
-                        <div class="game-buttons mt-3 justify-content-center d-flex">
+                        <div class="game-buttons mb-3 justify-content-center d-flex">
                             <button class="select-button" id="rock">🧱</button>
                             <button class="select-button" id="paper">📜</button>
                             <button class="select-button" id="scissors">✂️</button>
                             <button class="select-button" id="lizard">🦎</button>
                             <button class="select-button" id="spock">🖖</button>
                         </div>
+                        <p id="message-el">choose your weapon</p>
+                        <canvas id="gameCanvas"></canvas>
                     </div>
                     <div class="col-4 text-center">
                         <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
                     </div>
                 </div>
-        </div>
-        </section>
+            </section>
         </div>
 
+        <div id="campaign" style="display: none;">
+            <section>
+                <div class="container col-12">
+                    <div class="col-12 my-4 row mb-4">
+                        <div id="game-console" class="row justify-content-evenly align-items-start my-4">
+                            <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
+                                <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#rulesModal">
+                                    How to Play
+                                </button>
+                                <button class="menu-btn btn btn-secondary" onclick="location.href='index.html'">
+                                    Menu
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 text-center">
+                                <h2 class="Score-display display-4 mt-3">Score</h2>
+                                <p><span id="player-name">Player</span><span id="player-score">0</span></p>
+                                <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="Play-Avatar" class="col-4 px-0">
+                        <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
+                            class="img-fluid">
+                    </div>
 
+                    <div id="canvascon" class="col-4 text-center mt-5">
+                        <div class="game-buttons mb-3 justify-content-center d-flex">
+                            <button class="select-button" id="rock">🧱</button>
+                            <button class="select-button" id="paper">📜</button>
+                            <button class="select-button" id="scissors">✂️</button>
+                            <button class="select-button" id="lizard">🦎</button>
+                            <button class="select-button" id="spock">🖖</button>
+                        </div>
+                        <p id="message-el">choose your weapon</p>
+                        <canvas id="gameCanvas"></canvas>
+                    </div>
+                    <div class="col-4 text-center">
+                        <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="chooseOpponent" style="display: none;">
+            <section>
+                <div class="container col-12">
+                    <div class="col-12 my-4 row mb-4">
+                        <div id="game-console" class="row justify-content-evenly align-items-start my-4">
+                            <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
+                                <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#rulesModal">
+                                    How to Play
+                                </button>
+                                <button class="menu-btn btn btn-secondary" onclick="location.href='index.html'">
+                                    Menu
+                                </button>
+                            </div>
+                            <div class="col-12 col-md-6 text-center">
+                                <h2 class="Score-display display-4 mt-3">Score</h2>
+                                <p><span id="player-name">Player</span><span id="player-score">0</span></p>
+                                <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="Play-Avatar" class="col-4 px-0">
+                        <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
+                            class="img-fluid">
+                    </div>
+
+                    <div id="canvascon" class="col-4 text-center mt-5">
+                        <div class="game-buttons mb-3 justify-content-center d-flex">
+                            <button class="select-button" id="rock">🧱</button>
+                            <button class="select-button" id="paper">📜</button>
+                            <button class="select-button" id="scissors">✂️</button>
+                            <button class="select-button" id="lizard">🦎</button>
+                            <button class="select-button" id="spock">🖖</button>
+                        </div>
+                        <p id="message-el">choose your weapon</p>
+                        <canvas id="gameCanvas"></canvas>
+                    </div>
+                    <div class="col-4 text-center">
+                        <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer id="contact" class="custom-footer text-lg-start">
@@ -154,9 +244,6 @@
         </div>
     </footer>
 
-
-    </footer>
-
     <!-- Modal -->
     <div id="rulesModal" class="modal fade" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -168,7 +255,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>
                     <ul>
                         <li>✂️<strong>Scissors cuts Paper:</strong> Scissors wins against Paper</li>
                         <li>📜<strong>Paper covers Rock:</strong> Paper wins against Rock</li>
@@ -181,7 +267,6 @@
                         <li>🖖<strong>Spock vaporizes Rock:</strong> Spock wins against Rock</li>
                         <li>🧱<strong>Rock crushes Scissors:</strong> Rock wins against Scissors</li>
                     </ul>
-                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
