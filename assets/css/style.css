@@ -91,6 +91,14 @@ h1 {
     z-index: -1;
 }
 
+#enterprise {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 20%;
+}
+
 /* =========================
    Console
    ========================= */
