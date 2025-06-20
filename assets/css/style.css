@@ -444,6 +444,11 @@ h6 {
     color: var(--buttoncolor2);
 }
 
+#sheldon {
+    text-align: center;
+    color: var(--textcolor);
+}
+
 /* =========================
     Responsive Design
    ========================= */
