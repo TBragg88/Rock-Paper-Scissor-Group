@@ -217,10 +217,17 @@
     </div>
 
     <!-- Winner Modal -->
-    <div id="winnerModal">
-        <div id="winnerConsole">
+    <div id="winnerModal"
+        style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:9999;">
+        <div id="winnerConsole"
+            style="background:#222; color:#fff; padding:2rem; border-radius:12px; text-align:center; min-width:250px;">
             <h2 id="winnerMessage"></h2>
-            <button id="closeModalBtn">OK</button>
+            <input type="text" id="playerNameInput" class="form-control mb-2"
+                placeholder="Enter your name for the leaderboard" />
+            <button id="submitScoreBtn" class="btn btn-primary mb-2">Submit Score</button>
+            <h3>🏆 Leaderboard</h3>
+            <ul id="leaderboardList"></ul>
+            <button id="closeModalBtn" class="btn btn-secondary mt-2">OK</button>
         </div>
     </div>
 
@@ -231,7 +238,7 @@
 
 
     <!-- JavaScript -->
-    <script src="assets/javascript/index.js"></script>
+    <script type="module" src="assets/javascript/index.js"></script>
     <script src="assets/javascript/morePower.js" charset="utf-8"></script>
 </body>
 
