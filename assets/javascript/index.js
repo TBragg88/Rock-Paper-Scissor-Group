@@ -75,7 +75,7 @@ onValue(leaderboardRef, (snapshot) => {
 
     const leaderboardList = document.getElementById("leaderboardList");
     leaderboardList.innerHTML = "";
-    
+
     if (data) {
         const sorted = Object.values(data).sort((a, b) => b.score - a.score);
         sorted.forEach((entry) => {
@@ -85,7 +85,7 @@ onValue(leaderboardRef, (snapshot) => {
         });
     }
 });
-console.log("listener fired")
+
 // -------------------Reset Logic-------------------
 const resetGame = () => {
     playerScore = 0;
@@ -93,7 +93,7 @@ const resetGame = () => {
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("computer-score").textContent = aiScore;
     document.getElementById("message-el").textContent =
-        "First to 5 wins! Start a new match.";
+        "How Long can you last?";
 };
 
 // -------------------Event Listeners-------------------
