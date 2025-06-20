@@ -96,7 +96,7 @@ const resetGame = () => {
         "How Long can you last?";
 };
 
-// -------------------Event Listeners-------------------
+// -------------------bootans-------------------
 document.addEventListener("DOMContentLoaded", () => {
     const startBtn = document.getElementById("startButton");
     const gameButtons = document.querySelector(".game-buttons");
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-
+//--------------leaderboard submit----------
     if (submitBtn) {
         submitBtn.addEventListener("click", () => {
             const playerName =
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-
+//----------------reset-----------------
     if (closeModalBtn) {
         closeModalBtn.addEventListener("click", () => {
             document.getElementById("winnerModal").style.display = "none";
