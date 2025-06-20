@@ -92,8 +92,8 @@ h1 {
 }
 
 #enterprise {
-    width: 70px;
-    height: 70px;
+    width: 150px;
+    height: 150px;
     position: absolute;
     overflow: hidden;
     border-radius: 20%;
