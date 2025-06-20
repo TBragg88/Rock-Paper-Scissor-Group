@@ -220,7 +220,7 @@
     </div>
 
     <!-- Winner Modal -->
-    <div id="winnerModal" class="d-flex align-items-center justify-content-center">
+    <div id="winnerModal">
         <div id="winnerConsole" class="bg-dark text-white p-4 rounded-4 text-center shadow-lg">
             <h2 id="winnerMessage" class="mb-3"></h2>
             <div class="d-flex justify-content-center mb-2">
@@ -233,22 +233,6 @@
             <button id="closeModalBtn" class="btn btn-secondary mt-2">OK</button>
         </div>
     </div>
-    
-    <script>
-        // Insert high score message if not already present
-        document.addEventListener('DOMContentLoaded', function () {
-            const winnerConsole = document.getElementById('winnerConsole');
-            if (winnerConsole && !document.getElementById('highScoreMsg')) {
-                const msg = document.createElement('div');
-                msg.id = 'highScoreMsg';
-                msg.textContent = 'Congrats, you got a high score!';
-                const winnerMessage = document.getElementById('winnerMessage');
-                if (winnerMessage) {
-                    winnerMessage.insertAdjacentElement('afterend', msg);
-                }
-            }
-        });
-    </script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
