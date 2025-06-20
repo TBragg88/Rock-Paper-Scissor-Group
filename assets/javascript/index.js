@@ -1,3 +1,20 @@
+// -------------------Database hook up's-------------------
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"
+import { getDatabase,
+         ref,
+         push,
+         onValue,
+         remove } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js"
+
+const firebaseConfig = {
+    databaseURL: "https://rpsls-14063-default-rtdb.europe-west1.firebasedatabase.app/"
+}
+
+const app = initializeApp(firebaseConfig)
+const database = getDatabase(app)
+const referenceInDB = ref(database, "leads")
+
+
 // ----- HTML HOOK UP'S ------------
 
 document.getElementById("startButton").addEventListener("click", function () {
@@ -5,30 +22,6 @@ document.getElementById("startButton").addEventListener("click", function () {
     document.getElementById("gameScreen").style.display = "block";
 });
 
-/*-------GAME RULES + FUNCTIONS --------
-ok we start the game , we need the "ai to select his choice secretly" 
-- choice is made when player chooses his so no dom cheating.✔️
-
-player inputs his choice and its starts or requires button submit 
-games starts on choice✔️
-
-game compares two answers and returns who wins✔️
-alert box or something to indicate winner?✔️
-scores to be included✔️
-"animation" of sad ai opponent and new game button ?
-------------------------------------------------
-find a way to provide a score incremental to score board
-impliment without breaking,
-change "ai to be looking at player choice 
-and then react accordingly (red shirt lose, spock win)
-
-
-so global variables for player score and ai score✔️
-increment score based on winner function
-display scores in the message box✔️
-add a reset button to reset scores and game state?
-maybe save high scores in local storage?
-*/
 
 // ---------GAME LOGIC ---------------
 
@@ -107,6 +100,6 @@ function resetGame() {
     aiScore = 0;
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("computer-score").textContent = aiScore;
-    document.getElementById("message-el").textContent = "First to 3 wins! Start a new match.";
+    document.getElementById("message-el").textContent = "First to 5 wins! Start a new match.";
 }
 
