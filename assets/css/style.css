@@ -19,11 +19,6 @@
 /* =========================
    Base & Layout Styles
    ========================= */
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
 
 body {
     background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat center center fixed;
@@ -222,12 +217,10 @@ h1 {
    gamescreen stylies
    ========================= */
 #game-console {
-    background-color: rgba(
-        0,
-        0,
-        0,
-        0.85
-    ); 
+    background-color: rgba(0,
+            0,
+            0,
+            0.85);
     border: 2px solid yellow;
     border-radius: 12px;
 
