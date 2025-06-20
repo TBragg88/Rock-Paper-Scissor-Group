@@ -19,15 +19,9 @@
 /* =========================
    Base & Layout Styles
    ========================= */
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
 
 body {
-    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat
-        center center fixed;
+    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     display: flex;
@@ -40,7 +34,8 @@ body {
    ========================= */
 header,
 .custom-footer {
-    background: rgba(37, 59, 62, 0.85); /* 85% opaque */
+    background: rgba(37, 59, 62, 0.85);
+    /* 85% opaque */
     text-align: center;
     padding: 0.5rem 0;
 }
@@ -75,6 +70,7 @@ h1 {
     justify-content: center;
     margin-top: 4rem;
 }
+
 .wrapper {
     min-height: 67vh;
     flex-direction: column;
@@ -144,13 +140,11 @@ h1 {
 }
 
 .play-btn-edge {
-    background: linear-gradient(
-        to left,
-        hsl(227, 42%, 29%) 0%,
-        hsl(227, 42%, 29%) 8%,
-        hsl(227, 42%, 29%) 92%,
-        hsl(227, 42%, 29%) 100%
-    );
+    background: linear-gradient(to left,
+            hsl(227, 42%, 29%) 0%,
+            hsl(227, 42%, 29%) 8%,
+            hsl(227, 42%, 29%) 92%,
+            hsl(227, 42%, 29%) 100%);
 }
 
 .play-btn-front {
@@ -170,22 +164,27 @@ h1 {
 .play-btn-pushable:hover {
     filter: brightness(110%);
 }
+
 .play-btn-pushable:hover .play-btn-front {
     transform: translateY(-6px);
     transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
 }
+
 .play-btn-pushable:active .play-btn-front {
     transform: translateY(-2px);
     transition: transform 34ms;
 }
+
 .play-btn-pushable:hover .play-btn-shadow {
     transform: translateY(4px);
     transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
 }
+
 .play-btn-pushable:active .play-btn-shadow {
     transform: translateY(1px);
     transition: transform 34ms;
 }
+
 .play-btn-pushable:focus:not(:focus-visible) {
     outline: none;
 }
@@ -194,14 +193,13 @@ h1 {
 .sub-btn {
     background: var(--buttoncolor2);
 }
+
 .sub-btn-edge {
-    background: linear-gradient(
-        to left,
-        hsl(227, 42%, 20%) 0%,
-        hsl(227, 42%, 20%) 8%,
-        hsl(227, 42%, 20%) 92%,
-        hsl(227, 42%, 20%) 100%
-    );
+    background: linear-gradient(to left,
+            hsl(227, 42%, 20%) 0%,
+            hsl(227, 42%, 20%) 8%,
+            hsl(227, 42%, 20%) 92%,
+            hsl(227, 42%, 20%) 100%);
 }
 
 .sub-buttons {
@@ -218,6 +216,7 @@ h1 {
     gap: 1rem;
     margin-top: 1rem;
 }
+
 /* =========================
    gamescreen stylies
    ========================= */
@@ -248,6 +247,7 @@ main .menu-btn {
     border-radius: 0 0 20px 20px;
     margin-top: 0;
 }
+
 main .Score-display {
     color: var(--scoretextcolor);
     background-color: var(--scorehighlight2);
@@ -257,6 +257,7 @@ main .Score-display {
     border-radius: 50px;
     margin-bottom: 1rem;
 }
+
 main #player-name {
     background-color: var(--scorebackground1);
     color: #fff;
@@ -264,6 +265,7 @@ main #player-name {
     padding: 0.5rem 1.9rem;
     margin-left: 1em;
 }
+
 main #player-score {
     width: 50px;
     background-color: var(--scorebackground1);
@@ -272,6 +274,7 @@ main #player-score {
     padding: 0.5rem 1rem;
     margin-left: 1em;
 }
+
 main #computer-name {
     background-color: var(--scorebackground1);
     color: #fff;
@@ -279,6 +282,7 @@ main #computer-name {
     padding: 0.5rem 1rem;
     margin-left: 1em;
 }
+
 main #computer-score {
     background-color: var(--scorebackground1);
     color: #fff;
@@ -387,40 +391,31 @@ main #computer-score {
 }
 
 /* =========================
-   Lists
+    Lists
    ========================= */
 ul {
     list-style-type: none;
 }
 
-/* Modal */
-
-.modal-header,
-.modal-footer {
-    background-color: #253b3e;
-}
-
-.modal-body {
-    font-family: roboto;
-}
-
-h5,
-h6 {
-    color: #cd9c30;
-    text-align: center;
-}
-
 /* =========================
-   Responsive Design
+    Responsive Design
    ========================= */
 
 /* --- Small Devices --- */
 @media (max-width: 767px) {
+
+    body {
+        max-width: 100%;
+        max-height: 100%;
+        overflow-x: hidden;
+    }
+
     .footer-flex {
         flex-direction: column;
         align-items: stretch;
         text-align: center;
     }
+
     .footer-social,
     .footer-copyright {
         align-items: center !important;
@@ -428,6 +423,7 @@ h6 {
         width: 100%;
         text-align: center !important;
     }
+
     .footer-social .text-end {
         text-align: center !important;
     }
@@ -438,6 +434,7 @@ h6 {
     .header {
         width: 100%;
     }
+
     .center-container,
     .wrapper,
     .container {
@@ -445,17 +442,20 @@ h6 {
         flex-direction: column;
         margin-top: 40px;
     }
+
     .side-image {
         width: 10%;
         max-width: 100px;
         height: auto;
     }
+
     .play-btn,
     .sub-btn {
         width: 180px;
         font-size: 1.1rem;
         padding: 10px 0;
     }
+
     main .btn,
     .menu-btn {
         width: 100%;
@@ -466,6 +466,7 @@ h6 {
 
 /* --- Large Devices --- */
 @media screen and (min-width: 992px) {
+
     .center-container,
     .wrapper,
     .container {
@@ -473,21 +474,27 @@ h6 {
         justify-content: space-evenly;
         margin-top: 40px;
     }
+
     .side-image {
         max-width: 200px;
     }
+
     .play-btn,
     .sub-btn {
         width: 250px;
         font-size: 1.8rem;
         padding-top: 10px;
     }
-}
-main .Score-display {
-    font-size: 35px;
-}
-main #score-col {
-    margin-top: 1rem;
+
+
+    main .Score-display {
+        font-size: 35px;
+    }
+
+    main #score-col {
+        margin-top: 1rem;
+    }
+
 }
 
 /* --- Extra Large Devices --- */
@@ -495,12 +502,14 @@ main #score-col {
     .side-image {
         max-width: 300px;
     }
+
     .play-btn,
     .sub-btn {
         width: 350px;
         font-size: 2.5rem;
         padding-top: 10px;
     }
+
     #gameScreen,
     #campaign,
     #chooseOpponent {
@@ -508,4 +517,6 @@ main #score-col {
         margin: 0 auto;
         padding: 1rem;
     }
+
+
 }
