@@ -418,6 +418,31 @@ h6 {
     color: #cd9c30;
     text-align: center;
 }
+.hide {
+    display: none;
+}
+
+#rock:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
+
+#paper:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
+#scissors:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
+#lizard:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
+#spock:hover + .hide {
+    display: block;
+    color: var(--buttoncolor2);
+}
 
 /* =========================
     Responsive Design
