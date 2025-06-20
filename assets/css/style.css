@@ -87,11 +87,15 @@ h1 {
     z-index: -1;
 }
 
+.space {
+    z-index: -1;
+}
+
 /* =========================
    Console
    ========================= */
 #console {
-    background: black;
+    background: rgba(0, 0, 0, 0.85);
     border: 2px solid yellow;
     border-radius: 12px;
     padding: 1rem 2rem;
@@ -465,9 +469,9 @@ h6 {
     }
 
     .side-image {
-        width: 10%;
+        width: 100%;
         max-width: 100px;
-        height: auto;
+        height: 100%;
     }
 
     .play-btn,
@@ -495,9 +499,9 @@ h6 {
         margin-top: 40px;
     }
 
-    .side-image {
+    /* .side-image {
         max-width: 200px;
-    }
+    } */
 
     .play-btn,
     .sub-btn {
@@ -517,9 +521,9 @@ h6 {
 
 /* --- Extra Large Devices --- */
 @media screen and (min-width: 1200px) {
-    .side-image {
+    /* .side-image {
         max-width: 300px;
-    }
+    } */
 
     .play-btn,
     .sub-btn {
