@@ -2,6 +2,7 @@
 // Globar variables for player and ai scores
 let playerScore = 0;
 let aiScore = 0;
+const winTarget = 3;
 let isAlive = true
 
 
@@ -25,10 +26,6 @@ let winner = function (playerAction, aiChoice) {
             spock: ["scissors", "rock"],
         };
 
-        // message = winCon[playerAction].includes(aiChoice)
-        //     ? `You win! ${playerAction} beats ${aiChoice}.`
-        //     : `You lose! ${aiChoice} beats ${playerAction}.`;
-
         if (winCon[playerAction].includes(aiChoice)) {
             message = `You win! ${playerAction} beats ${aiChoice}.`;
             playerScore++;
@@ -40,6 +37,16 @@ let winner = function (playerAction, aiChoice) {
     document.getElementById("message-el").textContent = message;
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("computer-score").textContent = aiScore;
+
+    // Check for match winner
+    if (playerScore === winTarget || aiScore === winTarget) {
+        setTimeout(() => {
+            const winnerText = playerScore === winTarget
+                ? "Congratulations! You won the match!"
+                : "The computer wins the match!";
+            showWinnerModal(winnerText);
+        }, 100);
+    }
 };
 
 // --------buttons and winner function -----------
@@ -51,5 +58,22 @@ document
         winner(playerAction, aiChoice);
     });
 
+// -------- Modal Logic --------
+function showWinnerModal(message) {
+    document.getElementById("winnerMessage").textContent = message;
+    document.getElementById("winnerModal").style.display = "flex";
+}
 
+document.getElementById("closeModalBtn").addEventListener("click", function () {
+    document.getElementById("winnerModal").style.display = "none";
+    resetGame();
+});
+
+function resetGame() {
+    playerScore = 0;
+    aiScore = 0;
+    document.getElementById("player-score").textContent = playerScore;
+    document.getElementById("computer-score").textContent = aiScore;
+    document.getElementById("message-el").textContent = "First to 3 wins! Start a new match.";
+}
 
