@@ -222,13 +222,13 @@ h1 {
    gamescreen stylies
    ========================= */
 #game-console {
-    background-color: rgba(0,
-            0,
-            0,
-            0.85);
-    /* deep space black w/ transparency */
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.85
+    ); 
     border: 2px solid yellow;
-    /* glowing teal edge */
     border-radius: 12px;
 
     padding: 1rem 2rem;
@@ -259,7 +259,6 @@ main .Score-display {
     background-color: var(--scorehighlight2);
     display: inline-block;
     min-width: 200px;
-    /* or however wide you want */
     text-align: center;
     border-radius: 50px;
     margin-bottom: 1rem;
