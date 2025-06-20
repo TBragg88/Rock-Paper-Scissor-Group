@@ -37,11 +37,13 @@
     </header>
 
     <main>
-
+        <img id="enterprise" class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
         <div id="menuScreen">
             <section>
-                <div id="console" class="center-container wrapper">
-                    <div class="menu-buttons">
+                <div class="center-container wrapper">
+                    <div id="console" class="menu-buttons">
+                        <a href="https://youtu.be/sFGmhvx1elk?si=4N1BtLZxlK8DjCRZ" target="_blank" rel="noopener"
+                        style="outline: 0"><i class="fa-solid fa-power-off"></i></a>
                         <div>
                             <button class="play-btn-pushable" id="startButton" role="button">
                                 <span class="play-btn-shadow"></span>
@@ -58,7 +60,7 @@
                                 </span>
                             </button>
                         </div>
-                        <button class="play-btn-pushable" id="chooseOpponet" role="button">
+                        <button class="play-btn-pushable" onclick="location.href='difficulty.html'" id="chooseOpponet" role="button">
                             <span class="play-btn-shadow"></span>
                             <span class="play-btn-edge"></span>
                             <span class="play-btn-front text">
@@ -76,7 +78,6 @@
                             </button>
                         </div>
                     </div>
-                    <img class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
                 </div>
             </section>
         </div>
@@ -109,7 +110,7 @@
                             class="img-fluid">
                     </div>
 
-                    <div id="canvascon" class="col-4 text-center mt-5">
+                    <div id="canvascon" class="col-4 text-center">
                         <div class="game-buttons mb-3 justify-content-center d-flex">
                             <button class="select-button" id="rock">🧱</button>
                             <button class="select-button" id="paper">📜</button>
@@ -201,8 +202,8 @@
     </div>
 
     <!-- Winner Modal -->
-    <div id="winnerModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:9999;">
-      <div style="background:#222; color:#fff; padding:2rem; border-radius:12px; text-align:center; min-width:250px;">
+    <div id="winnerModal">
+      <div id="winnerConsole">
         <h2 id="winnerMessage"></h2>
         <button id="closeModalBtn">OK</button>
       </div>
@@ -216,6 +217,7 @@
 
     <!-- JavaScript -->
     <script src="assets/javascript/index.js"></script>
+    <script src="assets/javascript/morePower.js" charset="utf-8"></script>
 </body>
 
 </html>
