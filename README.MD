@@ -55,6 +55,15 @@ A Star Trek–themed Rock-Paper-Scissors game with multiple play modes, built wi
 
 ---
 
+### Wireframes
+
+<img src="readme-documentation/wireframes/Home-page.png" alt="Wireframe" width="600" />
+<img src="readme-documentation/wireframes/Phone.pngphone" alt="Wireframe" width="600" />
+<img src="readme-documentation/wireframes/Play-page.png alt="Wireframe" width="600" />
+
+
+---
+
 ## Screenshots
 
 
@@ -97,10 +106,13 @@ Contributions are welcome! Please open an issue or submit a pull request.
 ## Credits
 
 - Star Trek and related marks are trademarks of CBS Studios Inc.
-- Game logic and UI by [Your Name/Team].
-- Inspired by [Wikipedia: Rock–Paper–Scissors–Lizard–Spock](https://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock).
+- Game logic and UI by:
+Elite Coders: Alex McAlpine, Jake Smith, Jo Wolfarth and Tom Bragg 
 
----
+
+
+### Deployment
+
 
 ## License
 
