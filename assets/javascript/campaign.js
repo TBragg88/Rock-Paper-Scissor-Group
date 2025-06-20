@@ -1,36 +1,3 @@
-// ----- HTML HOOK UP'S ------------
-
-document.getElementById("startButton").addEventListener("click", function () {
-    document.getElementById("menuScreen").style.display = "none";
-    document.getElementById("gameScreen").style.display = "block";
-});
-
-/*-------GAME RULES + FUNCTIONS --------
-ok we start the game , we need the "ai to select his choice secretly" 
-- choice is made when player chooses his so no dom cheating.✔️
-
-player inputs his choice and its starts or requires button submit 
-games starts on choice✔️
-
-game compares two answers and returns who wins✔️
-alert box or something to indicate winner?✔️
-scores to be included✔️
-"animation" of sad ai opponent and new game button ?
-------------------------------------------------
-find a way to provide a score incremental to score board
-impliment without breaking,
-change "ai to be looking at player choice 
-and then react accordingly (red shirt lose, spock win)
-
-
-so global variables for player score and ai score✔️
-increment score based on winner function
-display scores in the message box
-add a reset button to reset scores and game state?
-maybe save high scores in local storage?
-*/
-
-// ---------GAME LOGIC ---------------
 
 // Globar variables for player and ai scores
 let playerScore = 0;
@@ -83,4 +50,6 @@ document
         const aiChoice = aiAction();
         winner(playerAction, aiChoice);
     });
+
+
 

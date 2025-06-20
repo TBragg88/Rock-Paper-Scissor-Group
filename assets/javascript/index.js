@@ -35,6 +35,7 @@ maybe save high scores in local storage?
 // Globar variables for player and ai scores
 let playerScore = 0;
 let aiScore = 0;
+const winTarget = 3;
 let isAlive = true
 
 
@@ -58,10 +59,6 @@ let winner = function (playerAction, aiChoice) {
             spock: ["scissors", "rock"],
         };
 
-        // message = winCon[playerAction].includes(aiChoice)
-        //     ? `You win! ${playerAction} beats ${aiChoice}.`
-        //     : `You lose! ${aiChoice} beats ${playerAction}.`;
-
         if (winCon[playerAction].includes(aiChoice)) {
             message = `You win! ${playerAction} beats ${aiChoice}.`;
             playerScore++;
@@ -70,10 +67,31 @@ let winner = function (playerAction, aiChoice) {
             aiScore++;
         }
     }
+
     document.getElementById("message-el").textContent = message;
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("computer-score").textContent = aiScore;
+
+    // Check for match winner
+    if (playerScore === winTarget || aiScore === winTarget) {
+        setTimeout(() => {
+            if (playerScore === winTarget) {
+                alert("Congratulations! You won the match!");
+            } else {
+                alert("The computer wins the match!");
+            }
+            resetGame();
+        }, 100);
+    }
 };
+
+function resetGame() {
+    playerScore = 0;
+    aiScore = 0;
+    document.getElementById("player-score").textContent = playerScore;
+    document.getElementById("computer-score").textContent = aiScore;
+    document.getElementById("message-el").textContent = "First to 3 wins! Start a new match.";
+}
 
 // --------buttons and winner function -----------
 document
