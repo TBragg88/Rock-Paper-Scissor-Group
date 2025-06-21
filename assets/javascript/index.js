@@ -1,112 +1,151 @@
-// ----- HTML HOOK UP'S ------------
+// -------------------Firebase Setup-------------------
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+import {
+    getDatabase,
+    ref,
+    push,
+    onValue,
+} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
-document.getElementById("startButton").addEventListener("click", function () {
-    document.getElementById("menuScreen").style.display = "none";
-    document.getElementById("gameScreen").style.display = "block";
-});
+const firebaseConfig = {
+    databaseURL:
+        "https://rpsls-14063-default-rtdb.europe-west1.firebasedatabase.app/",
+};
 
-/*-------GAME RULES + FUNCTIONS --------
-ok we start the game , we need the "ai to select his choice secretly" 
-- choice is made when player chooses his so no dom cheating.✔️
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const leaderboardRef = ref(database, "leaderboard");
 
-player inputs his choice and its starts or requires button submit 
-games starts on choice✔️
-
-game compares two answers and returns who wins✔️
-alert box or something to indicate winner?✔️
-scores to be included✔️
-"animation" of sad ai opponent and new game button ?
-------------------------------------------------
-find a way to provide a score incremental to score board
-impliment without breaking,
-change "ai to be looking at player choice 
-and then react accordingly (red shirt lose, spock win)
-
-
-so global variables for player score and ai score✔️
-increment score based on winner function
-display scores in the message box✔️
-add a reset button to reset scores and game state?
-maybe save high scores in local storage?
-*/
-
-// ---------GAME LOGIC ---------------
-
-// Globar variables for player and ai scores
+// -------------------Game State-------------------
 let playerScore = 0;
 let aiScore = 0;
-const winTarget = 3;
-let isAlive = true
+const winTarget = 5;
 
-
-//Kirk level "ai" rng win and lose conditions
-const aiAction = function aiAction() {
+// -------------------Kirk-------------------
+const aiAction = () => {
     const actions = ["rock", "paper", "scissors", "lizard", "spock"];
     return actions[Math.floor(Math.random() * actions.length)];
 };
 
-// Compare moves and determine winner
-let winner = function (playerAction, aiChoice) {
+// -------------------Win/lose calc-------------------
+const winner = (playerAction, aiChoice) => {
+    const winCon = {
+        rock: ["scissors", "lizard"],
+        paper: ["rock", "spock"],
+        scissors: ["paper", "lizard"],
+        lizard: ["spock", "paper"],
+        spock: ["scissors", "rock"],
+    };
+
     let message;
+
     if (playerAction === aiChoice) {
         message = `Draw! Both chose ${aiChoice}.`;
+    } else if (winCon[playerAction].includes(aiChoice)) {
+        message = `You win! ${playerAction} beats ${aiChoice}.`;
+        playerScore++;
     } else {
-        const winCon = {
-            rock: ["scissors", "lizard"],
-            paper: ["rock", "spock"],
-            scissors: ["paper", "lizard"],
-            lizard: ["spock", "paper"],
-            spock: ["scissors", "rock"],
-        };
-
-        if (winCon[playerAction].includes(aiChoice)) {
-            message = `You win! ${playerAction} beats ${aiChoice}.`;
-            playerScore++;
-        } else {
-            message = `You lose! ${aiChoice} beats ${playerAction}.`;
-            aiScore++;
-        }
+        message = `You lose! ${aiChoice} beats ${playerAction}.`;
+        aiScore++;
     }
+
     document.getElementById("message-el").textContent = message;
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("computer-score").textContent = aiScore;
 
-    // Check for match winner
-    if (playerScore === winTarget || aiScore === winTarget) {
+    if (aiScore === winTarget) {
         setTimeout(() => {
-            const winnerText = playerScore === winTarget
-                ? "Congratulations! You won the match!"
-                : "The computer wins the match!";
-            showWinnerModal(winnerText);
+            showWinnerModal(
+                "You held out well! put your name in the leaderboard!"
+            );
         }, 100);
     }
 };
 
-// --------buttons and winner function -----------
-document
-    .querySelector(".game-buttons")
-    .addEventListener("click", function (event) {
-        const playerAction = event.target.id;
-        const aiChoice = aiAction();
-        winner(playerAction, aiChoice);
-    });
-
-// -------- Modal Logic --------
-function showWinnerModal(message) {
+// -------------------Alert Modal-------------------
+const showWinnerModal = (message) => {
     document.getElementById("winnerMessage").textContent = message;
     document.getElementById("winnerModal").style.display = "flex";
-}
+};
 
-document.getElementById("closeModalBtn").addEventListener("click", function () {
-    document.getElementById("winnerModal").style.display = "none";
-    resetGame();
+// ------------------Databasepush Scoreboard -------------------
+onValue(leaderboardRef, (snapshot) => {
+    const data = snapshot.val();
+    console.log("Leaderboard updated:", data); // add this
+
+    const leaderboardList = document.getElementById("leaderboardList");
+    leaderboardList.innerHTML = "";
+
+    if (data) {
+        const sorted = Object.values(data).sort((a, b) => b.score - a.score);
+        sorted.forEach((entry) => {
+            const li = document.createElement("li");
+            li.textContent = `${entry.name}: ${entry.score}`;
+            leaderboardList.appendChild(li);
+        });
+    }
 });
 
-function resetGame() {
+// -------------------Reset Game State-------------------
+const resetGame = () => {
     playerScore = 0;
     aiScore = 0;
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("computer-score").textContent = aiScore;
-    document.getElementById("message-el").textContent = "First to 3 wins! Start a new match.";
-}
+    document.getElementById("message-el").textContent =
+        "How Long can you last?";
+};
 
+// -------------------bootans-------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const startBtn = document.getElementById("startButton");
+    const gameButtons = document.querySelector(".game-buttons");
+    const submitBtn = document.getElementById("submitScoreBtn");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+
+    if (startBtn) {
+        startBtn.addEventListener("click", () => {
+            document.getElementById("menuScreen").style.display = "none";
+            document.getElementById("gameScreen").style.display = "block";
+        });
+    }
+
+    if (gameButtons) {
+        gameButtons.addEventListener("click", (event) => {
+            const playerAction = event.target.id;
+            if (
+                ["rock", "paper", "scissors", "lizard", "spock"].includes(
+                    playerAction
+                )
+            ) {
+                const aiChoice = aiAction();
+                winner(playerAction, aiChoice);
+            }
+        });
+    }
+//--------------leaderboard submit----------
+    if (submitBtn) {
+        submitBtn.addEventListener("click", () => {
+            const playerName =
+                document.getElementById("playerNameInput").value ||
+                "Unknown Player";
+            push(leaderboardRef, {
+                name: playerName,
+                score: playerScore,
+                timestamp: Date.now(),
+            }).then(() => {
+                alert("Score submitted!");
+                document.getElementById("playerNameInput").value = "";
+                document.getElementById("winnerModal").style.display = "none";
+                resetGame();
+            });
+        });
+    }
+//----------------reset-----------------
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", () => {
+            document.getElementById("winnerModal").style.display = "none";
+            resetGame();
+        });
+    }
+});
