@@ -86,7 +86,7 @@ onValue(leaderboardRef, (snapshot) => {
     }
 });
 
-// -------------------Reset Game State-------------------
+// -------------------Reset Game-------------------
 const resetGame = () => {
     playerScore = 0;
     aiScore = 0;
