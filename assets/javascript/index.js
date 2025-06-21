@@ -27,6 +27,8 @@ const aiAction = () => {
     return actions[Math.floor(Math.random() * actions.length)];
 };
 
+// -------------------global science-------------------
+const submitBtn = document.getElementById("submit-btn");
 // -------------------Win/lose calc-------------------
 const winner = (playerAction, aiChoice) => {
     const winCon = {
@@ -63,15 +65,16 @@ const winner = (playerAction, aiChoice) => {
 };
 
 // -------------------Alert Modal-------------------
+const winnerModal = document.getElementById("winner-modal");
 const showWinnerModal = (message) => {
-    document.getElementById("winnerMessage").textContent = message;
-    document.getElementById("winnerModal").style.display = "flex";
+    document.getElementById("winner-msg").textContent = message;
+    winnerModal.style.display = "flex";
 };
 
 // ------------------Databasepush Scoreboard -------------------
 onValue(leaderboardRef, (snapshot) => {
     const data = snapshot.val();
-    console.log("Leaderboard updated:", data); // add this
+    console.log("Leaderboard updated:", data);
 
     const leaderboardList = document.getElementById("leaderboardList");
     leaderboardList.innerHTML = "";
@@ -100,8 +103,8 @@ const resetGame = () => {
 document.addEventListener("DOMContentLoaded", () => {
     const startBtn = document.getElementById("startButton");
     const gameButtons = document.querySelector(".game-buttons");
-    const submitBtn = document.getElementById("submitScoreBtn");
-    const closeModalBtn = document.getElementById("closeModalBtn");
+    const submitBtn = document.getElementById("submit-btn");
+    const closeModalBtn = document.getElementById("close-modal-btn");
 
     if (startBtn) {
         startBtn.addEventListener("click", () => {
@@ -123,12 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-//--------------leaderboard submit----------
+    //--------------leaderboard submit----------
     if (submitBtn) {
         submitBtn.addEventListener("click", () => {
             const playerName =
-                document.getElementById("playerNameInput").value ||
-                "Unknown Player";
+                document.getElementById("name-input").value || "Unknown Player";
             push(leaderboardRef, {
                 name: playerName,
                 score: playerScore,
@@ -136,15 +138,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }).then(() => {
                 alert("Score submitted!");
                 document.getElementById("playerNameInput").value = "";
-                document.getElementById("winnerModal").style.display = "none";
+                winnerModal.style.display = "none";
                 resetGame();
             });
         });
     }
-//----------------reset-----------------
+    //----------------reset-----------------
     if (closeModalBtn) {
         closeModalBtn.addEventListener("click", () => {
-            document.getElementById("winnerModal").style.display = "none";
+            winnerModal.style.display = "none";
             resetGame();
         });
     }

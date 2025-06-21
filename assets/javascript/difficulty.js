@@ -1,7 +1,7 @@
 let playerScore = 0;
 let aiScore = 0;
 const winTarget = 5;
-let currentDifficulty = "medium";
+let currentDifficulty = "easy"; // default to easy
 
 const actions = ["rock", "paper", "scissors", "lizard", "spock"];
 const winMap = {
@@ -9,24 +9,28 @@ const winMap = {
     paper: ["rock", "spock"],
     scissors: ["paper", "lizard"],
     lizard: ["spock", "paper"],
-    spock: ["scissors", "rock"]
+    spock: ["scissors", "rock"],
 };
 
-// ------------------- AI see's human input before making its decision ------------------------
+// --------- AI logic per difficulty ---------
 function aiAction(playerMove) {
     if (currentDifficulty === "easy") {
-        return winMap[playerMove][Math.floor(Math.random() * 2)]; // AI loses
+        // AI always loses: pick something player beats
+        return winMap[playerMove][Math.floor(Math.random() * 2)];
     } else if (currentDifficulty === "hard") {
-        const counters = actions.filter(move => winMap[move].includes(playerMove)); // AI wins
+        // AI always wins: pick something that beats the player
+        const counters = actions.filter((move) =>
+            winMap[move].includes(playerMove)
+        );
         return counters[Math.floor(Math.random() * counters.length)];
     }
-    return actions[Math.floor(Math.random() * actions.length)]; // balanced RNG
+    // Medium: random
+    return actions[Math.floor(Math.random() * actions.length)];
 }
 
-// ------------------- Game outcome logic ------------------------
+// --------- Game outcome logic ---------
 function winner(playerMove, aiMove) {
     let message;
-
     if (playerMove === aiMove) {
         message = `Draw! Both chose ${aiMove}.`;
     } else if (winMap[playerMove].includes(aiMove)) {
@@ -36,7 +40,6 @@ function winner(playerMove, aiMove) {
         message = `You lose! ${aiMove} beats ${playerMove}.`;
         aiScore++;
     }
-
     updateUI(message);
     checkWinCondition();
 }
@@ -50,32 +53,32 @@ function updateUI(message) {
 function checkWinCondition() {
     if (playerScore === winTarget || aiScore === winTarget) {
         setTimeout(() => {
-            const msg = playerScore === winTarget
-                ? "Congratulations! You won the match!"
-                : "The computer wins the match!";
-            showWinnerModal(msg);
+            const msg =
+                playerScore === winTarget
+                    ? "Congratulations! You won the match!"
+                    : "The computer wins the match!";
+            showWinnerModalDiff(msg);
         }, 100);
     }
 }
 
-// ------------------- Event Listeners ------------------------
+// --------- Event Listeners ---------
 document.querySelector(".game-buttons").addEventListener("click", function (e) {
     const move = e.target.id;
     if (!actions.includes(move)) return;
-
     const aiMove = aiAction(move);
     winner(move, aiMove);
 });
 
-document.getElementById("closeModalBtn").addEventListener("click", () => {
-    document.getElementById("winnerModal").style.display = "none";
+document.getElementById("closeModalBtndiff").addEventListener("click", () => {
+    document.getElementById("winnerModaldiff").style.display = "none";
     resetGame();
 });
 
-// ------------------- Modal and Reset ------------------------
-function showWinnerModal(message) {
-    document.getElementById("winnerMessage").textContent = message;
-    document.getElementById("winnerModal").style.display = "flex";
+// --------- Modal and Reset ---------
+function showWinnerModalDiff(message) {
+    document.getElementById("winnerMessagediff").textContent = message;
+    document.getElementById("winnerModaldiff").style.display = "flex";
 }
 
 function resetGame() {
@@ -84,14 +87,14 @@ function resetGame() {
     updateUI("First to 5 wins! Start a new match.");
 }
 
-// ------------------- radials control ai input and avatar selcection------------------------
+// --------- Difficulty radio & avatar logic ---------
 document.addEventListener("DOMContentLoaded", () => {
     const aiAvatar = document.getElementById("AI-Avatar");
     const difficulties = document.querySelectorAll('input[name="difficulty"]');
     const avatarMap = {
         easy: "assets/images/char-redshirt.png",
         medium: "assets/images/char-mccoy.png",
-        hard: "assets/images/char-spok.png"
+        hard: "assets/images/char-spok.png",
     };
 
     function updateDifficulty(value) {
@@ -105,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         radio.addEventListener("change", () => updateDifficulty(radio.value))
     );
 
+    // Set avatar and difficulty on load
     const checked = document.querySelector('input[name="difficulty"]:checked');
     if (checked) updateDifficulty(checked.value);
 });
