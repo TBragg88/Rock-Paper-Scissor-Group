@@ -335,6 +335,7 @@ main #computer-score {
     padding: 1rem 2rem 1rem 2rem;
 }
 #name-input {
+    line-height:24px;
     max-width: 300px;
     width: 70%;
     margin: 0 auto 0.5em auto;

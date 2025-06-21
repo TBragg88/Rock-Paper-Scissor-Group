@@ -1,6 +1,6 @@
 let playerScore = 0;
 let aiScore = 0;
-const winTarget = 5;
+const winTarget = 3;
 let currentDifficulty = "medium";
 
 const actions = ["rock", "paper", "scissors", "lizard", "spock"];
@@ -81,7 +81,7 @@ function showWinnerModal(message) {
 function resetGame() {
     playerScore = 0;
     aiScore = 0;
-    updateUI("First to 5 wins! Start a new match.");
+    updateUI("Best of 3!");
 }
 
 // ------------------- radials control ai input and avatar selcection------------------------
