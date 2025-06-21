@@ -86,7 +86,7 @@ onValue(leaderboardRef, (snapshot) => {
     }
 });
 
-// -------------------Reset Logic-------------------
+// -------------------Reset Game State-------------------
 const resetGame = () => {
     playerScore = 0;
     aiScore = 0;
