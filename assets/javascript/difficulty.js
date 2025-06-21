@@ -12,7 +12,7 @@ const winMap = {
     spock: ["scissors", "rock"]
 };
 
-// ------------------- AI decision logic ------------------------
+// ------------------- AI see's human input before making its decision ------------------------
 function aiAction(playerMove) {
     if (currentDifficulty === "easy") {
         return winMap[playerMove][Math.floor(Math.random() * 2)]; // AI loses
@@ -81,10 +81,10 @@ function showWinnerModal(message) {
 function resetGame() {
     playerScore = 0;
     aiScore = 0;
-    updateUI("First to 3 wins! Start a new match.");
+    updateUI("First to 5 wins! Start a new match.");
 }
 
-// ------------------- Difficulty & Avatar ------------------------
+// ------------------- radials control ai input and avatar selcection------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const aiAvatar = document.getElementById("AI-Avatar");
     const difficulties = document.querySelectorAll('input[name="difficulty"]');

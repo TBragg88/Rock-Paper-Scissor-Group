@@ -21,13 +21,13 @@ let playerScore = 0;
 let aiScore = 0;
 const winTarget = 5;
 
-// -------------------AI Logic-------------------
+// -------------------Kirk-------------------
 const aiAction = () => {
     const actions = ["rock", "paper", "scissors", "lizard", "spock"];
     return actions[Math.floor(Math.random() * actions.length)];
 };
 
-// -------------------Winner Logic-------------------
+// -------------------Win/lose calc-------------------
 const winner = (playerAction, aiChoice) => {
     const winCon = {
         rock: ["scissors", "lizard"],
@@ -62,13 +62,13 @@ const winner = (playerAction, aiChoice) => {
     }
 };
 
-// -------------------Modal Logic-------------------
+// -------------------Alert Modal-------------------
 const showWinnerModal = (message) => {
     document.getElementById("winnerMessage").textContent = message;
     document.getElementById("winnerModal").style.display = "flex";
 };
 
-// -------------------Leaderboard -------------------
+// ------------------Databasepush Scoreboard -------------------
 onValue(leaderboardRef, (snapshot) => {
     const data = snapshot.val();
     console.log("Leaderboard updated:", data); // add this

@@ -558,6 +558,10 @@ h6 {
     }
 }
 
+#winnerConsole {
+    max-width:100%;
+}
+
 /* --- Phones & Tablets --- */
 @media screen and (min-width: 320px) {
     .header {
@@ -620,6 +624,9 @@ h6 {
 
     main #score-col {
         margin-top: 1rem;
+    }
+    #winnerConsole {
+        max-width:50%;
     }
 }
 
