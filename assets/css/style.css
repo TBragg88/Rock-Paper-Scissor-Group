@@ -297,15 +297,16 @@ main #computer-score {
 }
 /*------------------- Winner Modal Styles--------------------- */
 #winner-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1050;
-    background: rgba(0, 0, 0, 0.7);
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1050;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #winner-console {

@@ -27,6 +27,8 @@ const aiAction = () => {
     return actions[Math.floor(Math.random() * actions.length)];
 };
 
+// -------------------global science-------------------
+const submitBtn = document.getElementById("submit-btn");
 // -------------------Win/lose calc-------------------
 const winner = (playerAction, aiChoice) => {
     const winCon = {
@@ -128,8 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (submitBtn) {
         submitBtn.addEventListener("click", () => {
             const playerName =
-                document.getElementById("playerNameInput").value ||
-                "Unknown Player";
+                document.getElementById("name-input").value || "Unknown Player";
             push(leaderboardRef, {
                 name: playerName,
                 score: playerScore,
