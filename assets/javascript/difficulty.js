@@ -1,7 +1,7 @@
 let playerScore = 0;
 let aiScore = 0;
 const winTarget = 5;
-let currentDifficulty = "easy"; // default to easy
+let currentDifficulty = "easy";
 
 const actions = ["rock", "paper", "scissors", "lizard", "spock"];
 const winMap = {
@@ -15,16 +15,11 @@ const winMap = {
 // --------- AI logic per difficulty ---------
 function aiAction(playerMove) {
     if (currentDifficulty === "easy") {
-        // AI always loses: pick something player beats
         return winMap[playerMove][Math.floor(Math.random() * 2)];
     } else if (currentDifficulty === "hard") {
-        // AI always wins: pick something that beats the player
-        const counters = actions.filter((move) =>
-            winMap[move].includes(playerMove)
-        );
+        const counters = actions.filter(move => winMap[move].includes(playerMove));
         return counters[Math.floor(Math.random() * counters.length)];
     }
-    // Medium: random
     return actions[Math.floor(Math.random() * actions.length)];
 }
 
@@ -50,16 +45,41 @@ function updateUI(message) {
     document.getElementById("computer-score").textContent = aiScore;
 }
 
+// --------- Win condition and modal ---------
 function checkWinCondition() {
     if (playerScore === winTarget || aiScore === winTarget) {
         setTimeout(() => {
-            const msg =
-                playerScore === winTarget
-                    ? "Congratulations! You won the match!"
-                    : "The computer wins the match!";
-            showWinnerModalDiff(msg);
+            const resultMsg = playerScore === winTarget
+                ? "Congratulations! You won the match!"
+                : "The computer wins the match!";
+            showWinnerModalDiff(resultMsg);
         }, 100);
     }
+}
+
+function showWinnerModalDiff(message) {
+    const winMsg = message.includes("won")
+        ? "Congratulations you won! play again"
+        : "Bad luck, try again!";
+
+    document.getElementById("win-msg-diff").textContent = winMsg;
+
+    const modal = document.getElementById("winnerModaldiff");
+    modal.classList.remove("d-none");
+    modal.classList.add("d-flex");
+}
+
+document.getElementById("closeModalBtndiff").addEventListener("click", () => {
+    const modal = document.getElementById("winnerModaldiff");
+    modal.classList.remove("d-flex");
+    modal.classList.add("d-none");
+    resetGame();
+});
+
+function resetGame() {
+    playerScore = 0;
+    aiScore = 0;
+    updateUI("First to 5 wins! Start a new match.");
 }
 
 // --------- Event Listeners ---------
@@ -70,31 +90,14 @@ document.querySelector(".game-buttons").addEventListener("click", function (e) {
     winner(move, aiMove);
 });
 
-document.getElementById("closeModalBtndiff").addEventListener("click", () => {
-    document.getElementById("winnerModaldiff").style.display = "none";
-    resetGame();
-});
-
-// --------- Modal and Reset ---------
-function showWinnerModalDiff(message) {
-    document.getElementById("winnerMessagediff").textContent = message;
-    document.getElementById("winnerModaldiff").style.display = "flex";
-}
-
-function resetGame() {
-    playerScore = 0;
-    aiScore = 0;
-    updateUI("First to 5 wins! Start a new match.");
-}
-
-// --------- Difficulty radio & avatar logic ---------
+// --------- Difficulty and Avatar Controls ---------
 document.addEventListener("DOMContentLoaded", () => {
     const aiAvatar = document.getElementById("AI-Avatar");
     const difficulties = document.querySelectorAll('input[name="difficulty"]');
     const avatarMap = {
         easy: "assets/images/char-redshirt.png",
         medium: "assets/images/char-mccoy.png",
-        hard: "assets/images/char-spok.png",
+        hard: "assets/images/char-spock.png",
     };
 
     function updateDifficulty(value) {
@@ -108,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
         radio.addEventListener("change", () => updateDifficulty(radio.value))
     );
 
-    // Set avatar and difficulty on load
     const checked = document.querySelector('input[name="difficulty"]:checked');
     if (checked) updateDifficulty(checked.value);
 });
