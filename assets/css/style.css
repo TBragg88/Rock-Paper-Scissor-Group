@@ -80,7 +80,7 @@ h1 {
    Images
    ========================= */
 .side-image {
-    width: 150px;
+    width: 200px;
     height: 150px;
     object-fit: contain;
     z-index: -1;
@@ -91,8 +91,8 @@ h1 {
 }
 
 #enterprise {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 180px;
     position: absolute;
     overflow: hidden;
 }
@@ -628,6 +628,8 @@ h6 {
 .leaderboard-container {
     max-width: 90%;
 }
+
+
 
 /* --- Phones & Tablets --- */
 @media screen and (max-width: 768px) {
