@@ -42,8 +42,8 @@
         </div>
         <div id="gameScreen">
             <section>
-                <div class="container col-12">
-                    <div class="col-12 my-4 row mb-4">
+                <div class="container-fluid">
+                    <div class="row my-4 mb-4">
                         <div id="game-console" class="row justify-content-evenly align-items-start my-4">
                             <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
                                 <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
@@ -56,37 +56,81 @@
                             </div>
                             <div class="col-12 col-md-6 text-center">
                                 <h2 class="Score-display display-4 mt-3">Score</h2>
-                                <p><span id="player-name">Player</span><span id="player-score">0</span></p>
-                                <p><span id="computer-name">Computer</span><span id="computer-score">0</span></p>
+                                <p><span id="player-name">Player</span> <span id="player-score">0</span></p>
+                                <p><span id="computer-name">Computer</span> <span id="computer-score">0</span></p>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <fieldset class="d-flex flex-row gap-4 align-items-center border-0">
+                                    <legend class="mb-0 me-2 fs-5">Difficulty:</legend>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="difficulty" id="easy"
+                                            value="easy" checked>
+                                        <label class="form-check-label" for="easy">Easy</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="difficulty" id="medium"
+                                            value="medium">
+                                        <label class="form-check-label" for="medium">Medium</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="difficulty" id="hard"
+                                            value="hard">
+                                        <label class="form-check-label" for="hard">Hard</label>
+                                    </div>
+                                </fieldset>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div id="Play-Avatar" class="col-4 px-0">
+                <div class="row align-items-center">
+                    <div id="Play-Avatar" class="col-12 col-md-4 px-0 d-flex justify-content-center mb-3 mb-md-0">
                         <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
-                            class="img-fluid">
+                            class="img-fluid" style="max-width: 180px; width: 100%; height: auto;">
                     </div>
-
-                    <div id="canvascon" class="col-4 text-center mt-5">
-                        <div class="game-buttons mb-3 justify-content-center d-flex">
-                            <button class="select-button" id="rock">🧱</button>
-                            <button class="select-button" id="paper">📜</button>
-                            <button class="select-button" id="scissors">✂️</button>
-                            <button class="select-button" id="lizard">🦎</button>
-                            <button class="select-button" id="spock">🖖</button>
+                    <div id="buttonConsole" class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                        <p id="message-el">Choose your weapon</p>
+                        <div class="game-buttons mb-3 justify-content-center d-flex flex-wrap gap-2">
+                            <button class="select-button" id="rock" style="font-size:2rem;">🧱</button>
+                            <button class="select-button" id="paper" style="font-size:2rem;">📜</button>
+                            <button class="select-button" id="scissors" style="font-size:2rem;">✂️</button>
+                            <button class="select-button" id="lizard" style="font-size:2rem;">🦎</button>
+                            <button class="select-button" id="spock" style="font-size:2rem;">🖖</button>
                         </div>
-                        <p id="message-el">choose your weapon</p>
-                        <canvas id="gameCanvas"></canvas>
                     </div>
-                    <div class="col-4 text-center">
-                        <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid">
+                    <div class="col-12 col-md-4 text-center d-flex justify-content-center">
+                        <img id="AI-Avatar" src="assets/images/char-spok.png" alt="AI Avatar" class="img-fluid"
+                            style="max-width: 180px; width: 100%; height: auto;">
                     </div>
                 </div>
             </section>
         </div>
     </main>
 
+    <footer id="contact" class="custom-footer text-lg-start">
+        <div class="container-fluid text-highlight mt-4">
+            <div class="footer-flex">
+                <div class="footer-copyright">
+                    <p class="mb-0">&copy; 2025. All rights reserved.</p>
+                </div>
+                <div class="footer-social d-flex align-items-center">
+                    <span class="me-2">Our social media:</span>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)"
+                        class="btn btn-outline-custom btn-floating m-1" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"
+                        aria-label="Visit our X page (opens in a new tab)"
+                        class="btn btn-outline-custom btn-floating m-1" role="button"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (opens in a new tab)"
+                        class="btn btn-outline-custom btn-floating m-1" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
     <div id="rulesModal" class="modal fade" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
         <div class="modal-dialog">
 
@@ -134,88 +178,24 @@
     </div>
     </div>
 
-    <footer id="contact" class="custom-footer text-lg-start">
-        <div class="container-fluid text-highlight mt-4">
-            <div class="footer-flex">
-                <div class="footer-copyright">
-                    <p class="mb-0">&copy; 2025. All rights reserved.</p>
-                </div>
-                <div class="footer-social d-flex align-items-center">
-                    <span class="me-2">Our social media:</span>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                        aria-label="Visit our Facebook page (opens in a new tab)"
-                        class="btn btn-outline-custom btn-floating m-1" role="button"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener"
-                        aria-label="Visit our X page (opens in a new tab)"
-                        class="btn btn-outline-custom btn-floating m-1" role="button"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener"
-                        aria-label="Visit our Instagram page (opens in a new tab)"
-                        class="btn btn-outline-custom btn-floating m-1" role="button"><i
-                            class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal -->
-    <div id="rulesModal" class="modal fade" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="rulesModalLabel">How to Play</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul>
-                        <li>✂️<strong>Scissors cuts Paper:</strong> Scissors wins against Paper</li>
-                        <li>📜<strong>Paper covers Rock:</strong> Paper wins against Rock</li>
-                        <li>🧱<strong>Rock crushes Lizard:</strong> Rock wins against Lizard</li>
-                        <li>🦎<strong>Lizard poisons Spock:</strong> Lizard wins against Spock</li>
-                        <li>🖖<strong>Spock smashes Scissors:</strong> Spock wins against Scissors</li>
-                        <li>✂️<strong>Scissors decapitates Lizard:</strong> Scissors wins against Lizard</li>
-                        <li>🦎<strong>Lizard eats Paper:</strong> Lizard wins against Paper.</li>
-                        <li>📜<strong>Paper disproves Spock</strong> Paper wins against Spock</li>
-                        <li>🖖<strong>Spock vaporizes Rock:</strong> Spock wins against Rock</li>
-                        <li>🧱<strong>Rock crushes Scissors:</strong> Rock wins against Scissors</li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-
+    <!-- Winner Modal for Difficulty Mode -->
+    <div id="winnerModaldiff">
+        <div id="winnerConsolediff" class="bg-dark text-white p-4 rounded-4 text-center shadow-lg mx-auto">
+            <h2 id="win-msg-diff"></h2>
+            <button id="closeModalBtndiff" class="btn btn-secondary mb-3">OK</button>
         </div>
     </div>
 
-    <!-- Winner Modal -->
-    <div id="winnerModal"
-        style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:9999;">
-        <div style="background:#222; color:#fff; padding:2rem; border-radius:12px; text-align:center; min-width:250px;">
-            <h2 id="winnerMessage"></h2>
-            <button id="closeModalBtn">OK</button>
-        </div>
-        <div id="winnerModal"
-            style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.7); align-items:center; justify-content:center; z-index:9999;">
-            <div
-                style="background:#222; color:#fff; padding:2rem; border-radius:12px; text-align:center; min-width:250px;">
-                <h2 id="winnerMessage"></h2>
-                <button id="closeModalBtn">OK</button>
-            </div>
-        </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
+        </script>
 
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
-            </script>
-
-
-        <!-- JavaScript -->
-        <script src="assets/javascript/campaign.js"></script>
-        <script src="assets/javascript/morePower.js" charset="utf-8"></script>
+    <!-- JavaScript -->
+    <script src="assets/javascript/difficulty.js"></script>
+    <script src="assets/javascript/morePower.js" charset="utf-8"></script>
 </body>
 
 </html>
