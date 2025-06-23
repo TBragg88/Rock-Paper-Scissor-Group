@@ -21,7 +21,8 @@
    ========================= */
 
 body {
-    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat center center fixed;
+    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat
+        center center fixed;
     background-size: cover;
     color: #fff;
     display: flex;
@@ -79,34 +80,50 @@ h1 {
 /* =========================
    Images
    ========================= */
-.side-image {
+.side-image,
+#enterprise {
     width: 100px;
     height: 125px;
     object-fit: contain;
     z-index: -1;
 }
 
-.space {
-    z-index: -1;
-}
-
 #enterprise {
-    width: 100px;
-    height: 125px;
     position: absolute;
     overflow: hidden;
 }
 
+.space {
+    z-index: -1;
+}
 
 /* =========================
    Console
    ========================= */
-#console {
+#console,
+#game-console,
+#buttonConsole {
     background: rgba(0, 0, 0, 0.85);
     border: 2px solid yellow;
     border-radius: 12px;
     padding: 1rem 2rem;
     max-width: 600px;
+}
+
+#buttonConsole {
+  max-width: 230px;
+  width: 100%;
+  margin: 0;
+}
+#gameScreen > section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* =========================
@@ -117,6 +134,29 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+}
+
+.menu-btn,
+.rules-btn {
+    width: 100%;
+    max-width: 350px;
+    min-width: 180px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    margin: 0.5rem auto;
+    display: block;
+    color: var(--scoretextcolor);
+    background-color: var(--scorehighlight2);
+    border-radius: 20px 20px 0 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover,
+.rules-btn:hover {
+    background-color: var(--scorebackground2);
+    color: var(--scoretextcolor);
 }
 
 /* --- Play Button Styles --- */
@@ -152,11 +192,13 @@ h1 {
 }
 
 .play-btn-edge {
-    background: linear-gradient(to left,
-            hsl(227, 42%, 29%) 0%,
-            hsl(227, 42%, 29%) 8%,
-            hsl(227, 42%, 29%) 92%,
-            hsl(227, 42%, 29%) 100%);
+    background: linear-gradient(
+        to left,
+        hsl(227, 42%, 29%) 0%,
+        hsl(227, 42%, 29%) 8%,
+        hsl(227, 42%, 29%) 92%,
+        hsl(227, 42%, 29%) 100%
+    );
 }
 
 .play-btn-front {
@@ -207,11 +249,13 @@ h1 {
 }
 
 .sub-btn-edge {
-    background: linear-gradient(to left,
-            hsl(227, 42%, 20%) 0%,
-            hsl(227, 42%, 20%) 8%,
-            hsl(227, 42%, 20%) 92%,
-            hsl(227, 42%, 20%) 100%);
+    background: linear-gradient(
+        to left,
+        hsl(227, 42%, 20%) 0%,
+        hsl(227, 42%, 20%) 8%,
+        hsl(227, 42%, 20%) 92%,
+        hsl(227, 42%, 20%) 100%
+    );
 }
 
 .sub-buttons {
@@ -226,7 +270,12 @@ gamescreen and Modal stylies
 ========================= */
 
 /*-------------------- Game Screen Styles --------------------- */
-
+#gameScreen > section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width:auto;
+}
 #game-console {
     background-color: rgba(0, 0, 0, 0.85);
     border: 2px solid yellow;
@@ -353,7 +402,6 @@ main #computer-score {
     text-align: center;
     max-width: 350px;
     border-radius: 20px 20px 0 0;
-    ;
 }
 
 .leaderboard-container {
@@ -422,9 +470,6 @@ main #computer-score {
     cursor: pointer;
 }
 
-
-
-
 /* -------------------- Modal and Console Buttons --------------------- */
 #close-modal-btn,
 #submit-btn,
@@ -462,6 +507,7 @@ main .menu-btn {
     background-color: var(--scorebackground1);
 }
 
+/* Game Buttons */
 .game-buttons {
     display: flex;
     flex-direction: row;
@@ -469,12 +515,36 @@ main .menu-btn {
     gap: 1rem;
     margin-top: 1rem;
     color: #253b3e;
+    
 }
 
-@media (max-width: 576px) {
-    #winnerModal {
-        width: 100%;
-    }
+/* Leaderboard & Misc */
+#name-input {
+    line-height: 24px;
+    max-width: 300px;
+    width: 70%;
+    margin: 0 auto 0.5em auto;
+    display: block;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.leaderboard-container {
+    margin: auto;
+    max-width: 100%;
+    width: 50%;
+    border-radius: 20px 20px 0 0;
+}
+
+#leaderboardList.list-group {
+    background: transparent;
+}
+
+#highScoreMsg {
+    font-size: 1.1rem;
+    color: #ffc107;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 /* =========================
@@ -522,22 +592,13 @@ main .menu-btn {
 #campaign .select-button,
 #chooseOpponent .select-button {
     font-size: 2rem;
-    color: var (var(--scorehighlight2));
+    color: var(--scorehighlight2);
     border: 2px solid #fff;
     border-radius: 50%;
     height: 50px;
     width: 50px;
     margin: 0;
     padding: 0;
-}
-
-#buttonConsole {
-    background-color: rgba(0, 0, 0, 0.85);
-    border: 2px solid yellow;
-    border-radius: 12px;
-    padding: 1rem 2rem;
-    max-width: 600px;
-    margin: auto;
 }
 
 /* =========================
@@ -568,27 +629,27 @@ h6 {
     display: none;
 }
 
-#rock:hover+.hide {
+#rock:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#paper:hover+.hide {
+#paper:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#scissors:hover+.hide {
+#scissors:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#lizard:hover+.hide {
+#lizard:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#spock:hover+.hide {
+#spock:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
@@ -599,8 +660,8 @@ h6 {
 }
 
 /* =========================
-    Responsive Design
-   ========================= */
+Responsive Design
+========================= */
 
 /* --- Small Devices --- */
 @media (max-width: 767px) {
@@ -609,23 +670,26 @@ h6 {
         max-height: 100%;
         overflow-x: hidden;
     }
-
+    
     .flex-container {
         display: flex;
     }
-
+    
     .footer-flex {
         flex-direction: column;
         align-items: stretch;
         text-align: center;
     }
-
+    
     .footer-social,
     .footer-copyright {
         align-items: center !important;
         justify-content: center !important;
         width: 100%;
         text-align: center !important;
+    }
+    #P-Avatar {
+        display: none;
     }
 
     .footer-social .text-end {
@@ -639,20 +703,20 @@ h6 {
 }
 
 @media (max-width: 393px) {
-.small-buttons {
-    display: flex;
-    justify-content: center;
-}
+    .small-buttons {
+        display: flex;
+        justify-content: center;
+    }
 
-#console {
-    max-width: 300px;
-}
+    #console {
+        max-width: 300px;
+    }
 
-#enterprise,
-#chaos {
-    width: 50px;
-    height: 75px;
-}
+    #enterprise,
+    #chaos {
+        width: 50px;
+        height: 75px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -663,7 +727,7 @@ h6 {
     }
 }
 
-/* --- Phones & Tablets --- */
+/* --- Phones & Tablets ---  */
 @media screen and (max-width: 768px) {
     .header {
         width: 100%;
@@ -697,11 +761,10 @@ h6 {
         padding: 0.5rem 1rem;
         font-size: 1.2rem;
     }
-}
 
+}
 /* --- Large Devices --- */
 @media screen and (min-width: 992px) {
-
     .center-container,
     .wrapper,
     .container {
@@ -732,7 +795,6 @@ h6 {
 
 /* --- Extra Large Devices --- */
 @media screen and (min-width: 1200px) {
-
     .play-btn,
     .sub-btn {
         width: 350px;
@@ -744,7 +806,7 @@ h6 {
     #campaign,
     #chooseOpponent {
         max-width: 800px;
-        margin: 0 auto;
+        margin: auto;
         padding: 1rem;
     }
 
@@ -752,8 +814,5 @@ h6 {
         transform: scale(1.25);
     }
 
-    #Play-Avatar {
-        transform: scale(1.5);
-        margin-left: -20px;
-    }
+  
 }

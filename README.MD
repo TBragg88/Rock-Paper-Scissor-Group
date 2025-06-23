@@ -4,6 +4,16 @@ A Star Trek–themed Rock-Paper-Scissors-Lizard-Spock game with multiple play mo
 
 ---
 
+## 🖼️ Website Mockup
+
+![Website Mockup](/readme-documentation/mock-up.png)
+
+---
+
+## 🌐 Deployed Site
+
+[https://tbragg88.github.io/Rock-Paper-Scissor-Group/](https://tbragg88.github.io/Rock-Paper-Scissor-Group/)
+
 ## Table of Contents
 
 -   [About](#about)
@@ -67,9 +77,9 @@ A Star Trek–themed Rock-Paper-Scissors-Lizard-Spock game with multiple play mo
 ## Screenshots
 
 <!-- Add your screenshots or GIFs here -->
-<img src="readme-documentation/wireframes/Home-page.png" alt="Home Wireframe" width="600" />
-<img src="readme-documentation/wireframes/Phone.png" alt="Mobile Wireframe" width="300" />
-<img src="readme-documentation/wireframes/Play-page.png" alt="Play Wireframe" width="600" />
+<img src="readme-documentation/wireframes/Home-page.png" alt="Home Wireframe" width="160" />
+<img src="readme-documentation/wireframes/Phone.png" alt="Mobile Wireframe" width="160" />
+<img src="readme-documentation/wireframes/Play-page.png" alt="Play Wireframe" width="160" />
 
 ---
 
@@ -148,6 +158,28 @@ See [PLANNING.MD](PLANNING.MD) for a full breakdown of project phases, features,
 
 ---
 
+## 🚀 How AI Was Used
+
+Artificial Intelligence played a crucial role in shaping this project, streamlining development, and improving overall efficiency. Here’s how AI was leveraged:
+
+1. **Code Generation:**  
+   AI-powered tools, such as **GitHub Copilot**, provided structured HTML and CSS code snippets, streamlining development. "A manual review ensured code quality. In the end, I mainly used an external Copilot for 'How can I do X?' rather than letting VS Code's internal Copilot indiscriminately shotgun lines."
+2. **Debugging & Optimization:**  
+   AI debugging tools detected errors and suggested solutions, minimizing bugs and improving stability.
+   "The W3C Markup Validation Service was great for identifying issues and bad coding practices. Lighthouse was particularly helpful in assessing accessibility and ensuring sufficient text contrast for an inclusive experience."
+
+3. **AI-Generated Imagery:**  
+   **DALL-E** was used to generate all images for the website, ensuring consistency and creativity.
+   "This was great from start to finish. As someone with little artistic talent, it provided me with enough guidance to create an aesthetic that flowed nicely."
+
+4. **Content Assistance:**  
+   **GitHub Copilot** aided in text refinement, delivering real-time suggestions for blurbs and content. "Again, this is completely true—I wrote nothing on the page. Every paragraph, inspirational message, and aspiration came entirely from the AI, and it was both cohesive and comprehensive."
+
+5. **Accessibility Improvements:**  
+   Tools like **Lighthouse** assessed accessibility features and provided recommendations for a user-friendly experience. "Not only was Lighthouse useful, but the built-in Copilot was also effective at formatting and validation. It highlighted best practices for aria-label placement and suggested accessibility improvements. It was very good at that."
+
+    ***
+
 ## Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
@@ -175,3 +207,25 @@ This project is licensed under the MIT License.
 ---
 
 
+## 🌓 Partial Integrations
+
+-   **Dark/Light Mode Toggle Animation:**  
+    More elaborate transitions were tested but replaced with a subtle, accessible toggle for a smoother experience.
+
+These decisions were made to ensure the site remains approachable, fast, and easy to navigate for all users.
+
+---
+## 🛠️ Features Considered But Not Included
+
+During development, several features were explored but not included to maintain clarity, accessibility, and a calming user experience:
+
+-   **Image Carousel:**  
+    Initially planned for the hero or resource sections to showcase tips and affirmations. Removed as it disrupted the calm, focused flow of the site and could distract users seeking support.
+
+-   **Breathing Animation:**  
+    A guided breathing exercise animation was prototyped to help users manage stress. It was omitted to keep the interface simple and avoid overwhelming first-time visitors. This feature may be revisited in future updates.
+
+-   **Live Chat Widget:**  
+    Considered for instant support, but excluded to maintain privacy and reduce technical complexity for a static site.
+
+---
