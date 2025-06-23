@@ -721,4 +721,8 @@ h6 {
         margin: 0 auto;
         padding: 1rem;
     }
+
+    #console {
+        transform: scale(1.25);
+    }
 }
