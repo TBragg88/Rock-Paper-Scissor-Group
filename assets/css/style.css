@@ -111,7 +111,19 @@ h1 {
 }
 
 #buttonConsole {
-    margin: 2px;
+  max-width: 230px;
+  width: 100%;
+  margin: 0;
+}
+#gameScreen > section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* =========================
@@ -262,6 +274,7 @@ gamescreen and Modal stylies
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width:auto;
 }
 #game-console {
     background-color: rgba(0, 0, 0, 0.85);
@@ -502,6 +515,7 @@ main .menu-btn {
     gap: 1rem;
     margin-top: 1rem;
     color: #253b3e;
+    
 }
 
 /* Leaderboard & Misc */
@@ -800,8 +814,5 @@ Responsive Design
         transform: scale(1.25);
     }
 
-    #Play-Avatar {
-        transform: scale(1.5);
-        margin-left: -20px;
-    }
+  
 }
