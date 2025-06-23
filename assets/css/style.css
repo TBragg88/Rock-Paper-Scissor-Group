@@ -92,8 +92,8 @@ h1 {
 }
 
 #enterprise {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 125px;
     position: absolute;
     overflow: hidden;    
 }
@@ -627,10 +627,9 @@ h6 {
     }
 
     .side-image {
-        margin:auto;
         width: 150;
         max-width: 100px;
-        height: 200px;
+        height: 150px;
     }
 
     .play-btn,
@@ -658,10 +657,6 @@ h6 {
         margin-top: 40px;
     }
 
-    .side-image {
-        max-width: 200px;
-    }
-
     .play-btn,
     .sub-btn {
         width: 250px;
@@ -683,9 +678,6 @@ h6 {
 
 /* --- Extra Large Devices --- */
 @media screen and (min-width: 1200px) {
-    /* .side-image {
-        max-width: 300px;
-    } */
 
     .play-btn,
     .sub-btn {
