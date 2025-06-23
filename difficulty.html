@@ -40,13 +40,13 @@
         <div id="enterprise" class="space">
             <img id="chaos" class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
         </div>
-        <div id="gameScreen">
+      <div id="gameScreen" class="container">
             <section>
                 <div class="container-fluid">
                     <div class="row my-4 mb-4">
                         <div id="game-console" class="row justify-content-evenly align-items-start my-4">
                             <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
-                                <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
+                                <button type="button" class="rules-btn btn" data-bs-toggle="modal"
                                     data-bs-target="#rulesModal">
                                     How to Play
                                 </button>
@@ -59,34 +59,20 @@
                                 <p><span id="player-name">Player</span> <span id="player-score">0</span></p>
                                 <p><span id="computer-name">Computer</span> <span id="computer-score">0</span></p>
                             </div>
-                            <div class="col-12 d-flex justify-content-center">
-                                <fieldset class="d-flex flex-row gap-4 align-items-center border-0">
-                                    <legend class="mb-0 me-2 fs-5">Difficulty:</legend>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="difficulty" id="easy"
-                                            value="easy" checked>
-                                        <label class="form-check-label" for="easy">Easy</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="difficulty" id="medium"
-                                            value="medium">
-                                        <label class="form-check-label" for="medium">Medium</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="difficulty" id="hard"
-                                            value="hard">
-                                        <label class="form-check-label" for="hard">Hard</label>
-                                    </div>
-                                </fieldset>
+                            <div id="bannerP" class="col-12">
+                                <p>Score as many points as you can before Spock gets 5.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
-                    <div id="Play-Avatar" class="col-12 col-md-4 px-0 d-flex justify-content-center mb-3 mb-md-0">
+                <div class="row justify-content-center align-items-center">
+                    <!-- Good Guy -->
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
                         <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
-                            class="img-fluid" style="max-width: 180px; width: 100%; height: auto;">
+                            class="img-fluid">
                     </div>
+
+                    <!-- Button Console -->
                     <div id="buttonConsole" class="col-12 col-md-4 text-center" style="width:250px">
                         <p id="message-el">"How Long can you last?"</p>
                         <div class="game-buttons d-flex flex-column gap-1">
@@ -103,11 +89,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 text-center d-flex justify-content-center">
-                        <img id="AI-Avatar" src="assets/images/char-spock.png" alt="AI Avatar" class="img-fluid"
-                            style="max-width: 180px; width: 100%; height: auto;">
+                    <!-- Bad Guy -->
+                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                        <img id="AI-Avatar" src="assets/images/char-spock.png" alt="AI Avatar" class="img-fluid">
                     </div>
-                </div>
             </section>
         </div>
     </main>
