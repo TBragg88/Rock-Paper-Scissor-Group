@@ -274,8 +274,12 @@ gamescreen and Modal stylies
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width:auto;
+  
+  max-width: 1200px;
+  margin: 0 auto;
 }
+  
+
 #game-console {
     background-color: rgba(0, 0, 0, 0.85);
     border: 2px solid yellow;
@@ -801,15 +805,7 @@ Responsive Design
         font-size: 2.5rem;
         padding-top: 10px;
     }
-
-    #gameScreen,
-    #campaign,
-    #chooseOpponent {
-        max-width: 800px;
-        margin: auto;
-        padding: 1rem;
-    }
-
+        
     #console {
         transform: scale(1.25);
     }
