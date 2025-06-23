@@ -81,8 +81,8 @@ h1 {
    Images
    ========================= */
 .side-image {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 125px;
     object-fit: contain;
     z-index: -1;
 }
@@ -283,6 +283,7 @@ main #computer-score {
     padding: 0.5rem 1rem;
     margin-left: 1em;
 }
+
 #bannerP {
     display: flex;
     justify-content: center;
@@ -328,6 +329,7 @@ main #computer-score {
     box-sizing: border-box;
     margin: auto;
 }
+
 #winnerModal {
     font-size: 1.5rem;
     color: var(--scoretextcolor);
@@ -338,12 +340,14 @@ main #computer-score {
     border: none;
     width: 50%;
 }
+
 #winner-msg {
     width: 70%;
     background-color: var(--scorehighlight2);
     border-radius: 20px;
     padding: 1rem 2rem 1rem 2rem;
 }
+
 #name-input {
     line-height: 24px;
     max-width: 300px;
@@ -361,6 +365,7 @@ main #computer-score {
     width: 50%;
     border-radius: 20px 20px 0 0;
 }
+
 #leaderboardList.list-group {
     background: transparent;
 }
@@ -371,6 +376,7 @@ main #computer-score {
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
+
 /*----------------difficulty game-------------------------*/
 /* Difficulty Winner Modal Styles */
 #winnerModaldiff {
@@ -385,6 +391,7 @@ main #computer-score {
     z-index: 1050;
     background: rgba(0, 0, 0, 0.7);
 }
+
 #winnerConsolediff {
     min-width: 260px;
     max-width: 500px;
@@ -395,6 +402,7 @@ main #computer-score {
     box-sizing: border-box;
     margin: auto;
 }
+
 #winnerMessagediff {
     font-size: 1.5rem;
     color: var(--scoretextcolor);
@@ -405,6 +413,7 @@ main #computer-score {
     width: 50%;
     background-color: var(--scorehighlight2);
 }
+
 #closeModalBtndiff {
     margin-top: 1rem;
     padding: 0.5rem 1.5rem;
@@ -430,6 +439,7 @@ main .btn,
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 #submit-btn,
 #close-modal-btn,
 main .menu-btn {
@@ -446,6 +456,7 @@ main .menu-btn {
     height: 2.5rem;
     margin: 0.25rem;
 }
+
 #submit-btn {
     width: 70%;
     background-color: var(--scorebackground1);
@@ -459,11 +470,13 @@ main .menu-btn {
     margin-top: 1rem;
     color: #253b3e;
 }
+
 @media (max-width: 576px) {
     #winnerModal {
         width: 100%;
     }
 }
+
 /* =========================
     Footer
     ========================= */
@@ -550,6 +563,7 @@ h6 {
     color: #cd9c30;
     text-align: center;
 }
+
 .hide {
     display: none;
 }
@@ -563,14 +577,17 @@ h6 {
     display: block;
     color: var(--buttoncolor2);
 }
+
 #scissors:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
+
 #lizard:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
+
 #spock:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
@@ -588,9 +605,13 @@ h6 {
 /* --- Small Devices --- */
 @media (max-width: 767px) {
     body {
-        max-width: 100%;
+        width: 100%;
         max-height: 100%;
         overflow-x: hidden;
+    }
+
+    .flex-container {
+        display: flex;
     }
 
     .footer-flex {
@@ -643,7 +664,7 @@ h6 {
 }
 
 /* --- Phones & Tablets --- */
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 768px) {
     .header {
         width: 100%;
         padding: 0.5rem 1rem;
@@ -670,7 +691,7 @@ h6 {
         padding: 10px 0;
     }
 
-    main .btn,
+    main.btn,
     .menu-btn {
         width: 100%;
         padding: 0.5rem 1rem;
@@ -711,6 +732,7 @@ h6 {
     main #score-col {
         margin-top: 1rem;
     }
+
     #winnerConsole {
         max-width: 50%;
     }
@@ -731,5 +753,14 @@ h6 {
         max-width: 800px;
         margin: 0 auto;
         padding: 1rem;
+    }
+
+    #console {
+        transform: scale(1.25);
+    }
+
+    #Play-Avatar {
+        transform: scale(1.5);
+        margin-left: -20px;
     }
 }
