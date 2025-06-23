@@ -660,7 +660,7 @@ h6 {
         padding: 10px 0;
     }
 
-    main .btn,
+    main.btn,
     .menu-btn {
         width: 100%;
         padding: 0.5rem 1rem;
@@ -726,5 +726,9 @@ h6 {
 
     #console {
         transform: scale(1.25);
+    }
+
+    #Play-Avatar {
+        transform: scale(1.5);
     }
 }
