@@ -80,7 +80,7 @@ h1 {
    Images
    ========================= */
 .side-image {
-    width: 200px;
+    width: 150px;
     height: 150px;
     object-fit: contain;
     z-index: -1;
@@ -91,8 +91,8 @@ h1 {
 }
 
 #enterprise {
-    width: 200px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     position: absolute;
     overflow: hidden;
 }
