@@ -80,8 +80,8 @@ h1 {
    Images
    ========================= */
 .side-image {
-    width: 200px;
-    height: 150px;
+    width: 100px;
+    height: 125px;
     object-fit: contain;
     z-index: -1;
 }
@@ -96,6 +96,7 @@ h1 {
     position: absolute;
     overflow: hidden;
 }
+
 
 /* =========================
    Console
