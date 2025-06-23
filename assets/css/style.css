@@ -728,7 +728,12 @@ h6 {
         transform: scale(1.25);
     }
 
+    .container-fluid {
+        transform: scale(1.15);
+    }
+
     #Play-Avatar {
         transform: scale(1.5);
+        margin-left: -20px;
     }
 }
