@@ -21,8 +21,7 @@
    ========================= */
 
 body {
-    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat
-        center center fixed;
+    background: #180518 url("../images/spacethefinalfrontier.jpg") no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     display: flex;
@@ -81,7 +80,7 @@ h1 {
    Images
    ========================= */
 .side-image {
-    width: 150px;
+    width: 200px;
     height: 150px;
     object-fit: contain;
     z-index: -1;
@@ -95,7 +94,7 @@ h1 {
     width: 100px;
     height: 125px;
     position: absolute;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 /* =========================
@@ -152,13 +151,11 @@ h1 {
 }
 
 .play-btn-edge {
-    background: linear-gradient(
-        to left,
-        hsl(227, 42%, 29%) 0%,
-        hsl(227, 42%, 29%) 8%,
-        hsl(227, 42%, 29%) 92%,
-        hsl(227, 42%, 29%) 100%
-    );
+    background: linear-gradient(to left,
+            hsl(227, 42%, 29%) 0%,
+            hsl(227, 42%, 29%) 8%,
+            hsl(227, 42%, 29%) 92%,
+            hsl(227, 42%, 29%) 100%);
 }
 
 .play-btn-front {
@@ -209,13 +206,11 @@ h1 {
 }
 
 .sub-btn-edge {
-    background: linear-gradient(
-        to left,
-        hsl(227, 42%, 20%) 0%,
-        hsl(227, 42%, 20%) 8%,
-        hsl(227, 42%, 20%) 92%,
-        hsl(227, 42%, 20%) 100%
-    );
+    background: linear-gradient(to left,
+            hsl(227, 42%, 20%) 0%,
+            hsl(227, 42%, 20%) 8%,
+            hsl(227, 42%, 20%) 92%,
+            hsl(227, 42%, 20%) 100%);
 }
 
 .sub-buttons {
@@ -283,6 +278,7 @@ main #computer-score {
     padding: 0.5rem 1rem;
     margin-left: 1em;
 }
+
 #bannerP {
     display: flex;
     justify-content: center;
@@ -306,16 +302,16 @@ main #computer-score {
 /*------------------- Winner Modal Styles--------------------- */
 /*----------standardgame----------------*/
 #winner-modal {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1050;
-  background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1050;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 #winner-console {
@@ -328,32 +324,36 @@ main #computer-score {
     box-sizing: border-box;
     margin: auto;
 }
+
 #winnerModal {
     font-size: 1.5rem;
     color: var(--scoretextcolor);
-    
+
     border-radius: 20px 20px 0 0;
     padding: 1.2rem 1.8rem;
     margin: 1rem auto 1rem auto;
     border: none;
     width: 50%;
 }
+
 #winner-msg {
     width: 70%;
     background-color: var(--scorehighlight2);
     border-radius: 20px;
     padding: 1rem 2rem 1rem 2rem;
 }
+
 #name-input {
-    line-height:24px;
+    line-height: 24px;
     max-width: 300px;
     width: 70%;
     margin: 0 auto 0.5em auto;
     display: block;
     text-align: center;
     max-width: 350px;
-    border-radius: 20px 20px 0 0;;
-    }
+    border-radius: 20px 20px 0 0;
+    ;
+}
 
 .leaderboard-container {
     margin: auto;
@@ -361,6 +361,7 @@ main #computer-score {
     width: 50%;
     border-radius: 20px 20px 0 0;
 }
+
 #leaderboardList.list-group {
     background: transparent;
 }
@@ -371,6 +372,7 @@ main #computer-score {
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
+
 /*----------------difficulty game-------------------------*/
 /* Difficulty Winner Modal Styles */
 #winnerModaldiff {
@@ -385,6 +387,7 @@ main #computer-score {
     z-index: 1050;
     background: rgba(0, 0, 0, 0.7);
 }
+
 #winnerConsolediff {
     min-width: 260px;
     max-width: 500px;
@@ -395,6 +398,7 @@ main #computer-score {
     box-sizing: border-box;
     margin: auto;
 }
+
 #winnerMessagediff {
     font-size: 1.5rem;
     color: var(--scoretextcolor);
@@ -405,6 +409,7 @@ main #computer-score {
     width: 50%;
     background-color: var(--scorehighlight2);
 }
+
 #closeModalBtndiff {
     margin-top: 1rem;
     padding: 0.5rem 1.5rem;
@@ -433,6 +438,7 @@ main .btn,
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 #submit-btn,
 #close-modal-btn,
 main .menu-btn {
@@ -449,6 +455,7 @@ main .menu-btn {
     height: 2.5rem;
     margin: 0.25rem;
 }
+
 #submit-btn {
     width: 70%;
     background-color: var(--scorebackground1);
@@ -462,11 +469,13 @@ main .menu-btn {
     margin-top: 1rem;
     color: #253b3e;
 }
+
 @media (max-width: 576px) {
     #winnerModal {
         width: 100%;
     }
 }
+
 /* =========================
     Footer
     ========================= */
@@ -553,28 +562,32 @@ h6 {
     color: #cd9c30;
     text-align: center;
 }
+
 .hide {
     display: none;
 }
 
-#rock:hover + .hide {
+#rock:hover+.hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#paper:hover + .hide {
+#paper:hover+.hide {
     display: block;
     color: var(--buttoncolor2);
 }
-#scissors:hover + .hide {
+
+#scissors:hover+.hide {
     display: block;
     color: var(--buttoncolor2);
 }
-#lizard:hover + .hide {
+
+#lizard:hover+.hide {
     display: block;
     color: var(--buttoncolor2);
 }
-#spock:hover + .hide {
+
+#spock:hover+.hide {
     display: block;
     color: var(--buttoncolor2);
 }
@@ -591,9 +604,13 @@ h6 {
 /* --- Small Devices --- */
 @media (max-width: 767px) {
     body {
-        max-width: 100%;
+        width: 100%;
         max-height: 100%;
         overflow-x: hidden;
+    }
+
+    .flex-container {
+        display: flex;
     }
 
     .footer-flex {
@@ -646,7 +663,7 @@ h6 {
 }
 
 /* --- Phones & Tablets --- */
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 768px) {
     .header {
         width: 100%;
         padding: 0.5rem 1rem;
@@ -673,7 +690,7 @@ h6 {
         padding: 10px 0;
     }
 
-    main .btn,
+    main.btn,
     .menu-btn {
         width: 100%;
         padding: 0.5rem 1rem;
@@ -683,6 +700,7 @@ h6 {
 
 /* --- Large Devices --- */
 @media screen and (min-width: 992px) {
+
     .center-container,
     .wrapper,
     .container {
@@ -705,6 +723,7 @@ h6 {
     main #score-col {
         margin-top: 1rem;
     }
+
     #winnerConsole {
         max-width: 50%;
     }
@@ -727,5 +746,13 @@ h6 {
         margin: 0 auto;
         padding: 1rem;
     }
-}
 
+    #console {
+        transform: scale(1.25);
+    }
+
+    #Play-Avatar {
+        transform: scale(1.5);
+        margin-left: -20px;
+    }
+}
