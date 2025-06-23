@@ -95,7 +95,7 @@ h1 {
     width: 100px;
     height: 125px;
     position: absolute;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 /* =========================
@@ -306,16 +306,16 @@ main #computer-score {
 /*------------------- Winner Modal Styles--------------------- */
 /*----------standardgame----------------*/
 #winner-modal {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1050;
-  background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1050;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 #winner-console {
@@ -331,7 +331,7 @@ main #computer-score {
 #winnerModal {
     font-size: 1.5rem;
     color: var(--scoretextcolor);
-    
+
     border-radius: 20px 20px 0 0;
     padding: 1.2rem 1.8rem;
     margin: 1rem auto 1rem auto;
@@ -345,15 +345,15 @@ main #computer-score {
     padding: 1rem 2rem 1rem 2rem;
 }
 #name-input {
-    line-height:24px;
+    line-height: 24px;
     max-width: 300px;
     width: 70%;
     margin: 0 auto 0.5em auto;
     display: block;
     text-align: center;
     max-width: 350px;
-    border-radius: 20px 20px 0 0;;
-    }
+    border-radius: 20px 20px 0 0;
+}
 
 .leaderboard-container {
     margin: auto;
@@ -415,9 +415,6 @@ main #computer-score {
     font-weight: bold;
     cursor: pointer;
 }
-
-
-
 
 /* -------------------- Modal and Console Buttons --------------------- */
 #close-modal-btn,
@@ -621,20 +618,20 @@ h6 {
 }
 
 @media (max-width: 393px) {
-.small-buttons {
-    display: flex;
-    justify-content: center;
-}
+    .small-buttons {
+        display: flex;
+        justify-content: center;
+    }
 
-#console {
-    max-width: 300px;
-}
+    #console {
+        max-width: 300px;
+    }
 
-#enterprise,
-#chaos {
-    width: 50px;
-    height: 75px;
-}
+    #enterprise,
+    #chaos {
+        width: 50px;
+        height: 75px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -681,6 +678,15 @@ h6 {
     }
 }
 
+/* Screens max width 768px */
+
+@media screen and (max-width: 768px) {
+    #P-Avatar,
+    #AI-Avatar {
+        display: none;
+    }
+}
+
 /* --- Large Devices --- */
 @media screen and (min-width: 992px) {
     .center-container,
@@ -712,7 +718,6 @@ h6 {
 
 /* --- Extra Large Devices --- */
 @media screen and (min-width: 1200px) {
-
     .play-btn,
     .sub-btn {
         width: 350px;
@@ -728,4 +733,3 @@ h6 {
         padding: 1rem;
     }
 }
-
