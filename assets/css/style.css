@@ -294,6 +294,15 @@ main #computer-score {
     border-radius: 20px;
     padding: 0.5rem 1rem;
 }
+
+.menu-btn:hover {
+    background-color: var(--scorebackground2);
+    color: var(--scoretextcolor);
+}
+.rules-btn:hover {
+    background-color: var(--scorebackground2);
+    color: var(--scoretextcolor);
+}
 /*------------------- Winner Modal Styles--------------------- */
 /*----------standardgame----------------*/
 #winner-modal {
