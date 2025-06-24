@@ -41,22 +41,21 @@
             <img id="chaos" class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
         </div>
         <div id="menuScreen">
-            <section>
+            <div id="section">
                 <div class="container d-flex justify-content-center align-items-center min-vh-50">
                     <div class="center-container wrapper w-100">
                         <div id="console" class="menu-buttons">
                             <a href="https://youtu.be/sFGmhvx1elk?si=4N1BtLZxlK8DjCRZ" target="_blank" rel="noopener"
                                 style="outline: 0"><i class="fa-solid fa-power-off"></i></a>
                             <div class="small-buttons">
-                                <button class="play-btn-pushable" id="startButton" role="button">
+                                <button class="play-btn-pushable" id="startButton">
                                     <span class="play-btn-shadow"></span>
                                     <span class="play-btn-edge"></span>
                                     <span class="play-btn-front text">
                                         Start Game
                                     </span>
                                 </button>
-                                <button class="play-btn-pushable" onclick="location.href='campaign.html'" id="bossRush"
-                                    role="button">
+                                <button class="play-btn-pushable" onclick="location.href='campaign.html'" id="bossRush">
                                     <span class="play-btn-shadow"></span>
                                     <span class="play-btn-edge"></span>
                                     <span class="play-btn-front text">
@@ -65,7 +64,7 @@
                                 </button>
                             </div>
                             <button class="play-btn-pushable" onclick="location.href='difficulty.html'"
-                                id="chooseOpponet" role="button">
+                                id="chooseOpponet">
                                 <span class="play-btn-shadow"></span>
                                 <span class="play-btn-edge"></span>
                                 <span class="play-btn-front text">
@@ -73,8 +72,8 @@
                                 </span>
                             </button>
                             <div class="sub-buttons">
-                                <button class="play-btn-pushable" id="rulesModalBtn" role="button"
-                                    data-bs-toggle="modal" data-bs-target="#rulesModal">
+                                <button class="play-btn-pushable" id="rulesModalBtn" data-bs-toggle="modal"
+                                    data-bs-target="#rulesModal">
                                     <span class="play-btn-shadow"></span>
                                     <span class="play-btn-edge sub-btn-edge"></span>
                                     <span class="play-btn-front sub-btn text">
@@ -85,10 +84,10 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
-        <!-- help -->
-        <!---------------------------------------gamescreens------------------------------------------------>
+
+        <!--===================================gamescreens===================================-->
         <div id="gameScreen" class="container" style="display: none;">
             <section>
                 <div class="container-fluid">
@@ -144,6 +143,7 @@
                     <div id="Comms-AI" class="col-12 col-md-4 d-flex justify-content-center">
                         <img id="AI-Avatar" src="assets/images/char-spock.png" alt="AI Avatar" class="img-fluid">
                     </div>
+                </div>
             </section>
         </div>
     </main>
@@ -191,16 +191,26 @@
                     <h6>How to play</h6>
                     <p>Each player secretly selects one of the five options</p>
                     <ul>
-                        <li id="rock-modal">🧱Rock</li>
-                        <div class="hide">Rock beats lizard & scissors</div><br>
-                        <li id="paper-modal">📜Paper</li>
-                        <div class="hide">Paper beats rock & spock</div><br>
-                        <li id="scissors-modal">✂️Scissors</li>
-                        <div class="hide">Scissors beats paper & lizard</div><br>
-                        <li id="lizard-modal">🦎Lizard</li>
-                        <div class="hide">Lizard beats Spock & paper</div><br>
-                        <li id="spock-modal">🖖Spock</li>
-                        <div class="hide">Spock beats scissors & rock</div>
+                        <li id="rock-modal">
+                            🧱Rock
+                            <span class="hide">Rock beats lizard & scissors</span>
+                        </li>
+                        <li id="paper-modal">
+                            📜Paper
+                            <span class="hide">Paper beats rock & spock</span>
+                        </li>
+                        <li id="scissors-modal">
+                            ✂️Scissors
+                            <span class="hide">Scissors beats paper & lizard</span>
+                        </li>
+                        <li id="lizard-modal">
+                            🦎Lizard
+                            <span class="hide">Lizard beats Spock & paper</span>
+                        </li>
+                        <li id="spock-modal">
+                            🖖Spock
+                            <span class="hide">Spock beats scissors & rock</span>
+                        </li>
                     </ul>
                     <img src="assets/images/RPSLS.webp" alt="Rock Paper Scissors Lizard Spock" class="img-fluid mb-3">
                     <p>Then, they reveal their choice simultaneously. The winner is decided based on the
@@ -251,8 +261,8 @@
 
     <!-- JavaScript -->
     <script type="module" src="assets/javascript/index.js"></script>
-    <script src="assets/javascript/morePower.js" charset="utf-8"></script>
-    <script src="assets/javascript/lines.js" charset="utf-8"></script>
+    <script src="assets/javascript/morePower.js"></script>
+    <script src="assets/javascript/lines.js"></script>
 </body>
 
 </html>
