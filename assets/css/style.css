@@ -80,33 +80,50 @@ h1 {
 /* =========================
    Images
    ========================= */
-.side-image {
+.side-image,
+#enterprise {
     width: 100px;
     height: 125px;
     object-fit: contain;
     z-index: -1;
 }
 
-.space {
-    z-index: -1;
-}
-
 #enterprise {
-    width: 100px;
-    height: 125px;
     position: absolute;
     overflow: hidden;
+}
+
+.space {
+    z-index: -1;
 }
 
 /* =========================
    Console
    ========================= */
-#console {
+#console,
+#game-console,
+#buttonConsole {
     background: rgba(0, 0, 0, 0.85);
     border: 2px solid yellow;
     border-radius: 12px;
     padding: 1rem 2rem;
     max-width: 600px;
+}
+
+#buttonConsole {
+    max-width: 230px;
+    width: 100%;
+    margin: 0;
+}
+#gameScreen > section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* =========================
@@ -117,6 +134,29 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+}
+
+.menu-btn,
+.rules-btn {
+    width: 100%;
+    max-width: 350px;
+    min-width: 180px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    margin: 0.5rem auto;
+    display: block;
+    color: var(--scoretextcolor);
+    background-color: var(--scorehighlight2);
+    border-radius: 20px 20px 0 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover,
+.rules-btn:hover {
+    background-color: var(--scorebackground2);
+    color: var(--scoretextcolor);
 }
 
 /* --- Play Button Styles --- */
@@ -226,10 +266,18 @@ h1 {
 }
 
 /* =========================
-gamescreen and Modal stylies
-========================= */
+    gamescreen and Modal stylies
+    ========================= */
 
 /*-------------------- Game Screen Styles --------------------- */
+#gameScreen > section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 #game-console {
     background-color: rgba(0, 0, 0, 0.85);
@@ -252,7 +300,7 @@ main .Score-display {
 }
 
 main #player-name {
-    background-color: var(--scorebackground1);
+    background-color: var(--scorehighlight1);
     color: #fff;
     border-radius: 20px 0 0 20px;
     padding: 0.5rem 1.9rem;
@@ -261,7 +309,7 @@ main #player-name {
 
 main #player-score {
     width: 50px;
-    background-color: var(--scorebackground1);
+    background-color: var(--scorehighlight1);
     color: #fff;
     border-radius: 0 20px 20px 0;
     padding: 0.5rem 1rem;
@@ -269,7 +317,7 @@ main #player-score {
 }
 
 main #computer-name {
-    background-color: var(--scorebackground1);
+    background-color: var(--scorehighlight1);
     color: #fff;
     border-radius: 20px 0 0 20px;
     padding: 0.5rem 1rem;
@@ -277,7 +325,7 @@ main #computer-name {
 }
 
 main #computer-score {
-    background-color: var(--scorebackground1);
+    background-color: var(--scorehighlight1);
     color: #fff;
     border-radius: 0 20px 20px 0;
     padding: 0.5rem 1rem;
@@ -295,7 +343,14 @@ main #computer-score {
     border-radius: 20px;
     padding: 0.5rem 1rem;
 }
-
+/* -------------------------DELETE THIS IF WE DONT LIKE THE SCREENS?????--------*/
+#Comms-human,
+#Comms-AI {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid var(--buttonhover);
+    border-radius: 10px;
+    height: auto;
+}
 .menu-btn:hover {
     background-color: var(--scorebackground2);
     color: var(--scoretextcolor);
@@ -425,6 +480,19 @@ main #computer-score {
     cursor: pointer;
 }
 
+/* boss rush modal ----------- */
+#winnersModalBoss {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1050;
+    background: rgba(0, 0, 0, 0.7);
+}
 /* -------------------- Modal and Console Buttons --------------------- */
 #close-modal-btn,
 #submit-btn,
@@ -462,6 +530,7 @@ main .menu-btn {
     background-color: var(--scorebackground1);
 }
 
+/* Game Buttons */
 .game-buttons {
     display: flex;
     flex-direction: row;
@@ -471,10 +540,33 @@ main .menu-btn {
     color: #253b3e;
 }
 
-@media (max-width: 576px) {
-    #winnerModal {
-        width: 100%;
-    }
+/* Leaderboard & Misc */
+#name-input {
+    line-height: 24px;
+    max-width: 300px;
+    width: 70%;
+    margin: 0 auto 0.5em auto;
+    display: block;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+
+.leaderboard-container {
+    margin: auto;
+    max-width: 100%;
+    width: 50%;
+    border-radius: 20px 20px 0 0;
+}
+
+#leaderboardList.list-group {
+    background: transparent;
+}
+
+#highScoreMsg {
+    font-size: 1.1rem;
+    color: #ffc107;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 /* =========================
@@ -522,22 +614,13 @@ main .menu-btn {
 #campaign .select-button,
 #chooseOpponent .select-button {
     font-size: 2rem;
-    color: var (var(--scorehighlight2));
+    color: var(--scorehighlight2);
     border: 2px solid #fff;
     border-radius: 50%;
     height: 50px;
     width: 50px;
     margin: 0;
     padding: 0;
-}
-
-#buttonConsole {
-    background-color: rgba(0, 0, 0, 0.85);
-    border: 2px solid yellow;
-    border-radius: 12px;
-    padding: 1rem 2rem;
-    max-width: 600px;
-    margin: auto;
 }
 
 /* =========================
@@ -568,27 +651,27 @@ h6 {
     display: none;
 }
 
-#rock:hover + .hide {
+#rock-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#paper:hover + .hide {
+#paper-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#scissors:hover + .hide {
+#scissors-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#lizard:hover + .hide {
+#lizard-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#spock:hover + .hide {
+#spock-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
@@ -599,8 +682,8 @@ h6 {
 }
 
 /* =========================
-    Responsive Design
-   ========================= */
+Responsive Design
+========================= */
 
 /* --- Small Devices --- */
 @media (max-width: 767px) {
@@ -626,6 +709,9 @@ h6 {
         justify-content: center !important;
         width: 100%;
         text-align: center !important;
+    }
+    #P-Avatar {
+        display: none;
     }
 
     .footer-social .text-end {
@@ -663,7 +749,7 @@ h6 {
     }
 }
 
-/* --- Phones & Tablets --- */
+/* --- Phones & Tablets ---  */
 @media screen and (max-width: 768px) {
     .header {
         width: 100%;
@@ -698,16 +784,6 @@ h6 {
         font-size: 1.2rem;
     }
 }
-
-/* Screens max width 768px */
-
-@media screen and (max-width: 768px) {
-    #P-Avatar,
-    #AI-Avatar {
-        display: none;
-    }
-}
-
 /* --- Large Devices --- */
 @media screen and (min-width: 992px) {
     .center-container,
@@ -747,20 +823,7 @@ h6 {
         padding-top: 10px;
     }
 
-    #gameScreen,
-    #campaign,
-    #chooseOpponent {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 1rem;
-    }
-
     #console {
         transform: scale(1.25);
-    }
-
-    #Play-Avatar {
-        transform: scale(1.5);
-        margin-left: -20px;
     }
 }

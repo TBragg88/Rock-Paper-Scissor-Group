@@ -42,44 +42,46 @@
         </div>
         <div id="menuScreen">
             <section>
-                <div class="center-container wrapper">
-                    <div id="console" class="menu-buttons">
-                        <a href="https://youtu.be/sFGmhvx1elk?si=4N1BtLZxlK8DjCRZ" target="_blank" rel="noopener"
-                            style="outline: 0"><i class="fa-solid fa-power-off"></i></a>
-                        <div class="small-buttons">
-                            <button class="play-btn-pushable" id="startButton" role="button">
+                <div class="container d-flex justify-content-center align-items-center min-vh-50">
+                    <div class="center-container wrapper w-100">
+                        <div id="console" class="menu-buttons">
+                            <a href="https://youtu.be/sFGmhvx1elk?si=4N1BtLZxlK8DjCRZ" target="_blank" rel="noopener"
+                                style="outline: 0"><i class="fa-solid fa-power-off"></i></a>
+                            <div class="small-buttons">
+                                <button class="play-btn-pushable" id="startButton" role="button">
+                                    <span class="play-btn-shadow"></span>
+                                    <span class="play-btn-edge"></span>
+                                    <span class="play-btn-front text">
+                                        Start Game
+                                    </span>
+                                </button>
+                                <button class="play-btn-pushable" onclick="location.href='campaign.html'" id="bossRush"
+                                    role="button">
+                                    <span class="play-btn-shadow"></span>
+                                    <span class="play-btn-edge"></span>
+                                    <span class="play-btn-front text">
+                                        Boss Rush
+                                    </span>
+                                </button>
+                            </div>
+                            <button class="play-btn-pushable" onclick="location.href='difficulty.html'"
+                                id="chooseOpponet" role="button">
                                 <span class="play-btn-shadow"></span>
                                 <span class="play-btn-edge"></span>
                                 <span class="play-btn-front text">
-                                    Start Game
+                                    Choose Your Opponent
                                 </span>
                             </button>
-                            <button class="play-btn-pushable" onclick="location.href='campaign.html'" id="bossRush"
-                                role="button">
-                                <span class="play-btn-shadow"></span>
-                                <span class="play-btn-edge"></span>
-                                <span class="play-btn-front text">
-                                    Boss Rush
-                                </span>
-                            </button>
-                        </div>
-                        <button class="play-btn-pushable" onclick="location.href='difficulty.html'" id="chooseOpponet"
-                            role="button">
-                            <span class="play-btn-shadow"></span>
-                            <span class="play-btn-edge"></span>
-                            <span class="play-btn-front text">
-                                Choose Your Opponent
-                            </span>
-                        </button>
-                        <div class="sub-buttons">
-                            <button class="play-btn-pushable" id="rulesModalBtn" role="button" data-bs-toggle="modal"
-                                data-bs-target="#rulesModal">
-                                <span class="play-btn-shadow"></span>
-                                <span class="play-btn-edge sub-btn-edge"></span>
-                                <span class="play-btn-front sub-btn text">
-                                    How to Play
-                                </span>
-                            </button>
+                            <div class="sub-buttons">
+                                <button class="play-btn-pushable" id="rulesModalBtn" role="button"
+                                    data-bs-toggle="modal" data-bs-target="#rulesModal">
+                                    <span class="play-btn-shadow"></span>
+                                    <span class="play-btn-edge sub-btn-edge"></span>
+                                    <span class="play-btn-front sub-btn text">
+                                        How to Play
+                                    </span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,7 +89,7 @@
         </div>
         <!-- help -->
         <!---------------------------------------gamescreens------------------------------------------------>
-        <div id="gameScreen" style="display: none;">
+        <div id="gameScreen" class="container" style="display: none;">
             <section>
                 <div class="container-fluid">
                     <div class="row my-4 mb-4">
@@ -112,26 +114,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center">
-                    <div id="Play-Avatar" class="col-12 col-md-4 px-0 d-flex justify-content-center mb-3 mb-md-0">
-                        <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
-                            class="img-fluid" style="max-width: 180px; width: 100%; height: auto;">
+                <div class="row justify-content-center align-items-center">
+                    <!-- Good Guy -->
+                    <div id="Comms-human" class="col-12 col-md-4 d-flex justify-content-center">
+                        <img id="P-Avatar" src="assets/images/playeravatar.png" alt="Red Shirt Avatar"
+                            class="img-fluid">
                     </div>
-                    <div id="buttonConsole" class="col-12 col-md-4 text-center mb-3 mb-md-0">
+
+                    <!-- Button Console -->
+                    <div id="buttonConsole" class="col-12 col-md-4 text-center" style="width:250px">
                         <p id="message-el">"How Long can you last?"</p>
-                        <div class="game-buttons mb-3 justify-content-center d-flex flex-wrap gap-2">
-                            <button class="select-button" id="rock">🧱</button>
-                            <button class="select-button" id="paper">📜</button>
-                            <button class="select-button" id="scissors">✂️</button>
-                            <button class="select-button" id="lizard">🦎</button>
-                            <button class="select-button" id="spock">🖖</button>
+                        <div id="button-area" class="game-buttons d-flex flex-column gap-1" style="position:relative;">
+                            <div class="d-flex justify-content-center ">
+                                <button class="select-button" id="scissors">✂️</button>
+                            </div>
+                            <div class="d-flex justify-content-around">
+                                <div class="me-auto"><button class="select-button" id="spock">🖖</button></div>
+                                <div><button class="select-button" id="paper">📜</button></div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-2 ">
+                                <button class="select-button me-2" id="lizard">🦎</button>
+                                <button class="select-button ms-2" id="rock">🧱</button>
+                            </div>
+                            <svg id="lines-svg"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none; z-index:10;"></svg>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 text-center d-flex justify-content-center">
-                        <img id="AI-Avatar" src="assets/images/char-spock.png" alt="AI Avatar" class="img-fluid"
-                            style="max-width: 180px; width: 100%; height: auto;">
+                    <!-- Bad Guy -->
+                    <div id="Comms-AI" class="col-12 col-md-4 d-flex justify-content-center">
+                        <img id="AI-Avatar" src="assets/images/char-spock.png" alt="AI Avatar" class="img-fluid">
                     </div>
-                </div>
             </section>
         </div>
     </main>
@@ -179,15 +191,15 @@
                     <h6>How to play</h6>
                     <p>Each player secretly selects one of the five options</p>
                     <ul>
-                        <li id="rock">🧱Rock</li>
+                        <li id="rock-modal">🧱Rock</li>
                         <div class="hide">Rock beats lizard & scissors</div><br>
-                        <li id="paper">📜Paper</li>
+                        <li id="paper-modal">📜Paper</li>
                         <div class="hide">Paper beats rock & spock</div><br>
-                        <li id="scissors">✂️Scissors</li>
+                        <li id="scissors-modal">✂️Scissors</li>
                         <div class="hide">Scissors beats paper & lizard</div><br>
-                        <li id="lizard">🦎Lizard</li>
+                        <li id="lizard-modal">🦎Lizard</li>
                         <div class="hide">Lizard beats Spock & paper</div><br>
-                        <li id="spock">🖖Spock</li>
+                        <li id="spock-modal">🖖Spock</li>
                         <div class="hide">Spock beats scissors & rock</div>
                     </ul>
                     <img src="assets/images/RPSLS.webp" alt="Rock Paper Scissors Lizard Spock" class="img-fluid mb-3">
@@ -239,6 +251,7 @@
     <!-- JavaScript -->
     <script type="module" src="assets/javascript/index.js"></script>
     <script src="assets/javascript/morePower.js" charset="utf-8"></script>
+    <script src="assets/javascript/lines.js" charset="utf-8"></script>
 </body>
 
 </html>
