@@ -255,43 +255,43 @@ h1 {
         hsl(227, 42%, 20%) 8%,
         hsl(227, 42%, 20%) 92%,
         hsl(227, 42%, 20%) 100%
-    );
-}
-
-.sub-buttons {
-    display: flex;
-    gap: 1.5rem;
-    flex-direction: row;
-    justify-content: center;
-}
-
-/* =========================
-gamescreen and Modal stylies
-========================= */
-
-/*-------------------- Game Screen Styles --------------------- */
-#gameScreen > section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  
-  max-width: 1200px;
-  margin: 0 auto;
-}
-  
-
-#game-console {
-    background-color: rgba(0, 0, 0, 0.85);
-    border: 2px solid yellow;
-    border-radius: 12px;
-
-    padding: 1rem 2rem;
-    max-width: 600px;
-    margin: auto;
-}
-
-main .Score-display {
-    color: var(--scoretextcolor);
+        );
+    }
+    
+    .sub-buttons {
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    /* =========================
+    gamescreen and Modal stylies
+    ========================= */
+    
+    /*-------------------- Game Screen Styles --------------------- */
+    #gameScreen > section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    
+    #game-console {
+        background-color: rgba(0, 0, 0, 0.85);
+        border: 2px solid yellow;
+        border-radius: 12px;
+        
+        padding: 1rem 2rem;
+        max-width: 600px;
+        margin: auto;
+    }
+    
+    main .Score-display {
+        color: var(--scoretextcolor);
     background-color: var(--scorehighlight2);
     display: inline-block;
     min-width: 200px;
@@ -340,11 +340,18 @@ main #computer-score {
     color: var(--scoretextcolor);
     width: 100%;
     text-align: center;
-
+    
     border-radius: 20px;
     padding: 0.5rem 1rem;
 }
-
+/* -------------------------DELETE THIS IF WE DONT LIKE THE SCREENS?????--------*/
+#Comms-human,
+#Comms-AI{
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid var(--buttonhover);
+    border-radius: 10px;
+    height:auto;
+}
 .menu-btn:hover {
     background-color: var(--scorebackground2);
     color: var(--scoretextcolor);
@@ -550,6 +557,7 @@ main .menu-btn {
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
+
 
 /* =========================
     Footer
