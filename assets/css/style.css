@@ -527,9 +527,12 @@ main .menu-btn {
 }
 
 #submit-btn {
-    width: 70%;
+    width: 60%;
+    color:#fafafa;
     background-color: var(--scorebackground1);
 }
+
+
 
 /* Game Buttons */
 .game-buttons {

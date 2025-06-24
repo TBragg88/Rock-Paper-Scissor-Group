@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 let playerScore = 0;
 let aiScore = 0;
 const winTarget = 5;

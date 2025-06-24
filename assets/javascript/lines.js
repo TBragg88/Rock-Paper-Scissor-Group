@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 // This script requires the DOM to be fully loaded before it will work correctly.
 // All logic is wrapped in a DOMContentLoaded event listener to ensure that
 // the buttons and SVG container exist before event listeners are attached.
