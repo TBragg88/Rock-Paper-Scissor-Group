@@ -18,18 +18,18 @@ const winMap = {
 
 const avatarMap = {
     easy: "assets/images/char-redshirt.png",
-    medium: "assets/images/char-sulu.png",
+    medium: "assets/images/char-mccoy.png",
     hard: "assets/images/char-spock.png",
 };
 
 const bannerMap = {
-    easy: "Your journey begins… face the Redshirt!",
-    medium: "Lieutenant Sulu steps up — precision and steel!",
+    easy: "Your journey begins… face Redshirt Guy!",
+    medium: "Dr. Leonard McCoy steps up — precision and steel!",
     hard: "Spock awaits. Your logic will be tested.",
 };
 
 const transitionMap = {
-    easy: "🚀 Sulu enters the bridge. Brace yourself!",
+    easy: "🚀 McCoy enters the bridge. Brace yourself!",
     medium: "🖖 Spock approaches. Logic is your final test.",
     hard: "🏆 You have mastered the Vulcan Mind Challenge! 🖖",
 };
