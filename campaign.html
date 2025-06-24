@@ -67,7 +67,7 @@
                 </div>
                 <div class="row justify-content-center align-items-center">
                     <!-- Good Guy -->
-                    <div id="Comms-human"  class="col-12 col-md-4 d-flex justify-content-center">
+                    <div id="Comms-human" class="col-12 col-md-4 d-flex justify-content-center">
                         <img id="P-Avatar" src="assets/images/playeravatar.png" alt="Red Shirt Avatar"
                             class="img-fluid">
                     </div>
@@ -94,6 +94,7 @@
                     <div id="Comms-AI" class="col-12 col-md-4 d-flex justify-content-center">
                         <img id="AI-Avatar" src="assets/images/char-spock.png" alt="AI Avatar" class="img-fluid">
                     </div>
+                </div>
             </section>
         </div>
     </main>
@@ -122,9 +123,10 @@
         </div>
     </footer>
 
-    <!-- Rules Modal -->
+    <!-- Modal -->
     <div id="rulesModal" class="modal fade" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
         <div class="modal-dialog">
+
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -132,23 +134,34 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6> Challenge of the Volcan Mind</h6>
+
+                    <h6> Challenge of the Vulcan Mind</h6>
                     <p>
                         Rock, Paper, Scissors, Lizard, Spock is an extended version of the classic game, designed to
-                        reduce ties. It was popularized by The Big Bang Theory, and here's how it works:</p>
+                        reduce ties. It was popularized by The Big Bang Theory, and here’s how it works:</p>
                     <h6>How to play</h6>
                     <p>Each player secretly selects one of the five options</p>
                     <ul>
-                        <li id="rock-modal">🧱Rock</li>
-                        <div class="hide">Rock beats lizard & scissors</div><br>
-                        <li id="paper-modal">📜Paper</li>
-                        <div class="hide">Paper beats rock & spock</div><br>
-                        <li id="scissors-modal">✂️Scissors</li>
-                        <div class="hide">Scissors beats paper & lizard</div><br>
-                        <li id="lizard-modal">🦎Lizard</li>
-                        <div class="hide">Lizard beats Spock & paper</div><br>
-                        <li id="spock-modal">🖖Spock</li>
-                        <div class="hide">Spock beats scissors & rock</div>
+                        <li id="rock-modal">
+                            🧱Rock
+                            <span class="hide">Rock beats lizard & scissors</span>
+                        </li>
+                        <li id="paper-modal">
+                            📜Paper
+                            <span class="hide">Paper beats rock & spock</span>
+                        </li>
+                        <li id="scissors-modal">
+                            ✂️Scissors
+                            <span class="hide">Scissors beats paper & lizard</span>
+                        </li>
+                        <li id="lizard-modal">
+                            🦎Lizard
+                            <span class="hide">Lizard beats Spock & paper</span>
+                        </li>
+                        <li id="spock-modal">
+                            🖖Spock
+                            <span class="hide">Spock beats scissors & rock</span>
+                        </li>
                     </ul>
                     <img src="assets/images/RPSLS.webp" alt="Rock Paper Scissors Lizard Spock" class="img-fluid mb-3">
                     <p>Then, they reveal their choice simultaneously. The winner is decided based on the
@@ -163,6 +176,7 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -195,8 +209,8 @@
 
     <!-- JavaScript -->
     <script src="assets/javascript/campaign.js"></script>
-    <script src="assets/javascript/morePower.js" charset="utf-8"></script>
-    <script src="assets/javascript/lines.js" charset="utf-8"></script>
+    <script src="assets/javascript/morePower.js"></script>
+    <script src="assets/javascript/lines.js"></script>
 </body>
 
 </html>
