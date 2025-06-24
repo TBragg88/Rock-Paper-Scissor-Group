@@ -530,6 +530,9 @@ main .menu-btn {
     width: 70%;
     background-color: var(--scorebackground1);
 }
+#submit-btn{
+    color:#fafafa;
+} 
 
 /* Game Buttons */
 .game-buttons {
