@@ -312,8 +312,8 @@ By leveraging AI at every stage—from code and content to design and accessibil
 
 Below are screenshots of the performance audits and Lighthouse results for the project:
 
-![Performance Audit Screenshot](./readme-documentation/Screenshot%202025-06-24%20143027.png)
-![Lighthouse Results Screenshot](./readme-documentation/Screenshot%202025-06-24%20150614.png)
+<img src="./readme-documentation/Screenshot%202025-06-24%20143027.png" alt="Performance Audit Screenshot" width="160" />
+<img src="./readme-documentation/Screenshot%202025-06-24%20150614.png" alt="Lighthouse Results Screenshot" width="160" />
 
 ---
 ## Contributing
