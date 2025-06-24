@@ -307,6 +307,7 @@ Artificial Intelligence was integral to the development of this project, enhanci
 
 6. **Performance:**
    (<Screenshot 2025-06-24 143027.png>)
+   (<Screenshot 2025-06-24 150614.png>)
 
 By leveraging AI at every stage—from code and content to design and accessibility—the project achieved a higher level of polish, efficiency, and inclusivity than would have been possible otherwise.
 
