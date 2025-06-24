@@ -5,7 +5,7 @@
     --borgred: #9d1823;
     --textcolor: #cd9c30;
     --buttonhover: #6ca3bf;
-    --buttoncolor: #4762a0;
+    --buttoncolor: #1a2b5b;
     --buttoncolor2: #2a3768;
     --spaceblue: #253b3e;
     --bordercolor: #9e7336;
@@ -194,10 +194,10 @@ h1 {
 .play-btn-edge {
     background: linear-gradient(
         to left,
-        hsl(227, 42%, 29%) 0%,
-        hsl(227, 42%, 29%) 8%,
-        hsl(227, 42%, 29%) 92%,
-        hsl(227, 42%, 29%) 100%
+        hsl(227, 80%, 60%) 0%,
+        hsl(227, 80%, 60%) 8%,
+        hsl(227, 80%, 60%) 92%,
+        hsl(227, 80%, 60%) 100%
     );
 }
 
@@ -245,16 +245,16 @@ h1 {
 
 /* --- Sub Button Styles --- */
 .sub-btn {
-    background: var(--buttoncolor2);
+    background: var(--buttoncolor);
 }
 
 .sub-btn-edge {
     background: linear-gradient(
         to left,
-        hsl(227, 42%, 20%) 0%,
-        hsl(227, 42%, 20%) 8%,
-        hsl(227, 42%, 20%) 92%,
-        hsl(227, 42%, 20%) 100%
+        hsl(227, 80%, 60%) 0%,
+        hsl(227, 80%, 60%) 8%,
+        hsl(227, 80%, 60%) 92%,
+        hsl(227, 80%, 60%) 100%
         );
     }
     
