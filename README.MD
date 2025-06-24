@@ -305,14 +305,17 @@ Artificial Intelligence was integral to the development of this project, enhanci
 5. **Accessibility & Best Practices:**  
    AI tools like **Lighthouse** were used to audit accessibility features, such as color contrast, keyboard navigation, and ARIA labels. Copilot further suggested improvements for semantic HTML and accessibility compliance, ensuring the site is usable by a wide range of users.
 
-6. **Performance:**
-   (<Screenshot 2025-06-24 143027.png>)
-   (<Screenshot 2025-06-24 150614.png>)
-
 By leveraging AI at every stage—from code and content to design and accessibility—the project achieved a higher level of polish, efficiency, and inclusivity than would have been possible otherwise.
 
 ---
+### Performance
 
+Below are screenshots of the performance audits and Lighthouse results for the project:
+
+![Performance Audit Screenshot](./readme-documentation/Screenshot%202025-06-24%20143027.png)
+![Lighthouse Results Screenshot](./readme-documentation/Screenshot%202025-06-24%20150614.png)
+
+---
 ## Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
