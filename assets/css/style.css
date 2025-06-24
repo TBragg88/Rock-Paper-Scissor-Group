@@ -416,6 +416,8 @@ main #computer-score {
 }
 
 .leaderboard-container {
+    max-height: 220px;
+    overflow-y: auto;
     margin: auto;
     max-width: 100%;
     width: 50%;
@@ -557,6 +559,8 @@ main .menu-btn {
 }
 
 .leaderboard-container {
+    max-height: 220px;
+    overflow-y: auto;
     margin: auto;
     max-width: 100%;
     width: 50%;
