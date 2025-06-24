@@ -308,12 +308,21 @@ Artificial Intelligence was integral to the development of this project, enhanci
 By leveraging AI at every stage—from code and content to design and accessibility—the project achieved a higher level of polish, efficiency, and inclusivity than would have been possible otherwise.
 
 ---
-### Performance
+### Validation
 
 Below are screenshots of the performance audits and Lighthouse results for the project:
 
-![Performance Audit Screenshot](./readme-documentation/Screenshot%202025-06-24%20143027.png)
-![Lighthouse Results Screenshot](./readme-documentation/Screenshot%202025-06-24%20150614.png)
+<img src="./readme-documentation/Screenshot%202025-06-24%20143027.png" alt="Performance Audit Screenshot" width="160" />
+<img src="./readme-documentation/Screenshot%202025-06-24%20150614.png" alt="Lighthouse Results Screenshot" width="160" />
+### Code Validation
+
+All project code was rigorously tested using industry-standard validation tools:
+
+- **HTML:** Validated with the [W3C Markup Validation Service](https://validator.w3.org/), confirming that all HTML files are free of errors and adhere to modern web standards.
+- **CSS:** Checked using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), ensuring that all stylesheets are valid and compatible across browsers.
+- **JavaScript:** Reviewed with [JSHint](https://jshint.com/) and [ESLint](https://eslint.org/) to catch syntax errors, enforce best practices, and maintain clean, reliable code.
+
+No errors or critical warnings were reported by any of these tools, demonstrating a strong commitment to code quality, maintainability, and cross-browser compatibility.
 
 ---
 ## Contributing
