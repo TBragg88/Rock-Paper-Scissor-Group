@@ -40,13 +40,13 @@
         <div id="enterprise" class="space">
             <img id="chaos" class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
         </div>
-      <div id="gameScreen" class="container">
+        <div id="gameScreen">
             <section>
                 <div class="container-fluid">
                     <div class="row my-4 mb-4">
                         <div id="game-console" class="row justify-content-evenly align-items-start my-4">
                             <div class="col-12 col-md-4 d-flex flex-column align-items-start gap-2 mb-4">
-                                <button type="button" class="rules-btn btn" data-bs-toggle="modal"
+                                <button type="button" class="rules-btn btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#rulesModal">
                                     How to Play
                                 </button>
@@ -59,8 +59,25 @@
                                 <p><span id="player-name">Player</span> <span id="player-score">0</span></p>
                                 <p><span id="computer-name">Computer</span> <span id="computer-score">0</span></p>
                             </div>
-                            <div id="bannerP" class="col-12">
-                                <p>Score as many points as you can before Spock gets 5.</p>
+                            <div class="col-12 d-flex justify-content-center">
+                                <fieldset class="d-flex flex-row gap-4 align-items-center border-0">
+                                    <legend class="mb-0 me-2 fs-5">Difficulty:</legend>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="difficulty" id="easy"
+                                            value="easy" checked>
+                                        <label class="form-check-label" for="easy">Easy</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="difficulty" id="medium"
+                                            value="medium">
+                                        <label class="form-check-label" for="medium">Medium</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="difficulty" id="hard"
+                                            value="hard">
+                                        <label class="form-check-label" for="hard">Hard</label>
+                                    </div>
+                                </fieldset>
                             </div>
                         </div>
                     </div>
