@@ -529,11 +529,9 @@ main .menu-btn {
 
 #submit-btn {
     width: 60%;
-    color:#fafafa;
+    color: #fafafa;
     background-color: var(--scorebackground1);
 }
-
-
 
 /* Game Buttons */
 .game-buttons {
@@ -827,5 +825,19 @@ Responsive Design
 
     #console {
         transform: scale(1.25);
+    }
+}
+
+/* Fix oversized modals/game console on small screens */
+@media (max-width: 600px) {
+    #winner-console,
+    #game-console,
+    .modal-dialog,
+    .modal-content {
+        max-height: 90vh !important;
+        overflow-y: auto !important;
+        width: 95vw !important;
+        max-width: 98vw !important;
+        box-sizing: border-box;
     }
 }
