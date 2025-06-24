@@ -641,27 +641,27 @@ h6 {
     display: none;
 }
 
-#rock:hover + .hide {
+#rock-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#paper:hover + .hide {
+#paper-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#scissors:hover + .hide {
+#scissors-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#lizard:hover + .hide {
+#lizard-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
 
-#spock:hover + .hide {
+#spock-modal:hover + .hide {
     display: block;
     color: var(--buttoncolor2);
 }
