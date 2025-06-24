@@ -40,7 +40,7 @@
         <div id="enterprise" class="space">
             <img id="chaos" class="side-image" src="assets/images/notussenterprise.png" alt="Not the enterprise">
         </div>
-       <div id="gameScreen" class="container">
+        <div id="gameScreen" class="container">
             <section>
                 <div class="container-fluid">
                     <div class="row my-4 mb-4">
@@ -60,18 +60,17 @@
                                 <p><span id="computer-name">Computer</span> <span id="computer-score">0</span></p>
                             </div>
                             <div id="bannerP" class="col-12">
-                                <p>Score as many points as you can before Spock gets 5.</p>
+                                <p>Defeat your opponent and get to Spock!</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                 <div class="row justify-content-center align-items-center">
+                <div class="row justify-content-center align-items-center">
                     <!-- Good Guy -->
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
+                    <div id="Comms-human" class="col-12 col-md-4 d-flex justify-content-center">
                         <img id="P-Avatar" src="assets/images/char-redshirt.png" alt="Red Shirt Avatar"
                             class="img-fluid">
                     </div>
-
                     <!-- Button Console -->
                     <div id="buttonConsole" class="col-12 col-md-4 text-center" style="width:250px">
                         <p id="message-el">"How Long can you last?"</p>
@@ -90,8 +89,9 @@
                         </div>
                     </div>
                     <!-- Bad Guy -->
-                    <div class="col-12 col-md-4 d-flex justify-content-center">
-                        <img id="AI-Avatar" src="assets/images/char-spock.png" alt="AI Avatar" class="img-fluid">
+                    <div id="Comms-AI" class="col-12 col-md-4 d-flex justify-content-center">
+                        <img id="AI-Avatar" src="assets/images/char-redshirt.png" alt="AI Avatar" class="img-fluid">
+
                     </div>
             </section>
         </div>
@@ -121,10 +121,9 @@
         </div>
     </footer>
 
-    <!-- Modal -->
+    <!-- Rules Modal -->
     <div id="rulesModal" class="modal fade" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -132,11 +131,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-
                     <h6> Challenge of the Volcan Mind</h6>
                     <p>
                         Rock, Paper, Scissors, Lizard, Spock is an extended version of the classic game, designed to
-                        reduce ties. It was popularized by The Big Bang Theory, and here’s how it works:</p>
+                        reduce ties. It was popularized by The Big Bang Theory, and here's how it works:</p>
                     <h6>How to play</h6>
                     <p>Each player secretly selects one of the five options</p>
                     <ul>
@@ -164,19 +162,40 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <!-- Boss Victory/Defeat Modal-->
+    <div id="winnersModalBoss" class="modal fade" tabindex="-1" aria-labelledby="winnersModalBossLabel"
+        aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="winnersModalBossLabel">Boss Battle Result</h5>
+
+                </div>
+                <div class="modal-body text-center">
+                    <h4 id="win-msg-boss" class="mb-4">Victory message will appear here</h4>
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border text-primary" role="status" aria-hidden="true"></div>
+                        <span class="ms-2">Preparing next challenge...</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="closeModalBtnBoss">Continue</button>
+
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
-        </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript -->
-    <script src="assets/javascript/index.js"></script>
+    <script src="assets/javascript/campaign.js"></script>
     <script src="assets/javascript/morePower.js" charset="utf-8"></script>
+
 </body>
 
 </html>
