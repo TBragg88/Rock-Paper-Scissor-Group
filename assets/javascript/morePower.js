@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 window.addEventListener('DOMContentLoaded', function () {
     // Get references to the moving div and the spinning image inside it
     const enterprise = document.getElementById("enterprise");
