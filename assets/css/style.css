@@ -111,19 +111,19 @@ h1 {
 }
 
 #buttonConsole {
-  max-width: 230px;
-  width: 100%;
-  margin: 0;
+    max-width: 230px;
+    width: 100%;
+    margin: 0;
 }
 #gameScreen > section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .container-fluid {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* =========================
@@ -255,43 +255,42 @@ h1 {
         hsl(227, 80%, 60%) 8%,
         hsl(227, 80%, 60%) 92%,
         hsl(227, 80%, 60%) 100%
-        );
-    }
-    
-    .sub-buttons {
-        display: flex;
-        gap: 1.5rem;
-        flex-direction: row;
-        justify-content: center;
-    }
-    
-    /* =========================
+    );
+}
+
+.sub-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* =========================
     gamescreen and Modal stylies
     ========================= */
-    
-    /*-------------------- Game Screen Styles --------------------- */
-    #gameScreen > section {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    
-    #game-console {
-        background-color: rgba(0, 0, 0, 0.85);
-        border: 2px solid yellow;
-        border-radius: 12px;
-        
-        padding: 1rem 2rem;
-        max-width: 600px;
-        margin: auto;
-    }
-    
-    main .Score-display {
-        color: var(--scoretextcolor);
+
+/*-------------------- Game Screen Styles --------------------- */
+#gameScreen > section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#game-console {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid yellow;
+    border-radius: 12px;
+
+    padding: 1rem 2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+main .Score-display {
+    color: var(--scoretextcolor);
     background-color: var(--scorehighlight2);
     display: inline-block;
     min-width: 200px;
@@ -340,17 +339,17 @@ main #computer-score {
     color: var(--scoretextcolor);
     width: 100%;
     text-align: center;
-    
+
     border-radius: 20px;
     padding: 0.5rem 1rem;
 }
 /* -------------------------DELETE THIS IF WE DONT LIKE THE SCREENS?????--------*/
 #Comms-human,
-#Comms-AI{
+#Comms-AI {
     background-color: rgba(0, 0, 0, 0.85);
     border: 2px solid var(--buttonhover);
     border-radius: 10px;
-    height:auto;
+    height: auto;
 }
 .menu-btn:hover {
     background-color: var(--scorebackground2);
@@ -484,8 +483,8 @@ main #computer-score {
 }
 
 /* boss rush modal ----------- */
-#winnersModalBoss{
-display: none;
+#winnersModalBoss {
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -544,7 +543,6 @@ main .menu-btn {
     gap: 1rem;
     margin-top: 1rem;
     color: #253b3e;
-    
 }
 
 /* Leaderboard & Misc */
@@ -577,7 +575,6 @@ main .menu-btn {
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
-
 
 /* =========================
     Footer
@@ -637,56 +634,56 @@ main .menu-btn {
     Lists
    ========================= */
 ul {
-  list-style-type: none;
-  padding-left: 0;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 li {
-  margin-bottom: 12px;
-  cursor: pointer;
-  position: relative;
-  font-weight: bold;
-  color: var(--textcolor, #fff);
+    margin-bottom: 12px;
+    cursor: pointer;
+    position: relative;
+    font-weight: bold;
+    color: var(--textcolor, #fff);
 }
 
 /* Modal Colors & Fonts */
 .modal-header,
 .modal-footer {
-  background-color: #253b3e;
+    background-color: #253b3e;
 }
 
 .modal-body {
-  font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 h5,
 h6 {
-  color: #cd9c30;
-  text-align: center;
+    color: #cd9c30;
+    text-align: center;
 }
 
 /* Rule explanations - fade in on hover */
 .hide {
-  display: block;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  font-weight: normal;
-  color: var(--buttoncolor2, #aaa);
-  font-size: 0.9em;
-  margin-top: 4px;
+    display: block;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    font-weight: normal;
+    color: var(--buttoncolor2, #aaa);
+    font-size: 0.9em;
+    margin-top: 4px;
 }
 
 li:hover .hide {
-  opacity: 1;
-  max-height: 40px;
+    opacity: 1;
+    max-height: 40px;
 }
 
 /* Link styling */
 #sheldon {
-  text-align: center;
-  color: var(--textcolor, #cdcdcd);
+    text-align: center;
+    color: var(--textcolor, #cdcdcd);
 }
 /* =========================
 Responsive Design
@@ -699,17 +696,17 @@ Responsive Design
         max-height: 100%;
         overflow-x: hidden;
     }
-    
+
     .flex-container {
         display: flex;
     }
-    
+
     .footer-flex {
         flex-direction: column;
         align-items: stretch;
         text-align: center;
     }
-    
+
     .footer-social,
     .footer-copyright {
         align-items: center !important;
@@ -790,7 +787,6 @@ Responsive Design
         padding: 0.5rem 1rem;
         font-size: 1.2rem;
     }
-
 }
 /* --- Large Devices --- */
 @media screen and (min-width: 992px) {
@@ -830,10 +826,8 @@ Responsive Design
         font-size: 2.5rem;
         padding-top: 10px;
     }
-        
+
     #console {
         transform: scale(1.25);
     }
-
-  
 }
