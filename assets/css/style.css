@@ -630,60 +630,57 @@ main .menu-btn {
     Lists
    ========================= */
 ul {
-    list-style-type: none;
+  list-style-type: none;
+  padding-left: 0;
 }
 
-/* Modal */
+li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+  color: var(--textcolor, #fff);
+}
 
+/* Modal Colors & Fonts */
 .modal-header,
 .modal-footer {
-    background-color: #253b3e;
+  background-color: #253b3e;
 }
 
 .modal-body {
-    font-family: roboto;
+  font-family: 'Roboto', sans-serif;
 }
 
 h5,
 h6 {
-    color: #cd9c30;
-    text-align: center;
+  color: #cd9c30;
+  text-align: center;
 }
 
+/* Rule explanations - fade in on hover */
 .hide {
-    display: none;
+  display: block;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-weight: normal;
+  color: var(--buttoncolor2, #aaa);
+  font-size: 0.9em;
+  margin-top: 4px;
 }
 
-#rock-modal:hover + .hide {
-    display: block;
-    color: var(--buttoncolor2);
+li:hover .hide {
+  opacity: 1;
+  max-height: 40px;
 }
 
-#paper-modal:hover + .hide {
-    display: block;
-    color: var(--buttoncolor2);
-}
-
-#scissors-modal:hover + .hide {
-    display: block;
-    color: var(--buttoncolor2);
-}
-
-#lizard-modal:hover + .hide {
-    display: block;
-    color: var(--buttoncolor2);
-}
-
-#spock-modal:hover + .hide {
-    display: block;
-    color: var(--buttoncolor2);
-}
-
+/* Link styling */
 #sheldon {
-    text-align: center;
-    color: var(--textcolor);
+  text-align: center;
+  color: var(--textcolor, #cdcdcd);
 }
-
 /* =========================
 Responsive Design
 ========================= */
@@ -768,7 +765,7 @@ Responsive Design
     }
 
     .side-image {
-        width: 150;
+        width: 150px;
         max-width: 100px;
         height: 150px;
     }
