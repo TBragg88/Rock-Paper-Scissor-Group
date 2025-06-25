@@ -363,18 +363,17 @@ Audited with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/
 > No critical errors or warnings were reported by these tools, demonstrating a strong commitment to code quality, accessibility, and maintainability.
 
 ---
-
 ### 📸 Validation Screenshots
 
-<div align="center">
+![Index HTML Validation](/readme-documentation/indexvalid.png){ width=220 }
 
-<img src="/readme-documentation/indexvalid.png" alt="Index HTML Validation" width="220" style="margin: 0 10px;" />
-<img src="/readme-documentation/diffvalid.png" alt="Difficulty HTML Validation" width="220" style="margin: 0 10px;" />
-<img src="/readme-documentation/CSSvalid.png" alt="CSS Validation" width="220" style="margin: 0 10px;" />
-<img src="/readme-documentation/Screenshot%202025-06-24%20143027.png" alt="Performance Audit Screenshot" width="160" style="margin: 0 10px;" />
-<img src="/readme-documentation/Screenshot%202025-06-24%20150614.png" alt="Lighthouse Results Screenshot" width="360" style="margin: 0 10px;" />
+![Difficulty HTML Validation](/readme-documentation/diffvalid.png){ width=220 }
 
-</div>
+![CSS Validation](/readme-documentation/CSSvalid.png){ width=220 }
+
+![Performance Audit Screenshot](/readme-documentation/Screenshot%202025-06-24%20143027.png){ width=160 }
+
+![Lighthouse Results Screenshot](/readme-documentation/Screenshot%202025-06-24%20150614.png){ width=360 }
 
 ---
 
