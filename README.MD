@@ -28,9 +28,13 @@ A Star Trek–themed Rock-Paper-Scissors-Lizard-Spock game with multiple play mo
 -   [Technologies Used](#technologies-used)
 -   [Development & Planning](#development--planning)
 -   [Known Issues / Roadmap](#known-issues--roadmap)
--   [Contributing](#contributing)
+-   [How AI Was Used](#how-ai-was-used)
+-   [Partial Integrations](#partial-integrations)
+-   [Features Considered But Not Included](#features-considered-but-not-included)
+-   [Code & Accessibility Validation](#code--accessibility-validation)
 -   [Credits](#credits)
 -   [License](#license)
+-   [Contributing](#contributing)
 
 ---
 
@@ -308,26 +312,69 @@ Artificial Intelligence was integral to the development of this project, enhanci
 By leveraging AI at every stage—from code and content to design and accessibility—the project achieved a higher level of polish, efficiency, and inclusivity than would have been possible otherwise.
 
 ---
-### Validation
 
-Below are screenshots of the performance audits and Lighthouse results for the project:
+## 🌓 Partial Integrations
 
-<img src="./readme-documentation/Screenshot%202025-06-24%20143027.png" alt="Performance Audit Screenshot" width="160" />
-<img src="./readme-documentation/Screenshot%202025-06-24%20150614.png" alt="Lighthouse Results Screenshot" width="360" />
-### Code Validation
+-   **Dark/Light Mode Toggle Animation:**  
+    More elaborate transitions were tested but replaced with a subtle, accessible toggle for a smoother experience.
 
-All project code was rigorously tested using industry-standard validation tools:
-
-- **HTML:** Validated with the [W3C Markup Validation Service](https://validator.w3.org/), confirming that all HTML files are free of errors and adhere to modern web standards.
-- **CSS:** Checked using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), ensuring that all stylesheets are valid and compatible across browsers.
-- **JavaScript:** Reviewed with [JSHint](https://jshint.com/) and [ESLint](https://eslint.org/) to catch syntax errors, enforce best practices, and maintain clean, reliable code.
-
-No errors or critical warnings were reported by any of these tools, demonstrating a strong commitment to code quality, maintainability, and cross-browser compatibility.
+These decisions were made to ensure the site remains approachable, fast, and easy to navigate for all users.
 
 ---
-## Contributing
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+## 🛠️ Features Considered But Not Included
+
+During development, several features were thoughtfully explored and prototyped, but ultimately left out to preserve the site’s clarity, accessibility, and calming user experience. Here’s a more detailed look at these features and the reasons for their exclusion:
+
+-   **Image Carousel:**  
+     An interactive image carousel was initially designed for the hero or resource sections, intended to display rotating tips, affirmations, or Star Trek–themed visuals. While visually engaging, user testing revealed that the motion and constant change could disrupt the site’s tranquil atmosphere and distract users who prefer a focused, supportive environment. To maintain a calm and accessible interface, the carousel was removed in favor of static, thoughtfully placed images.
+
+-   **Breathing Animation:**  
+     A guided breathing exercise animation was prototyped to help users manage stress or refocus between games. The animation featured expanding and contracting visuals with gentle prompts. However, it was omitted from the final release to keep the interface simple and avoid overwhelming first-time visitors with unexpected motion. The team may revisit this feature in future updates, potentially as an optional tool for users seeking relaxation techniques.
+
+-   **Live Chat Widget:**  
+     The idea of integrating a live chat widget for instant support or community interaction was considered. While this could enhance engagement, it was excluded to prioritize user privacy and reduce technical complexity, especially given the static nature of the site. Additionally, moderation and safeguarding user data would require significant resources. For now, support is provided through clear documentation and accessible design, with the possibility of asynchronous feedback channels in the future.
+
+These decisions reflect a commitment to user-centered design, ensuring the site remains approachable, fast, and easy to navigate for all visitors.
+
+---
+
+## ✅ Code & Accessibility Validation
+
+All project code was rigorously tested and validated using industry-standard tools to ensure quality, accessibility, and performance:
+
+### 📝 HTML
+
+Validated with the [W3C Markup Validation Service](https://validator.w3.org/) for semantic, error-free markup.
+
+### 🎨 CSS
+
+Checked using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) for standards compliance and cross-browser compatibility.
+
+### ⚡ JavaScript
+
+Reviewed with [JSHint](https://jshint.com/) and [ESLint](https://eslint.org/) to catch syntax errors and enforce best practices.
+
+### ♿ Accessibility & Performance
+
+Audited with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) for accessibility, performance, and best practices.
+
+> **Result:**  
+> No critical errors or warnings were reported by these tools, demonstrating a strong commitment to code quality, accessibility, and maintainability.
+
+---
+
+### 📸 Validation Screenshots
+
+<div align="center">
+
+<img src="assets/readme-documentation/indexvalid.png" alt="Index HTML Validation" width="220" style="margin: 0 10px;" />
+<img src="assets/readme-documentation/diffvalid.png" alt="Difficulty HTML Validation" width="220" style="margin: 0 10px;" />
+<img src="assets/readme-documentation/CSSvalid.png" alt="CSS Validation" width="220" style="margin: 0 10px;" />
+<img src="assets/readme-documentation/Screenshot%202025-06-24%20143027.png" alt="Performance Audit Screenshot" width="160" style="margin: 0 10px;" />
+<img src="assets/readme-documentation/Screenshot%202025-06-24%20150614.png" alt="Lighthouse Results Screenshot" width="360" style="margin: 0 10px;" />
+
+</div>
 
 ---
 
@@ -373,28 +420,8 @@ This project is licensed under the MIT License.
 
 ---
 
-## 🌓 Partial Integrations
+## Contributing
 
--   **Dark/Light Mode Toggle Animation:**  
-    More elaborate transitions were tested but replaced with a subtle, accessible toggle for a smoother experience.
-
-These decisions were made to ensure the site remains approachable, fast, and easy to navigate for all users.
-
----
-
-## 🛠️ Features Considered But Not Included
-
-During development, several features were thoughtfully explored and prototyped, but ultimately left out to preserve the site’s clarity, accessibility, and calming user experience. Here’s a more detailed look at these features and the reasons for their exclusion:
-
--   **Image Carousel:**  
-     An interactive image carousel was initially designed for the hero or resource sections, intended to display rotating tips, affirmations, or Star Trek–themed visuals. While visually engaging, user testing revealed that the motion and constant change could disrupt the site’s tranquil atmosphere and distract users who prefer a focused, supportive environment. To maintain a calm and accessible interface, the carousel was removed in favor of static, thoughtfully placed images.
-
--   **Breathing Animation:**  
-     A guided breathing exercise animation was prototyped to help users manage stress or refocus between games. The animation featured expanding and contracting visuals with gentle prompts. However, it was omitted from the final release to keep the interface simple and avoid overwhelming first-time visitors with unexpected motion. The team may revisit this feature in future updates, potentially as an optional tool for users seeking relaxation techniques.
-
--   **Live Chat Widget:**  
-     The idea of integrating a live chat widget for instant support or community interaction was considered. While this could enhance engagement, it was excluded to prioritize user privacy and reduce technical complexity, especially given the static nature of the site. Additionally, moderation and safeguarding user data would require significant resources. For now, support is provided through clear documentation and accessible design, with the possibility of asynchronous feedback channels in the future.
-
-These decisions reflect a commitment to user-centered design, ensuring the site remains approachable, fast, and easy to navigate for all visitors.
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 ---
