@@ -365,17 +365,16 @@ Audited with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/
 ---
 ### 📸 Validation Screenshots
 
-![Index HTML Validation](/readme-documentation/indexvalid.png){ width=220 }
+<div align="center">
 
-![Difficulty HTML Validation](/readme-documentation/diffvalid.png){ width=220 }
+<img src="assets/readme-documentation/indexvalid.png" alt="Index HTML Validation" width="220" style="margin: 10px;" />
+<img src="assets/readme-documentation/diffvalid.png" alt="Difficulty HTML Validation" width="220" style="margin: 10px;" />
+<img src="assets/readme-documentation/CSSvalid.png" alt="CSS Validation" width="220" style="margin: 10px;" />
+<br>
+<img src="assets/readme-documentation/Screenshot%202025-06-24%20143027.png" alt="Performance Audit Screenshot" width="160" style="margin: 10px;" />
+<img src="assets/readme-documentation/Screenshot%202025-06-24%20150614.png" alt="Lighthouse Results Screenshot" width="360" style="margin: 10px;" />
 
-![CSS Validation](/readme-documentation/CSSvalid.png){ width=220 }
-
-![Performance Audit Screenshot](/readme-documentation/Screenshot%202025-06-24%20143027.png){ width=160 }
-
-![Lighthouse Results Screenshot](/readme-documentation/Screenshot%202025-06-24%20150614.png){ width=360 }
-
----
+</div>
 
 ## Credits
 
