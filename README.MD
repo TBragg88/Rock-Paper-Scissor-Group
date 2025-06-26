@@ -373,8 +373,7 @@ Audited with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/
 |:--:|:--:|
 | Performance Audit | Lighthouse Results |
 
-
-
+---
 ## Credits
 
 -   **Project Contributors:**
