@@ -365,17 +365,15 @@ Audited with [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/
 ---
 ### 📸 Validation Screenshots
 
-<div align="center">
+| ![Index HTML Validation](assets/readme-documentation/indexvalid.png) | ![Difficulty HTML Validation](assets/readme-documentation/diffvalid.png) | ![CSS Validation](assets/readme-documentation/CSSvalid.png) |
+|:--:|:--:|:--:|
+| Index HTML Validation | Difficulty HTML Validation | CSS Validation |
 
-<img src="/assets/readme-documentation/indexvalid.png" alt="Index HTML Validation" width="220" style="margin: 10px;" />
-<img src="/assets/readme-documentation/diffvalid.png" alt="Difficulty HTML Validation" width="220" style="margin: 10px;" />
-<img src="/assets/readme-documentation/CSSvalid.png" alt="CSS Validation" width="220" style="margin: 10px;" />
-<br>
-<img src="/assets/readme-documentation/Screenshot%202025-06-24%20143027.png" alt="Performance Audit Screenshot" width="160" style="margin: 10px;" />
-<img src="/assets/readme-documentation/Screenshot%202025-06-24%20150614.png" alt="Lighthouse Results Screenshot" width="360" style="margin: 10px;" />
+| ![Performance Audit Screenshot](assets/readme-documentation/Screenshot%202025-06-24%20143027.png) | ![Lighthouse Results Screenshot](assets/readme-documentation/Screenshot%202025-06-24%20150614.png) |
+|:--:|:--:|
+| Performance Audit | Lighthouse Results |
 
-</div>
-
+---
 ## Credits
 
 -   **Project Contributors:**
